@@ -9,4 +9,8 @@
 	
 	print_r($data);
 	
+	echo '<br>----<br>';
+	
+	json_encode($data);
+		
 ?>
