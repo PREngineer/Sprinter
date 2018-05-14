@@ -19,4 +19,4 @@
 	print_r($_SESSION);
 ?>
 
-Testing.  Testing.  Testing.
+Leaderboard goes here.

@@ -3,10 +3,10 @@
 *************************************************/
 
 // Name of Data Cache
-var dataCacheName = "em-data";
+var dataCacheName = "sprinter-data";
 
 // Name of the Cache
-var cacheName = "em";
+var cacheName = "sprinter";
 
 // Defines which files to cache locally
 var filesToCache = [
