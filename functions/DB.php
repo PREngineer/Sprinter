@@ -525,7 +525,7 @@ get_SprintData($date)
 Function 
 get_UserData($date, $user)
 {
-	$sprintID = get_SprintData($date)[0];
+	$sprintID = get_SprintData($date)[0][0];
 	
 	print_r($sprintID);
 	
