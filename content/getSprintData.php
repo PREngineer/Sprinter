@@ -7,6 +7,6 @@
 	
 	$data = get_SprintData( date('Y-m-d') );
 	
-	echo json_encode($data);
+	echo str_replace( "\r\n", "<br>", json_encode($data) );
 		
 ?>
