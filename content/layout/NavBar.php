@@ -102,7 +102,7 @@ if( $_GET['display'] == 'AddData' )
 else
 {
   echo '
-	document.getElementById("announcementsLink").classList.remove("active");
+	document.getElementById("addDataLink").classList.remove("active");
   ';
 }
 
