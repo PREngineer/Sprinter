@@ -11,8 +11,8 @@
 <?php
 
 	$Sprint   = get_SprintData( date("Y-m-d") )[0];
-	$UserData = get_UserData( date("Y-m-d"), $_SESSION['username'] );
-	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['username'] );
+	$UserData = get_UserData( date("Y-m-d"), $_SESSION['userID'] );
+	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] );
 	
 	print_r($Sprint);
 	echo '<br>';
