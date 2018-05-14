@@ -20,3 +20,27 @@
 ?>
 <br>
 Leaderboard goes here.
+
+
+<script type="text/javascript">
+
+var SprintData = "";
+
+function results(){
+    $.ajax({
+        url: 'getSprintdata.php',
+        dataType: 'jsonp',
+        jsonp: 'jsoncallback',
+        timeout: 5000,
+        success: function(data, status)
+		{
+			SprintData = data;
+        },
+        error: function(){
+            output.text('There was an error loading the data.');
+        }
+    });
+};
+
+alert(SprintData);
+</script>
