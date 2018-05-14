@@ -19,6 +19,8 @@
 	print_r($UserData);
 	echo '<br>';
 	print_r($UserGoal);
+	echo '<br>';
+	print_r($_SESSION);
 
 ?>
 
