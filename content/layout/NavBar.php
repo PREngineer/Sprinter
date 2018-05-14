@@ -50,7 +50,7 @@
 			</li>
 <?php
 
-if( $_SESSION['userRole'] == 1 )
+if( isset($_SESSION['userRole']) && $_SESSION['userRole'] == 1 )
 {
 	echo'
           <li id="administratorLink">
@@ -59,7 +59,7 @@ if( $_SESSION['userRole'] == 1 )
 	';
 }
 
-if( $_SESSION['userRole'] == 0 )
+if( isset($_SESSION['userRole']) && $_SESSION['userRole'] == 0 )
 {
 	echo'
           <li id="addDataLink">
