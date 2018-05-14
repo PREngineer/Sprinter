@@ -36,7 +36,7 @@ include '../../functions/Init.php';
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="nav navbar-nav">
           <li id="announcementsLink">
-            <a link="index.php">Sprinter - A health friendly competition platform</a>
+            <a link="index.php" style="cursor: pointer;">Sprinter - A health friendly competition platform</a>
           </li>
         </ul>
 
