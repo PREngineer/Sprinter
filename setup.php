@@ -224,6 +224,25 @@
                     $result['Errors'] .
                   '</div>';
           }
+		  
+		  // Create Sprints Table
+          $result = setup_SprintsTable();
+
+          if($result['Result'])
+          {
+            echo '<div class="alert alert-success alert-dismissible" role="alert">
+            <button type = "button" class="close" data-dismiss = "alert">x</button>
+                    --> Successfully created table "Sprints".
+                  </div>';
+          }
+          else
+          {
+            echo '<div class="alert alert-danger alert-dismissible" role="alert">
+            <button type = "button" class="close" data-dismiss = "alert">x</button>
+                    [!] ' . count($result['Errors']) . ' Error(s) occurred while creating the "Sprints" table!<br><br>' .
+                    $result['Errors'] .
+                  '</div>';
+          }
 
           // Create admin user
           $result = create_adminUser();
