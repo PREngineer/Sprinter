@@ -50,23 +50,6 @@
 			</li>
 <?php
 
-if( !isset($_SESSION['userRole']) )
-{
-	echo' 
-		  <li id="loginLink">
-            <a link="index.php?display=Login" style="cursor: pointer;">Login</a>
-          </li>
-	';
-}
-else
-{
-	echo '
-		<li id="logoutLink">
-            <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
-        </li>
-	';
-}
-
 if( $_SESSION['userRole'] == 1 )
 {
 	echo'
@@ -81,6 +64,23 @@ else
           <li id="addDataLink">
             <a link="index.php?display=AddData" style="cursor: pointer;">Add Data</a>
           </li>
+	';
+}
+
+if( !isset($_SESSION['userRole']) )
+{
+	echo' 
+		  <li id="loginLink">
+            <a link="index.php?display=Login" style="cursor: pointer;">Login</a>
+          </li>
+	';
+}
+else
+{
+	echo '
+		<li id="logoutLink">
+            <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
+        </li>
 	';
 }
 
