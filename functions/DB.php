@@ -394,7 +394,7 @@ function login($username, $password)
   {
     if( mysqli_fetch_all($query['Data'])[0][0] == 1 )
     {
-      $res = query_DB("SELECT `Username`, `Role`
+      $res = query_DB("SELECT `Username`, `FName`, `Initials`, `LName`, `Role`
                         FROM `Users`
                         WHERE `Username` = '$username'
                         AND `Password` = '$password'");

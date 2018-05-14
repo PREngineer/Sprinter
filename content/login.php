@@ -16,7 +16,9 @@ if( $res['Result'] )
   
   $_SESSION['userID']    = $userdata[0];
   $_SESSION['userFName'] = $userdata[1];
-  $_SESSION['userLName'] = $userdata[2];
+  $_SESSION['initials']  = $userdata[2];
+  $_SESSION['userLName'] = $userdata[3];
+  $_SESSION['userRole']  = $userdata[4];
 
   // Extend cookie life time
   // A year in seconds = 365 days * 24 hours * 60 mins * 60 secs
