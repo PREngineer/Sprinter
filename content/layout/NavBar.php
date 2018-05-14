@@ -58,7 +58,8 @@ if( $_SESSION['userRole'] == 1 )
           </li>
 	';
 }
-else
+
+if( $_SESSION['userRole'] == 0 )
 {
 	echo'
           <li id="addDataLink">
