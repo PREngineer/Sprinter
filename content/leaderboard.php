@@ -35,12 +35,11 @@ function results(){
         success: function(data, status)
 		{
 			SprintData = data;
+			alert(SprintData);
         },
         error: function(){
             output.text('There was an error loading the data.');
         }
     });
 };
-
-alert(SprintData);
 </script>
