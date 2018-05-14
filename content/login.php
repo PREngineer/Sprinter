@@ -15,9 +15,9 @@ if( $res['Result'] )
   session_start();
   
   $_SESSION['userID']    = $userdata[0];
-  $_SESSION['fName'] = $userdata[1];
+  $_SESSION['fName']     = $userdata[1];
   $_SESSION['initials']  = $userdata[2];
-  $_SESSION['lName'] = $userdata[3];
+  $_SESSION['lName']     = $userdata[3];
   $_SESSION['userRole']  = $userdata[4];
 
   // Extend cookie life time
@@ -36,8 +36,7 @@ if( $res['Result'] )
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Login</h1>
 
 <!-- Form STARTS here -->
-<form class="container" method="POST" id="loginPage">
- <input name="display" type="hidden" value="Login">
+<form class="container" method="POST" id="loginPage" action="index.php">
 
   <hr>
 
