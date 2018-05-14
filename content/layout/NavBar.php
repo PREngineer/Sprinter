@@ -51,7 +51,10 @@
 if( !isset($_SESSION['username']) )
 {
 	echo'
-          <li id="loginLink">
+          <li id="leaderboardLink">
+            <a link="index.php?display=Leaderboard" style="cursor: pointer;">Leaderboard</a>
+          </li>
+		  <li id="loginLink">
             <a link="index.php?display=Login" style="cursor: pointer;">Login</a>
           </li>
 	';
@@ -60,7 +63,10 @@ if( !isset($_SESSION['username']) )
 if( $_SESSION['userRole'] == 1 )
 {
 	echo'
-          <li id="administratorLink">
+          <li id="leaderboardLink">
+            <a link="index.php?display=Leaderboard" style="cursor: pointer;">Leaderboard</a>
+          </li>
+		  <li id="administratorLink">
             <a link="index.php?display=Administrator" style="cursor: pointer;">Administrator</a>
           </li>
           <li id="logoutLink">
@@ -71,7 +77,10 @@ if( $_SESSION['userRole'] == 1 )
 else
 {
 	echo'
-          <li id="addDataLink">
+          <li id="leaderboardLink">
+            <a link="index.php?display=Leaderboard" style="cursor: pointer;">Leaderboard</a>
+          </li>
+		  <li id="addDataLink">
             <a link="index.php?display=AddData" style="cursor: pointer;">Add Data</a>
           </li>
           <li id="logoutLink">
@@ -123,6 +132,19 @@ if( $_GET['display'] == 'Administrator' )
 {
   echo '
 	document.getElementById("administratorLink").classList.add("active");
+  ';
+}
+else
+{
+  echo '
+	document.getElementById("administratorLink").classList.remove("active");
+  ';
+}
+
+if( $_GET['display'] == 'Leaderboard' )
+{
+  echo '
+	document.getElementById("leaderboardLink").classList.add("active");
   ';
 }
 else

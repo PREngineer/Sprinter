@@ -15,9 +15,9 @@ if( $res['Result'] )
   session_start();
   
   $_SESSION['userID']    = $userdata[0];
-  $_SESSION['userFName'] = $userdata[1];
+  $_SESSION['fName'] = $userdata[1];
   $_SESSION['initials']  = $userdata[2];
-  $_SESSION['userLName'] = $userdata[3];
+  $_SESSION['lName'] = $userdata[3];
   $_SESSION['userRole']  = $userdata[4];
 
   // Extend cookie life time

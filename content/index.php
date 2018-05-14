@@ -1,12 +1,9 @@
 <?php
-
   // Include Session Init
   include '../functions/Init.php';
   // Include DB functions
   include '../functions/DB.php';
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
