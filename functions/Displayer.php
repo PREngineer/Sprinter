@@ -20,6 +20,16 @@ This is used to determine which element will be loaded into the center of the pa
       </script>
     ';
   }
+  
+  // Do the actual Login
+  if( $_POST['display'] == 'Login')
+  {
+    echo'
+      <script>
+        $("#Content").load("login.php?username=' . $_POST['username'] . '&password=' . $_POST['password'] . '");
+      </script>
+    ';
+  }
 
   // Logout
   if( $_GET['display'] == 'Logout' )

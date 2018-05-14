@@ -25,12 +25,13 @@ if( $res['Result'] )
   $cookieLifetime = 365 * 24 * 60 * 60;
   setcookie(session_name(),session_id(),time() + $cookieLifetime);
   
-  print_r($_POST);
+  header('Location: index.php');
+  exit;
+}
+
+  print_r($_GET);
   print_r($_SESSION);
   
-  //header('Location: index.php');
-  //exit;
-}
 ?>
 
 <!--Skip Navigation Link-->
@@ -39,8 +40,9 @@ if( $res['Result'] )
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Login</h1>
 
 <!-- Form STARTS here -->
-<form class="container" method="POST" id="loginPage" action="login.php">
+<form class="container" method="POST" id="loginPage">
 
+ <input name="display" type="hidden" value="Login">
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
