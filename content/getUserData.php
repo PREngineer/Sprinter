@@ -5,7 +5,7 @@
 
 	// Get the Sprint Data
 	
-	$data = get_UserData( date('Y-m-d'), $_SESSION['userID'] );
+	$data = get_UserData( date('Y-m-d'), $_GET['username'] );
 	
 	echo json_encode($data);
 		
