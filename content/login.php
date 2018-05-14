@@ -25,8 +25,10 @@ if( $res['Result'] )
   $cookieLifetime = 365 * 24 * 60 * 60;
   setcookie(session_name(),session_id(),time() + $cookieLifetime);
   
-  header('Location: index.php');
-  exit;
+  print_r($_SESSION);
+  
+  //header('Location: index.php');
+  //exit;
 }
 ?>
 
