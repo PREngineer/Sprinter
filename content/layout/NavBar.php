@@ -2,7 +2,7 @@
 	// Include Session Init
 	include '../../../functions/Init.php';
 	// Include DB functions
-	//include '../../../functions/DB.php';
+	include '../../../functions/DB.php';
 ?>
 
 <!-- ******************* NavBar Handler Section ******************* -->
