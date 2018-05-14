@@ -101,7 +101,7 @@
   print_r($_GET);*/
 ?>
 
-    <div class="container" id="Content" name="Content" style="padding-top:40px;padding-bottom:30px;">Testing</div>
+    <div class="container" id="Content" name="Content" style="padding-top:60px;padding-bottom:30px;"></div>
 
 <?php
 
