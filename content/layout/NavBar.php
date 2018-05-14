@@ -68,6 +68,17 @@ if( $_SESSION['userRole'] == 1 )
           </li>
 	';
 }
+else
+{
+	echo'
+          <li id="addDataLink">
+            <a link="index.php?display=AddData" style="cursor: pointer;">Add Data</a>
+          </li>
+          <li id="logoutLink">
+            <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
+          </li>
+	';
+}
 
 ?>
         </ul>
