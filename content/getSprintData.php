@@ -5,7 +5,7 @@
 
 	// Get the Sprint Data
 	
-	$data = get_SprintData( date('Y-m-d') );
+	$data = get_SprintData( $_GET['date'] );
 	
 	echo json_encode($data);
 		
