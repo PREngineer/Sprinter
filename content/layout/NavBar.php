@@ -97,55 +97,48 @@ else
 <script>
 <?php
 
-if( $_GET['display'] == 'AddData' )
+// Normal user is logged in and adding data
+if( $_GET['display'] == 'AddData' && $_SESSION['userRole'] == "0")
 {
   echo '
 	document.getElementById("addDataLink").classList.add("active");
-  ';
-}
-else
-{
-  echo '
-	document.getElementById("addDataLink").classList.remove("active");
+	document.getElementById("leaderboardLink").classList.remove("active");
   ';
 }
 
+// Normal user is logged in and viewing leaderboard
+if( $_GET['display'] == 'AddData' && $_SESSION['userRole'] == "0")
+{
+  echo '
+	document.getElementById("addDataLink").classList.remove("active");
+	document.getElementById("leaderboardLink").classList.add("active");
+  ';
+}
+
+// If person is logging in
 if( $_GET['display'] == 'Login' )
 {
   echo '
 	document.getElementById("loginLink").classList.add("active");
-  ';
-}
-else
-{
-  echo '
-	document.getElementById("loginLink").classList.remove("active");
+	document.getElementById("leaderboardLink").classList.remove("active");
   ';
 }
 
-if( $_GET['display'] == 'Administrator' )
+// Administrator user is logged in and adding data
+if( $_GET['display'] == 'Administrator' && $_SESSION['userRole'] == "1")
 {
   echo '
 	document.getElementById("administratorLink").classList.add("active");
-  ';
-}
-else
-{
-  echo '
-	document.getElementById("administratorLink").classList.remove("active");
+	document.getElementById("leaderboardLink").classList.remove("active");
   ';
 }
 
-if( $_GET['display'] == 'Leaderboard' )
-{
-  echo '
-	document.getElementById("leaderboardLink").classList.add("active");
-  ';
-}
-else
+// Administrator user is logged in and viewing leaderboard
+if( $_GET['display'] == 'Administrator' && $_SESSION['userRole'] == "1")
 {
   echo '
 	document.getElementById("administratorLink").classList.remove("active");
+	document.getElementById("leaderboardLink").classList.add("active");
   ';
 }
 
