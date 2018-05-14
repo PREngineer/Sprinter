@@ -527,6 +527,8 @@ get_UserData($date, $user)
 {
 	$sprintID = get_SprintData($date)[0];
 	
+	print_r($sprintID);
+	
 	$result = query_DB("SELECT *
                       FROM `Entries`
                       WHERE `User`   = '$user'
