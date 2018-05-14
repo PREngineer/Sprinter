@@ -158,7 +158,8 @@ Function setup_EntriesTable()
 						`ID` INT NOT NULL AUTO_INCREMENT COMMENT 'Entry ID' , 
 						`User` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Username' , 
 						`SprintID` INT NOT NULL COMMENT 'Sprint ID' , 
-						`Data` DOUBLE NOT NULL COMMENT 'Actual Data' , 
+						`Data` DOUBLE NOT NULL COMMENT 'Actual data' , 
+						`Date` date NOT NULL COMMENT 'Day it was done',
 						`Recorded` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Timestamp of entry' , 
 						PRIMARY KEY (`ID`)
 						) 
@@ -501,6 +502,35 @@ get_SprintData($date)
                       FROM `Sprints`
                       WHERE `Start` <= '$date'
 					  AND   `End`   >= '$date'");
+
+	if( $result['Result'] )
+	{
+		return mysqli_fetch_all( $result['Data'] );
+	}
+	else
+	{
+		return $result['Errors'];
+	}
+}
+
+/*
+  Description:
+    This function executes a query to get the User's entry data.
+  @PARAM:
+    [date]   - Sprint active day
+  @RETURN:
+    [Boolean] - True
+    [Array]   - Errors
+*/
+Function 
+get_UserData($date, $user)
+{
+	$sprintID = get_SprintData($date)[0];
+	
+	$result = query_DB("SELECT *
+                      FROM `Entries`
+                      WHERE `User`   = '$user'
+					  AND `SprintID` = '$sprintID'");
 
 	if( $result['Result'] )
 	{
