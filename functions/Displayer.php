@@ -21,16 +21,6 @@ This is used to determine which element will be loaded into the center of the pa
     ';
   }
 
-  // Login Posted
-  if( $_POST['display'] == 'Login' )
-  {
-    echo'
-      <script>
-        $("#Content").load("login.php");
-      </script>
-    ';
-  }
-
   // Logout
   if( $_GET['display'] == 'Logout' )
   {
@@ -43,6 +33,18 @@ This is used to determine which element will be loaded into the center of the pa
       </script>
     ';
   }
+  
+  // Leaderboard View
+  if( $_GET['display'] == 'Leaderboard' )
+  {
+    echo'
+      <script>
+        $("#Content").load("Leaderboard.php");
+      </script>
+    ';
+  }
+  
+  
 }
 
 
