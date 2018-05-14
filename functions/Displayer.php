@@ -44,6 +44,15 @@ This is used to determine which element will be loaded into the center of the pa
     ';
   }
   
+  // Leaderboard View
+  if( $_GET['display'] == 'AddData' )
+  {
+    echo'
+      <script>
+        $("#Content").load("addData.php");
+      </script>
+    ';
+  }
   
 }
 
