@@ -152,7 +152,7 @@ Function setup_DB($dbname, $user, $pass, $host, $port)
     [Boolean] - False for failure
     [Array]   - Array if successful
 */
-Function setup_EntriesTable()
+Function setup_GoalsTable()
 {
   return query_DB("CREATE TABLE `Entries` ( 
 						`ID` INT NOT NULL AUTO_INCREMENT COMMENT 'Entry ID' , 
@@ -161,6 +161,30 @@ Function setup_EntriesTable()
 						`Data` DOUBLE NOT NULL COMMENT 'Actual data' , 
 						`Date` date NOT NULL COMMENT 'Day it was done',
 						`Recorded` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Timestamp of entry' , 
+						PRIMARY KEY (`ID`)
+						) 
+						ENGINE = InnoDB 
+						CHARSET=utf8 
+						COLLATE utf8_general_ci 
+						COMMENT = 'Contains the entries';");
+}
+
+/*
+  Description:
+    This function creates the Goals table
+  @PARAM:
+    NONE
+  @RETURN:
+    [Boolean] - False for failure
+    [Array]   - Array if successful
+*/
+Function setup_EntriesTable()
+{
+  return query_DB("CREATE TABLE `Goals` ( 
+						`ID` INT NOT NULL AUTO_INCREMENT COMMENT 'Entry ID' , 
+						`User` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Username' , 
+						`SprintID` INT NOT NULL COMMENT 'Sprint ID' , 
+						`Goal` DOUBLE NOT NULL COMMENT 'The Goal' , 
 						PRIMARY KEY (`ID`)
 						) 
 						ENGINE = InnoDB 
