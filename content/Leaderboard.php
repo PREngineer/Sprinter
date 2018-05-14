@@ -11,8 +11,12 @@
 <?php
 	echo 'GET: ';
 	print_r($_GET);
+	
 	echo '<br><br>POST: ';
-	print_r($_:POST);
+	print_r($_POST);
+	
+	echo '<br><br>SESSION: ';
+	print_r($_SESSION);
 ?>
 
 Testing.  Testing.  Testing.
