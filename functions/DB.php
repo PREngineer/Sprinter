@@ -525,10 +525,10 @@ get_SprintData($date)
 Function 
 get_UserData($date, $user)
 {
+	// Retrieve the Sprint ID
 	$sprintID = get_SprintData($date)[0][0];
 	
-	print_r($sprintID);
-	
+	// Get all user data related to that Sprint
 	$result = query_DB("SELECT *
                       FROM `Entries`
                       WHERE `User`   = '$user'
