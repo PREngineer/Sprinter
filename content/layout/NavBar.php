@@ -45,46 +45,41 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-		
+			<li id="leaderboardLink">
+				<a link="index.php?display=Leaderboard" style="cursor: pointer;">Leaderboard</a>
+			</li>
 <?php
 
-if( !isset($_SESSION['username']) )
+if( !isset($_SESSION['userRole']) )
 {
-	echo'
-          <li id="leaderboardLink">
-            <a link="index.php?display=Leaderboard" style="cursor: pointer;">Leaderboard</a>
-          </li>
+	echo' 
 		  <li id="loginLink">
             <a link="index.php?display=Login" style="cursor: pointer;">Login</a>
           </li>
+	';
+}
+else
+{
+	echo '
+		<li id="logoutLink">
+            <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
+        </li>
 	';
 }
 
 if( $_SESSION['userRole'] == 1 )
 {
 	echo'
-          <li id="leaderboardLink">
-            <a link="index.php?display=Leaderboard" style="cursor: pointer;">Leaderboard</a>
-          </li>
-		  <li id="administratorLink">
+          <li id="administratorLink">
             <a link="index.php?display=Administrator" style="cursor: pointer;">Administrator</a>
-          </li>
-          <li id="logoutLink">
-            <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
           </li>
 	';
 }
 else
 {
 	echo'
-          <li id="leaderboardLink">
-            <a link="index.php?display=Leaderboard" style="cursor: pointer;">Leaderboard</a>
-          </li>
-		  <li id="addDataLink">
+          <li id="addDataLink">
             <a link="index.php?display=AddData" style="cursor: pointer;">Add Data</a>
-          </li>
-          <li id="logoutLink">
-            <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
           </li>
 	';
 }
