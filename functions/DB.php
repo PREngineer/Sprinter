@@ -85,8 +85,8 @@ Function create_adminUser()
 {
   $pass = hash( 'sha256', SHA1( MD5("password") ) );
   $create = query_DB("INSERT INTO `Users`
-                      (`Username`, `Password`, `Role`)
-                      VALUES ('administrator','" . $pass . "','3')");
+                      (`Username`, `Password`, `FName`, `Initials`, `LName`,  `Role`)
+                      VALUES ('administrator','" . $pass . "','Administrator','(Default)','The','3')");
 
   if( $create['Result'] )
   {
