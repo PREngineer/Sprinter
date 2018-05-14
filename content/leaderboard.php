@@ -26,20 +26,20 @@ Leaderboard goes here.
 
 var SprintData = "";
 
-function results(){
-    $.ajax({
-        url: 'getSprintdata.php',
-        dataType: 'jsonp',
-        jsonp: 'jsoncallback',
-        timeout: 5000,
-        success: function(data, status)
+$(document).ready(function ()
+{
+	$('#retrieve-resources').click(function ()
+	{
+		$.ajax(
 		{
-			SprintData = data;
-			alert(SprintData);
-        },
-        error: function(){
-            output.text('There was an error loading the data.');
-        }
-    });
-};
+			type: "GET",
+			url: "getSprintData.php",
+			success: function(result)
+			{
+				alert(result);
+			}
+		});
+ 
+	});
+});
 </script>
