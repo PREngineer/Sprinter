@@ -568,4 +568,36 @@ get_UserData($date, $user)
 	}
 }
 
+/*
+  Description:
+    This function executes a query to get the User's sprint goal.
+  @PARAM:
+    [date]   - Sprint active day
+  @RETURN:
+    [Boolean] - True
+    [Array]   - Errors
+*/
+Function 
+get_UserGoal($date, $user)
+{
+	// Retrieve the Sprint ID
+	$sprintID = get_SprintData($date)[0][0];
+	
+	// Get all user data related to that Sprint
+	$result = query_DB("SELECT *
+                      FROM `Goals`
+                      WHERE `User`   = '$user'
+					  AND `SprintID` = '$sprintID'");
+
+	if( $result['Result'] )
+	{
+		return mysqli_fetch_all( $result['Data'] );
+	}
+	else
+	{
+		return $result['Errors'];
+	}
+}
+
+
 ?>

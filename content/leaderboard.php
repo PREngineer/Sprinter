@@ -9,8 +9,15 @@
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Leaderboard</h1>
 
 <?php
-	echo '<br><br>SESSION: ';
-	print_r($_SESSION);
+
+	$Sprint   = get_SprintData( date("Y-m-d") );
+	$UserData = get_UserData( date("Y-m-d"), $_SESSION['username'] );
+	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['username'] )[3];
+	
+	print_r($Sprint);
+	print_r($UserData);
+	print_r($UserGoal);
+
 ?>
 
 <br>
