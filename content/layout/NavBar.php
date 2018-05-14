@@ -1,8 +1,8 @@
 <?php
 	// Include Session Init
-	include '../functions/Init.php';
+	//include '../functions/Init.php';
 	// Include DB functions
-	include '../functions/DB.php';
+	//include '../functions/DB.php';
 ?>
 
 <!-- ******************* NavBar Handler Section ******************* -->
@@ -45,15 +45,16 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
+		
 <?php
 
 if( !isset($_SESSION['username']) )
 {
-echo'
+	echo'
           <li id="loginLink">
             <a link="index.php?display=Login" style="cursor: pointer;">Login</a>
           </li>
-';
+	';
 }
 
 if( $_SESSION['userRole'] == 1 )
