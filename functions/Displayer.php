@@ -39,7 +39,7 @@ This is used to determine which element will be loaded into the center of the pa
   {
     echo'
       <script>
-        $("#Content").load("Leaderboard.php");
+        $("#Content").load("leaderboard.php");
       </script>
     ';
   }
