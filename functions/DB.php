@@ -180,7 +180,7 @@ Function setup_EntriesTable()
 Function setup_UsersTable()
 {
   return query_DB("CREATE TABLE `Users` (
-						`Username` TEXT NOT NULL COMMENT 'Username' ,
+						`Username` VARCHAR(200) NOT NULL COMMENT 'Username' ,
 						`Password` TEXT NOT NULL COMMENT 'Password' ,
 						`FName` TEXT NOT NULL COMMENT 'First Name' ,
 						`Initials` TEXT NOT NULL COMMENT 'Initials' ,
