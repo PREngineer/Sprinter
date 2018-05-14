@@ -86,7 +86,7 @@ Function create_adminUser()
   $pass = hash( 'sha256', SHA1( MD5("password") ) );
   $create = query_DB("INSERT INTO `Users`
                       (`Username`, `Password`, `FName`, `Initials`, `LName`,  `Role`)
-                      VALUES ('administrator','" . $pass . "','Administrator','(Default)','The','3')");
+                      VALUES ('administrator','" . $pass . "','Administrator','(Default)','The','1')");
 
   if( $create['Result'] )
   {
@@ -187,6 +187,32 @@ Function setup_UsersTable()
 						`LName` TEXT NOT NULL COMMENT 'Last Name' ,
 						`Role` BIGINT NOT NULL COMMENT 'User Role'  ,
 						PRIMARY KEY (`Username`)
+	)
+    ENGINE  = InnoDB
+    CHARSET = utf8
+    COLLATE utf8_general_ci
+    COMMENT = 'Contains all accounts'");
+}
+
+/*
+  Description:
+    This function creates the Sprints table
+  @PARAM:
+    NONE
+  @RETURN:
+    [Boolean] - False for failure
+    [Array]   - Array if successful
+*/
+Function setup_SprintsTable()
+{
+  return query_DB("CREATE TABLE `Sprints` (
+						`ID` INT NOT NULL AUTO_INCREMENT COMMENT 'Sprint ID' , 
+						`Name` TEXT NOT NULL COMMENT 'Sprint Name' ,
+						`Goal` TEXT NOT NULL COMMENT 'Description of the sprint goal' ,
+						`Rules` TEXT NOT NULL COMMENT 'Rules of the sprint' ,
+						`Start` date NOT NULL COMMENT 'Sprint Start',
+						`End` date NOT NULL COMMENT 'Sprint End',
+						PRIMARY KEY (`ID`)
 	)
     ENGINE  = InnoDB
     CHARSET = utf8
@@ -404,8 +430,8 @@ Function get_Leaderboard()
 {
   $date = date('Y-m-d');
 
-  $result = query_DB("SELECT `ID`, `Name`,`Date`,`Start`,`End`,`Location`
-                      FROM `Events`
+  $result = query_DB("SELECT *
+                      FROM `Entries`
                       WHERE `Date` > '$date'
                       AND `Approved` = 1
                       AND `Deleted` = 0

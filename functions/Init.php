@@ -21,7 +21,7 @@ function logged_in()
 */
 function protectAdmin()
 {
-  if( $_SESSION['userRole'] != '3' )
+  if( $_SESSION['userRole'] != '1' )
   {
     echo '<script type="text/javascript">
         window.location.href = "/content/index.php?display=Login"

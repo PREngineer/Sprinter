@@ -58,25 +58,25 @@ echo'
 
 if( $_SESSION['userRole'] == 1 )
 {
-echo'
+	echo'
           <li id="administratorLink">
             <a link="index.php?display=Administrator" style="cursor: pointer;">Administrator</a>
           </li>
           <li id="logoutLink">
             <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
           </li>
-';
+	';
 }
 else
 {
-echo'
+	echo'
           <li id="addDataLink">
             <a link="index.php?display=AddData" style="cursor: pointer;">Add Data</a>
           </li>
           <li id="logoutLink">
             <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
           </li>
-';
+	';
 }
 
 ?>
@@ -95,39 +95,39 @@ echo'
 if( $_GET['display'] == 'AddData' )
 {
   echo '
-  document.getElementById("addDataLink").classList.add("active");
+	document.getElementById("addDataLink").classList.add("active");
   ';
 }
 else
 {
   echo '
-  document.getElementById("announcementsLink").classList.remove("active");
+	document.getElementById("announcementsLink").classList.remove("active");
   ';
 }
 
 if( $_GET['display'] == 'Login' )
 {
   echo '
-  document.getElementById("loginLink").classList.add("active");
+	document.getElementById("loginLink").classList.add("active");
   ';
 }
 else
 {
   echo '
-  document.getElementById("loginLink").classList.remove("active");
+	document.getElementById("loginLink").classList.remove("active");
   ';
 }
 
 if( $_GET['display'] == 'Administrator' )
 {
   echo '
-  document.getElementById("administratorLink").classList.add("active");
+	document.getElementById("administratorLink").classList.add("active");
   ';
 }
 else
 {
   echo '
-  document.getElementById("administratorLink").classList.remove("active");
+	document.getElementById("administratorLink").classList.remove("active");
   ';
 }
 
