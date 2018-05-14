@@ -10,12 +10,14 @@
 
 <?php
 
-	$Sprint   = get_SprintData( date("Y-m-d") );
+	$Sprint   = get_SprintData( date("Y-m-d") )[0];
 	$UserData = get_UserData( date("Y-m-d"), $_SESSION['username'] );
 	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['username'] )[3];
 	
 	print_r($Sprint);
+	echo '<br>';
 	print_r($UserData);
+	echo '<br>';
 	print_r($UserGoal);
 
 ?>
