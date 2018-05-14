@@ -18,5 +18,5 @@
 	echo '<br><br>SESSION: ';
 	print_r($_SESSION);
 ?>
-
+<br>
 Leaderboard goes here.

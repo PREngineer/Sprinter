@@ -485,4 +485,31 @@ Function insert_Entry($data)
   }
 }
 
+/*
+  Description:
+    This function executes a query to get the Sprint's data.
+  @PARAM:
+    [date]   - Sprint active day
+  @RETURN:
+    [Boolean] - True
+    [Array]   - Errors
+*/
+Function 
+get_SprintData($date)
+{
+	$result = query_DB("SELECT *
+                      FROM `Sprints`
+                      WHERE `Start` <= '$date'
+					  AND   `End`   >= '$date'");
+
+	if( $result['Result'] )
+	{
+		return mysqli_fetch_all( $result['Data'] );
+	}
+	else
+	{
+		return $result['Errors'];
+	}
+}
+
 ?>
