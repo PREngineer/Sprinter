@@ -22,6 +22,8 @@ if( $res['Result'] )
   // A year in seconds = 365 days * 24 hours * 60 mins * 60 secs
   $cookieLifetime = 365 * 24 * 60 * 60;
   setcookie(session_name(),session_id(),time() + $cookieLifetime);
+  
+  header 'Location: index.php';
 }
 ?>
 

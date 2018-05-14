@@ -28,7 +28,7 @@ include '../../functions/Init.php';
 
         <!-- Brand icon -->
         <a link="index.php" class="navbar-brand" style="cursor: pointer;">
-          <img src="../images/Tlogo.png" width="30" height="30" alt="Logo">
+          <img src="../images/TLogo.png" width="30" height="30" alt="Logo">
         </a>
       </div>
 
@@ -52,7 +52,18 @@ echo'
 ';
 }
 
-if( isset($_SESSION['userRole']) )
+if( $_SESSION['userRole'] == 1 )
+{
+echo'
+          <li id="administratorLink">
+            <a link="index.php?display=Administrator" style="cursor: pointer;">Administrator</a>
+          </li>
+          <li id="logoutLink">
+            <a link="index.php?display=Logout" style="cursor: pointer;">Logout</a>
+          </li>
+';
+}
+else
 {
 echo'
           <li id="addDataLink">
@@ -100,6 +111,19 @@ else
 {
   echo '
   document.getElementById("loginLink").classList.remove("active");
+  ';
+}
+
+if( $_GET['display'] == 'Administrator' )
+{
+  echo '
+  document.getElementById("administratorLink").classList.add("active");
+  ';
+}
+else
+{
+  echo '
+  document.getElementById("administratorLink").classList.remove("active");
   ';
 }
 
