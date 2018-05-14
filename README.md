@@ -1,2 +1,55 @@
+# Please Support This Project!
+
+This project is being developed during my spare time.  I would appreciate a donation if you found it useful.
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=53CD2WNX3698E&lc=US&item_name=PREngineer&item_number=Event%2dManager&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+
 # Sprinter
-A health centered, sprint measured progressive web app.
+
+This platform is used to track health related competitions
+
+# About
+
+This project is designed as a Progressive Web App.  This means that the project is compatible with most computer web browsers, tablets, and mobile devices while not requiring licensing with Google or Apple to be deployed through their stores.
+
+It consists of a Web Server component and a Database component.  The Web Server component is used to display a user interface and reporting.  The Database component is used to hold the data of interest.
+
+Core web development technologies include:
+  * HTML
+  * CSS
+  * JavaScript
+  * PHP 7
+
+Libraries/Frameworks used:
+  * Bootstrap v.3.3.7 [Stable]
+    * Bootstrap coding resources:
+
+      http://getbootstrap.com/docs/3.3/components/#input-groups
+
+      https://www.w3schools.com/Bootstrap/default.asp
+
+  * jQuery-3
+
+# How to Install (Ubuntu Server)
+
+
+
+# Important Considerations:
+
+  * Links do not work like they do normally!
+    The links' "href" property has been removed and replaced by a "link" property that is read by
+    the JavaScript link handler function.
+    This is done because we do not want a complete reload of a new page.  We just care about
+    replacing the content of a DIV that represents the content of the pages.  We want to maintain the same navigation menu and footer.
+    This also allows for better management of code in different locations without having a
+    negative effect on others.
+	This also prevents the PWA from opening links in Safari (iOS).
+
+# The Team
+
+  * Benjamin Burden
+  * Jorge Pabon
+
+# License
+
+All rights are reserved by Jorge L. Pabon Cruz.  Use of this application without a license is not authorized.  For licensing costs contact Jorge L. Pabon Cruz at pianistapr@hotmail.com.
