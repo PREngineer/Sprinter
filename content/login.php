@@ -36,7 +36,7 @@ if( $res['Result'] )
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Login</h1>
 
 <!-- Form STARTS here -->
-<form class="container" method="POST" id="loginPage" action="index.php">
+<form class="container" method="POST" id="loginPage" action="login.php">
 
   <hr>
 
