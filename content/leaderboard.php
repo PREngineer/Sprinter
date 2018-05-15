@@ -11,7 +11,7 @@
 	//$UserData = get_UserData( date("Y-m-d"), $_SESSION['userID'] );
 	
 	//$leaders = get_Leaderboard();
-	get_Leaderboard();
+	get_Leaderboard(date("Y-m-d"));
 
 echo '<br>';
 echo '
