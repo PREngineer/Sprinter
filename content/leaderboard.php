@@ -68,7 +68,7 @@
 					Your sprint goal is: 
 				</td>
 				<td>
-					<form class="container" method="POST" action="api.php?action=setGoal&username=' . $_SESSION['userID'] . '&sprint=' . $Sprint . '">
+					<form class="container" method="POST" action="api.php?action=setGoal&username=' . $_SESSION['userID'] . '&sprint=' . ( ($Sprint)[0] )[0] . '">
 						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" aria-describedby="usernameHelp" required>
 						<input class="btn btn-primary" type="submit" value="Change">
 					</form>
