@@ -30,32 +30,33 @@
 
 	echo '<br>';
 	echo '
-	<table class="table">
-		<tr>
-			<td style="width: 50%;">
-				Current sprint is: 
-			</td>
-			<td style="width: 50%;">
-				<b>' . $Sprint[1] . '</b>
-			</td>
-		</tr>
-		</tr>
-			<td>
-				The goal this sprint is: 
-			</td>
-			<td>
-				<b>' . $Sprint[2] . '</b>.
-			</td>
-		</tr>
-		
-		<tr>
-			<td>
-				The rules for the sprint are:
-			</td>
-			<td>
-				<b>' . $Sprint[3] . '</b>
-			</td>
-		</tr>
+	<div class="container">
+		<table class="table">
+			<tr>
+				<td>
+					Current sprint is: 
+				</td>
+				<td>
+					<b>' . $Sprint[1] . '</b>
+				</td>
+			</tr>
+			</tr>
+				<td>
+					The goal this sprint is: 
+				</td>
+				<td>
+					<b>' . $Sprint[2] . '</b>.
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					The rules for the sprint are:
+				</td>
+				<td>
+					<b>' . $Sprint[3] . '</b>
+				</td>
+			</tr>
 	';
 
 	if( isset($_SESSION['userID']) )
@@ -81,25 +82,27 @@
 	}
 
 	echo '
-	</table>';
+	</table>
+	</div>';
 
 ?>
 
-<table class="table">
-	<thead>
-		<th>
-			Name
-		</th>
-		<th>
-			Count to Date
-		</th>
-		<th>
-			Goal to Date (%)
-		</th>
-	</thead>
+<div class="container">
+	<table class="table">
+		<thead>
+			<th>
+				Name
+			</th>
+			<th>
+				Count to Date
+			</th>
+			<th>
+				Goal to Date (%)
+			</th>
+		</thead>
 
 
-	<tbody>
+		<tbody>
 <?php
 
 	foreach($leaders as $each)
@@ -119,5 +122,6 @@
 		';
 	}
 ?>
-	</tbody>
+		</tbody>
 	</table>
+</div>
