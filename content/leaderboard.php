@@ -46,6 +46,7 @@ echo '
 if( isset($_SESSION['userID']) )
 {
 	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] );
+	print_r($UserGoal);
 	
 	echo '
 		<tr>
@@ -53,7 +54,7 @@ if( isset($_SESSION['userID']) )
 				Your sprint goal is: 
 			</td>
 			<td>
-				' . $UserGoal[3] . '
+				<b>' . $UserGoal[3] . '</b>
 			</td>
 		</tr>
 	';
