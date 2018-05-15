@@ -19,7 +19,7 @@
 echo '<br>';
 echo '
 	<p>
-		Current sprint is: ' . $Sprint[1] . '
+		Current sprint is: <b>' . $Sprint[1] . '</b>
 	</p>
 	
 	<p>
