@@ -112,6 +112,15 @@ if( $_GET['display'] == 'Leaderboard' && $_SESSION['userRole'] == "0")
   ';
 }
 
+// Unlogged user viewing leaderboard
+if( $_GET['display'] == 'Leaderboard' && !isset($_SESSION['userRole']) )
+{
+  echo '
+	document.getElementById("loginLink").classList.remove("active");
+	document.getElementById("leaderboardLink").classList.add("active");
+  ';
+}
+
 // If person is logging in
 if( $_GET['display'] == 'Login' )
 {
