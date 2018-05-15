@@ -34,7 +34,7 @@
         <a link="index.php" class="navbar-brand" style="cursor: pointer;">
           <img src="../images/TLogo.png" width="30" height="30" alt="Logo">
         </a>
-		<span>Sprinter</span>
+		<a link="index.php" class="navbar-brand" style="cursor: pointer;">Sprinter</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
