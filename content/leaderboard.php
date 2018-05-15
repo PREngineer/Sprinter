@@ -45,7 +45,7 @@ echo '
 
 if( isset($_SESSION['userID']) )
 {
-	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0][3];
+	$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] )[3];
 	
 	echo '
 		<tr>
