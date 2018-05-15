@@ -18,7 +18,7 @@
 </script>
 
 <div class="container">
-  <nav class="navbar navbar-fixed-top">
+  <nav class="navbar navbar-fixed-top" style="color: #7500C0;">
     <div class="container-fluid">
       <!-- Brand and toggle (hamburger) get grouped for better mobile display -->
       <div class="navbar-header">
