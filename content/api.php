@@ -42,4 +42,5 @@
 		// Like so: api.php?action=getUserGoal&date=2018-05-14
 	}
 	
+	print_r($_POST);
 ?>
