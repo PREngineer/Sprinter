@@ -69,8 +69,8 @@
 				</td>
 				<td>
 					<form class="container" method="POST" action="api.php?action=setGoal&username=' . $_SESSION['userID'] . '&sprint=' . $Sprint . '">
-						<input name="goal" type="text" maxlength="10" placeholder="' . $UserGoal . '" aria-describedby="usernameHelp" required>
-						<input class="btn btn-primary" type="submit" value="Change">
+						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" aria-describedby="usernameHelp" style="width: 15px;" required>
+						<input class="btn btn-primary" type="submit" value="Change" style="width: 15px;">
 					</form>
 				</td>
 			</tr>
