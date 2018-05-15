@@ -71,7 +71,7 @@ Function test_MySQL($dbname, $user, $pass, $host, $port)
 Region Start - MySQL DB Setup Functions
 *****************************
 */
-
+{
 /*
   Description:
     This function adds an admin user to the Users Table
@@ -244,6 +244,7 @@ Function setup_SprintsTable()
     COLLATE utf8_general_ci
     COMMENT = 'Contains all accounts'");
 }
+}
 
 /*
 *****************************
@@ -251,6 +252,7 @@ Region Start - Regular Use MySQL DB Setup Functions
 *****************************
 */
 
+{
 /*
   Description:
     This function opens a connection to the specific database.
@@ -358,13 +360,14 @@ Function sanitize($string)
   $string = str_replace(",", "", $string);
   return $string;
 }
+}
 
 /*
 *****************************
 Region Start - Session Related Session Functions
 *****************************
 */
-
+{
 /*
   Description:
     This function checks if the user credentials provided are correct
@@ -435,6 +438,7 @@ function login($username, $password)
     return $query['Errors'];
   }
 }
+}
 
 /*
 *****************************
@@ -451,63 +455,16 @@ Region Start - Regular Use MySQL DB Get Functions
     [Array]   - Data
     [Boolean] - False
 */
-Function get_Leaderboard()
+Function get_Leaderboard($date)
 {
-  $date = date('Y-m-d');
+	// Retrieve the Sprint ID
+	$sprintID = get_SprintData($date)[0][0];
+	
+	$entries = get_SprintEntries($sprintID);
+	
+	$goals = get_SprintGoals($sprintID);
 
-  $result = query_DB("SELECT *
-                      FROM `Entries`
-                      WHERE `Date` > '$date'
-                      AND `Approved` = 1
-                      AND `Deleted` = 0
-                      ORDER BY `Date`,`Start`");
-
-  if( $result['Result'] )
-  {
-    return mysqli_fetch_all( $result['Data'] );
-  }
-  else
-  {
-    return $result['Errors'];
-  }
-}
-
-/*
-*****************************
-Region Start - Regular Use MySQL DB Insert Functions
-*****************************
-*/
-
-/*
-  Description:
-    This function executes a query to insert data to the entries table.
-  @PARAM:
-    [Array]   - The event data
-  @RETURN:
-    [Boolean] - True
-    [Array]   - Errors
-*/
-Function insert_Entry($data)
-{
-  $text = nl2br($data['Text']);
-
-  // Update the Events Table
-  $result = query_DB( "UPDATE `Announcements`
-                       SET `Title`   = '" . sanitize($data['Title']) . "',
-                           `Content` = '" . sanitize($text)          . "',
-                           `Expires` = '" . sanitize($data['Date'])  . "'
-                       WHERE `ID` = '" . sanitize($data['id']) . "'"
-                    );
-
-  // If successful
-  if( $result['Result'] )
-  {
-    return True;
-  }
-  else
-  {
-    return $result['Errors'];
-  }
+	
 }
 
 /*
@@ -526,6 +483,61 @@ get_SprintData($date)
                       FROM `Sprints`
                       WHERE `Start` <= '$date'
 					  AND   `End`   >= '$date'");
+
+	if( $result['Result'] )
+	{
+		return mysqli_fetch_all( $result['Data'] );
+	}
+	else
+	{
+		return $result['Errors'];
+	}
+}
+
+/*
+  Description:
+    This function executes a query to get the Users' entry data.
+  @PARAM:
+    [date]   - Sprint active day
+  @RETURN:
+    [Boolean] - True
+    [Array]   - Errors
+*/
+Function 
+get_SprintEntries($id)
+{
+	// Get all user data related to that Sprint
+	$result = query_DB("SELECT `User`, SUM(`Data`) AS Data
+						FROM `Entries`
+						WHERE `SprintID` = $id
+						GROUP BY `User`");
+
+	if( $result['Result'] )
+	{
+		return mysqli_fetch_all( $result['Data'] );
+	}
+	else
+	{
+		return $result['Errors'];
+	}
+}
+
+/*
+  Description:
+    This function executes a query to get the Users' goal data.
+  @PARAM:
+    [date]   - Sprint active day
+  @RETURN:
+    [Boolean] - True
+    [Array]   - Errors
+*/
+Function 
+get_SprintGoals($id)
+{
+	// Get all user data related to that Sprint
+	$result = query_DB("SELECT `User`, `Goal`
+						FROM `Goals`
+						WHERE `SprintID` = $id");
 
 	if( $result['Result'] )
 	{
@@ -599,5 +611,43 @@ get_UserGoal($date, $user)
 	}
 }
 
+
+/*
+*****************************
+Region Start - Regular Use MySQL DB Insert Functions
+*****************************
+*/
+
+/*
+  Description:
+    This function executes a query to insert data to the entries table.
+  @PARAM:
+    [Array]   - The event data
+  @RETURN:
+    [Boolean] - True
+    [Array]   - Errors
+*/
+Function insert_Entry($data)
+{
+  $text = nl2br($data['Text']);
+
+  // Update the Events Table
+  $result = query_DB( "UPDATE `Announcements`
+                       SET `Title`   = '" . sanitize($data['Title']) . "',
+                           `Content` = '" . sanitize($text)          . "',
+                           `Expires` = '" . sanitize($data['Date'])  . "'
+                       WHERE `ID` = '" . sanitize($data['id']) . "'"
+                    );
+
+  // If successful
+  if( $result['Result'] )
+  {
+    return True;
+  }
+  else
+  {
+    return $result['Errors'];
+  }
+}
 
 ?>
