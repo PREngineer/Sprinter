@@ -11,33 +11,28 @@
 <?php
 
 	$Sprint   = get_SprintData( date("Y-m-d") )[0];
-	$UserData = get_UserData( date("Y-m-d"), $_SESSION['userID'] );
-	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] );
+	//$UserData = get_UserData( date("Y-m-d"), $_SESSION['userID'] );
 	
 	//$leaders = get_Leaderboard();
-	
-	print_r($Sprint);
-	echo '<br>';
-	print_r($UserData);
-	echo '<br>';
-	print_r($UserGoal);
-
+	get_Leaderboard();
 
 echo '<br>';
 echo '
 	<p>
-		The goal this sprint is to ' . $Sprint[2] . '.
+		The goal this sprint is to <b>' . $Sprint[2] . '</b>.
 	</p>
 	<p>
 		The rules for the sprint are:
 	</p>
 	<p>
-	' . $Sprint[3] . '
+	<b>' . $Sprint[3] . '</b>
 	</p>
 ';
 
 if( isset($_SESSION['userID']) )
 {
+	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] );
+	
 	echo '
 		<p>
 			Your sprint goal is: ' . $UserGoal . '

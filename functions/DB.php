@@ -464,7 +464,23 @@ Function get_Leaderboard($date)
 	
 	$goals = get_SprintGoals($sprintID);
 
+	$data = array();
 	
+	for($i = 0; $i < sizeof($entries); $i++)
+	{
+		for($j = 0; $j < sizeof($goals); $j++)
+		{
+			if($entries[$i][0] == $goals[$j][0])
+			{
+				$data[$i] = array($entries[$i][0], $entries[$i][1], $goals[$j][1]);
+				$j = sizeof($goals);
+			}
+		}
+	}
+	
+	print_r($data);
+	
+	return $data;
 }
 
 /*
