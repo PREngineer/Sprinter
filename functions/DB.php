@@ -458,7 +458,7 @@ Region Start - Regular Use MySQL DB Get Functions
 Function get_Leaderboard($date)
 {
 	// Retrieve the Sprint ID
-	$sprintID = (get_SprintData($date)[0])[0];
+	$sprintID = get_SprintData($date)[0];
 	
 	echo 'SprintID: ' . $SprintID;
 	
