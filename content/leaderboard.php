@@ -18,7 +18,7 @@
 
 echo '<br>';
 echo '
-<table>
+<table class="table">
 	<tr>
 		<td>
 			Current sprint is: 
