@@ -47,7 +47,7 @@ if( isset($_SESSION['userID']) )
 
 ?>
 
-<table>
+<table class="table">
 	<thead>
 		<th>
 			Name
