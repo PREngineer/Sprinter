@@ -447,6 +447,19 @@ Region Start - Regular Use MySQL DB Get Functions
 */
 
 /*
+	Used to sort the Leaderboard
+*/
+Function compare($a, $b)
+{
+    if ( $a[2] == $b[2] )
+	{
+        return 0;
+    }
+    
+	return ($a < $b) ? -1 : 1;
+}
+
+/*
   Description:
     This function executes a query to get the leaderboard.
   @PARAM:
@@ -472,11 +485,13 @@ Function get_Leaderboard($date)
 		{
 			if($entries[$i][0] == $goals[$j][0])
 			{
-				$data[$i] = array($entries[$i][0], $entries[$i][1], round( ($entries[$i][1]/$goals[$j][1]),2 ) );
+				$data[$i] = array($entries[$i][0], $entries[$i][1], round( ( ($entries[$i][1]/$goals[$j][1])*100 ),2 ) );
 				$j = sizeof($goals);
 			}
 		}
 	}
+	
+	usort($data, "compare");
 	
 	return $data;
 }
