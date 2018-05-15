@@ -104,7 +104,7 @@ if( $_GET['display'] == 'AddData' && $_SESSION['userRole'] == "0")
 }
 
 // Normal user is logged in and viewing leaderboard
-if( $_GET['display'] == 'AddData' && $_SESSION['userRole'] == "0")
+if( $_GET['display'] == 'Leaderboard' && $_SESSION['userRole'] == "0")
 {
   echo '
 	document.getElementById("addDataLink").classList.remove("active");
@@ -131,7 +131,7 @@ if( $_GET['display'] == 'Administrator' && $_SESSION['userRole'] == "1")
 }
 
 // Administrator user is logged in and viewing leaderboard
-if( $_GET['display'] == 'Administrator' && $_SESSION['userRole'] == "1")
+if( $_GET['display'] == 'Leaderboard' && $_SESSION['userRole'] == "1")
 {
   echo '
 	document.getElementById("administratorLink").classList.remove("active");
