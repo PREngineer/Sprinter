@@ -7,11 +7,22 @@
 
 <?php
 
-	echo'
-		<h2>
-			Hi there, ' . $_SESSION['fName'] . '!
-		</h2>
-	';
+	if( isset($_SESSION['userID']) )
+	{
+		echo'
+			<h2>
+				Hi there, ' . $_SESSION['fName'] . '!
+			</h2>
+		';
+	}
+	else
+	{
+		echo'
+			<h2>
+				Hi there!
+			</h2>
+		';
+	}
 
 	$Sprint   = get_SprintData( date("Y-m-d") )[0];
 	
