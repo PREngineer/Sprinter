@@ -472,7 +472,7 @@ Function get_Leaderboard($date)
 		{
 			if($entries[$i][0] == $goals[$j][0])
 			{
-				$data[$i] = array($entries[$i][0], $entries[$i][1], $goals[$j][1]);
+				$data[$i] = array($entries[$i][0], $entries[$i][1], round( ($entries[$i][1]/$goals[$j][1]),2 ) );
 				$j = sizeof($goals);
 			}
 		}
