@@ -7,6 +7,12 @@
 
 <?php
 
+	echo'
+		<h2>
+			Hi there, ' . $_SESSION['fName'] . '!
+		</h2>
+	';
+
 	$Sprint   = get_SprintData( date("Y-m-d") )[0];
 	
 	$leaders = get_Leaderboard( date("Y-m-d") );
