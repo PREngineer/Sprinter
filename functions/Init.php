@@ -24,7 +24,7 @@ function protectAdmin()
   if( $_SESSION['userRole'] != '1' )
   {
     echo '<script type="text/javascript">
-        window.location.href = "/content/index.php?display=Leaderboard"
+        window.location.href = "index.php?display=Leaderboard"
       </script>';
   }
 }
@@ -39,7 +39,7 @@ function protectUser()
   if( $_SESSION['userRole'] != '0' )
   {
     echo '<script type="text/javascript">
-        window.location.href = "/content/index.php?display=Leaderboard"
+        window.location.href = "index.php?display=Leaderboard"
       </script>';
   }
 }
