@@ -460,7 +460,7 @@ Function get_Leaderboard($date)
 	// Retrieve the Sprint ID
 	$sprintID = (get_SprintData($date))[0];
 	
-	print_r($sprintID`);
+	print_r($sprintID);
 	
 	$entries = get_SprintEntries($sprintID);
 	
