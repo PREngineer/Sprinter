@@ -32,10 +32,10 @@
 	echo '
 	<table class="table">
 		<tr>
-			<td>
+			<td style="width: 50%;">
 				Current sprint is: 
 			</td>
-			<td>
+			<td style="width: 50%;">
 				<b>' . $Sprint[1] . '</b>
 			</td>
 		</tr>
