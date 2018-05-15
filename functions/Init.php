@@ -15,7 +15,7 @@ function logged_in()
 }
 
 /*
-  Function that checks if the user Admin session is active
+  Function that checks if the Admin session is active
   - Used all over the place
   @Return - Boolean (T or F) if logged in
 */
@@ -24,7 +24,22 @@ function protectAdmin()
   if( $_SESSION['userRole'] != '1' )
   {
     echo '<script type="text/javascript">
-        window.location.href = "/content/index.php?display=Login"
+        window.location.href = "/content/index.php?display=Leaderboard"
+      </script>';
+  }
+}
+
+/*
+  Function that checks if the user session is active
+  - Used all over the place
+  @Return - Boolean (T or F) if logged in
+*/
+function protectUser()
+{
+  if( $_SESSION['userRole'] != '0' )
+  {
+    echo '<script type="text/javascript">
+        window.location.href = "/content/index.php?display=Leaderboard"
       </script>';
   }
 }

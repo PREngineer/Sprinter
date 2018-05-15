@@ -1,6 +1,8 @@
 <?php
 	include '../functions/Init.php';
 	include '../functions/DB.php';
+	
+	protectUser();
 ?>
 
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Add Data</h1>
