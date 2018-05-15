@@ -32,7 +32,7 @@
 
         <!-- Brand icon -->
         <a link="index.php" class="navbar-brand" style="cursor: pointer;">
-          <img src="../images/TLogo.png" width="30" height="30" alt="Logo">Sprinter - A health friendly competition platform
+          <img src="../images/TLogo.png" width="30" height="30" alt="Logo"><span>Sprinter - A health friendly competition platform</span>
         </a>
       </div>
 
