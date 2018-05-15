@@ -460,9 +460,15 @@ Function get_Leaderboard($date)
 	// Retrieve the Sprint ID
 	$sprintID = get_SprintData($date)[0][0];
 	
+	echo 'SprintID: $SprintID';
+	
 	$entries = get_SprintEntries($sprintID);
 	
+	print_r($entries);
+	
 	$goals = get_SprintGoals($sprintID);
+	
+	print_r($goals);
 
 	$data = array();
 	

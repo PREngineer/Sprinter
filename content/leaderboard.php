@@ -19,11 +19,17 @@
 echo '<br>';
 echo '
 	<p>
+		Current sprint is: ' . $Sprint[1] . '
+	</p>
+	
+	<p>
 		The goal this sprint is to <b>' . $Sprint[2] . '</b>.
 	</p>
+	
 	<p>
 		The rules for the sprint are:
 	</p>
+	
 	<p>
 	<b>' . $Sprint[3] . '</b>
 	</p>
