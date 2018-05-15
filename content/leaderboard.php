@@ -33,7 +33,7 @@
 	<div class="container">
 		<table class="table">
 			<tr>
-				<td>
+				<td class="col-md-3">
 					Current sprint is: 
 				</td>
 				<td>
@@ -92,7 +92,7 @@
 <div class="container">
 	<table class="table">
 		<thead>
-			<th>
+			<th class="col-md-3">
 				Name
 			</th>
 			<th>
