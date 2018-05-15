@@ -18,21 +18,32 @@
 
 echo '<br>';
 echo '
-	<p>
-		Current sprint is: <b>' . $Sprint[1] . '</b>
-	</p>
+<table>
+	<tr>
+		<td>
+			Current sprint is: 
+		</td>
+		<td>
+			<b>' . $Sprint[1] . '</b>
+		</td>
+	</tr>
+	</tr>
+		<td>
+			The goal this sprint is to <b>
+		</td>
+		<td>
+			<b>' . $Sprint[2] . '</b>.
+		</td>
+	</tr>
 	
-	<p>
-		The goal this sprint is to <b>' . $Sprint[2] . '</b>.
-	</p>
-	
-	<p>
-		The rules for the sprint are:
-	</p>
-	
-	<p>
-	<b>' . $Sprint[3] . '</b>
-	</p>
+	<tr>
+		<td>
+			The rules for the sprint are:
+		</td>
+		<td>
+			<b>' . $Sprint[3] . '</b>
+		</td>
+	</tr>
 ';
 
 if( isset($_SESSION['userID']) )
