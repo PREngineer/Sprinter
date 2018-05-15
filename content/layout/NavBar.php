@@ -32,19 +32,14 @@
 
         <!-- Brand icon -->
         <a link="index.php" class="navbar-brand" style="cursor: pointer;">
-          <img src="../images/TLogo.png" width="30" height="30" alt="Logo">
+          <img src="../images/TLogo.png" width="30" height="30" alt="Logo">Sprinter - A health friendly competition platform
         </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="nav navbar-nav">
-          <li id="announcementsLink">
-            <a link="index.php" style="cursor: pointer;">Sprinter - A health friendly competition platform</a>
-          </li>
-        </ul>
 
-        <ul class="nav navbar-nav navbar-right">
+		<ul class="nav navbar-nav navbar-right">
 			<li id="leaderboardLink">
 				<a link="index.php?display=Leaderboard" style="cursor: pointer;">Leaderboard</a>
 			</li>
