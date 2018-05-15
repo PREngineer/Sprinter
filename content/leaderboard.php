@@ -14,6 +14,8 @@
 	$UserData = get_UserData( date("Y-m-d"), $_SESSION['userID'] );
 	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] );
 	
+	//$leaders = get_Leaderboard();
+	
 	print_r($Sprint);
 	echo '<br>';
 	print_r($UserData);

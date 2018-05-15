@@ -100,41 +100,12 @@
 
     <div class="container" id="Content" name="Content" style="padding-top:60px;padding-bottom:30px;"></div>
 
-<?php
-
-    $leaders = get_Leaderboard();
-
-    //*** Decide what to load on fresh start ***//
-    // If there is no get passed and there are no leaders:
-    // Redirect to the Entry
-    if( sizeof($leaders) == 0 && empty($_GET) )
-    {
-      echo'
-      <script>
-      $(document).ready(function()
-      {
-          window.location.href = "index.php?display=Entry";
-      });
-      </script>
-      ';
-    }
-    // If there are leaders and there is no get:
-    // Redirect to the Current leaders
-    else if( sizeof($leaders) >= 1 && empty($_GET) )
-    {
-      echo'
-      <script>
+    <script>
       $(document).ready(function()
       {
           window.location.href = "index.php?display=Leaderboard";
       });
-      </script>
-      ';
-    }
-
-    // The Footer section
-    include 'layout/Footer.php';
-?>
+    </script>
 
   </body>
 
