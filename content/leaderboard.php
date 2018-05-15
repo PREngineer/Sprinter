@@ -43,7 +43,7 @@
 
 	if( isset($_SESSION['userID']) )
 	{
-		$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] );
+		$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] )[3];
 		
 		print_r($UserGoal);
 		
