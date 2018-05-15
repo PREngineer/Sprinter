@@ -31,7 +31,10 @@
         </button>
 
         <!-- Brand icon -->
-        <a link="index.php" class="navbar-brand" style="cursor: pointer;"><img src="../images/TLogo.png" width="30" height="30" alt="Logo"> Sprinter</a>
+        <a link="index.php" class="navbar-brand" style="cursor: pointer;">
+          <img src="../images/TLogo.png" width="30" height="30" alt="Logo">
+        </a>
+		Sprinter
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
