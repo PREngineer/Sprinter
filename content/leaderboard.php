@@ -22,9 +22,57 @@
 	echo '<br>';
 	print_r($UserGoal);
 
+
+echo '<br>';
+echo '
+	<p>
+		The goal this sprint is to ' . $Sprint[2] . '.
+	</p>
+	<p>
+		The rules for the sprint are:
+	</p>
+	<p>
+	' . $Sprint[3] . '
+	</p>
+';
+
+if( isset($_SESSION['userID']) )
+{
+	echo '
+		<p>
+			Your sprint goal is: ' . $UserGoal . '
+		</p>
+	';
+}
+
 ?>
 
-<br>
-Leaderboard goes here.
+<table>
+	<thead>
+		<th>
+			Name
+		</th>
+		<th>
+			Count to Date
+		</th>
+		<th>
+			Goal to Date (%)
+		</th>
+	</thead>
 
 
+	<tbody>
+<?php
+echo'
+		<tr>
+			<td>
+			</td>
+			<td>
+			</td>
+			<td>
+			</td>
+		</tr>
+';
+?>
+	</tbody>
+	</table>
