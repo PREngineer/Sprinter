@@ -456,7 +456,8 @@ Function compare($a, $b)
         return 0;
     }
     
-	return ($a < $b) ? -1 : 1;
+	// Order descending
+	return ($a < $b) ? 1 : -1;
 }
 
 /*
