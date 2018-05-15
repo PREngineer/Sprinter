@@ -100,12 +100,24 @@
 
     <div class="container" id="Content" name="Content" style="padding-top:60px;padding-bottom:30px;"></div>
 
-    <script>
+<?php
+
+    // Redirect to the Current leaders
+    if( empty($_GET) )
+    {
+      echo'
+      <script>
       $(document).ready(function()
       {
           window.location.href = "index.php?display=Leaderboard";
       });
-    </script>
+      </script>
+      ';
+    }
+
+    // The Footer section
+    include 'layout/Footer.php';
+?>
 
   </body>
 
