@@ -70,11 +70,13 @@
 				</td>
 				<td>
 					<form class="container" method="POST" action="api.php">
+					<div class="input-group">
 						<input name="action" type="hidden" value="setGoal">
 						<input name="username" type="hidden" value="' . $_SESSION['userID'] . '">
 						<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
-						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" aria-describedby="usernameHelp" required>
+						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
 						<input class="btn btn-primary" type="submit" value="Change">
+					</div>
 					</form>
 				</td>
 			</tr>
