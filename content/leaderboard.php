@@ -48,11 +48,19 @@ if( isset($_SESSION['userID']) )
 	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] );
 	
 	echo '
-		<p>
-			Your sprint goal is: ' . $UserGoal . '
-		</p>
+		<tr>
+			<td>
+				Your sprint goal is: 
+			</td>
+			<td>
+				' . $UserGoal[3] . '
+			</td>
+		</tr>
 	';
 }
+
+echo '
+</table>';
 
 ?>
 
