@@ -464,11 +464,11 @@ Function get_Leaderboard($date)
 	
 	$entries = get_SprintEntries($sprintID);
 	
-	print_r($entries);
+	//print_r($entries);
 	
 	$goals = get_SprintGoals($sprintID);
 	
-	print_r($goals);
+	//print_r($goals);
 
 	$data = array();
 	
