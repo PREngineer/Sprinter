@@ -31,6 +31,16 @@ This is used to determine which element will be loaded into the center of the pa
     ';
   }
 
+  // Administrator View
+  if( $_GET['display'] == 'Administrator' )
+  {
+    echo'
+      <script>
+        $("#Content").load("administrator.php");
+      </script>
+    ';
+  }
+  
   // Logout
   if( $_GET['display'] == 'Logout' )
   {
