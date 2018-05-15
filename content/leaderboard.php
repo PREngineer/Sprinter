@@ -8,9 +8,8 @@
 <?php
 
 	$Sprint   = get_SprintData( date("Y-m-d") )[0];
-	//$UserData = get_UserData( date("Y-m-d"), $_SESSION['userID'] );
 	
-	$leaders = get_Leaderboard(date("Y-m-d"));
+	$leaders = get_Leaderboard( date("Y-m-d") );
 
 	echo '<br>';
 	echo '
@@ -44,7 +43,9 @@
 
 	if( isset($_SESSION['userID']) )
 	{
-		$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] )[3];
+		$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] );
+		
+		print_r($UserGoal);
 		
 		echo '
 			<tr>
