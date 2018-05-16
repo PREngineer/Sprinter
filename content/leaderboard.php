@@ -87,7 +87,7 @@
 	echo '
 		<br>
 
-		<form action="api.php">
+		<form method="POST" action="api.php">
 			<div class="row">
 				<div class=col-lg-6>
 					<div class="input-group">
