@@ -20,30 +20,29 @@
 				<pre>api.php?action=getSprintData&date=2018-05-14</pre>
 				<br><br>
 				The GET parameter <strong>action</strong> determines which action you want the API to execute.  The options are:
-				<br>
+				<br><br>
 				<strong>1. getSprintData</strong> - Gets a sprint\'s details.
 				<br><br>
-				&#09;<strong>Returns:</strong>
-				<br>
-				&#09;ID, Name, Goal, Rules, Start Date, End Date
+				<strong>Returns:</strong>
+				<br><br>
+				ID, Name, Goal, Rules, Start Date, End Date
 				<br><br>
 				<strong>2. getUserData</strong> - Gets the user\'s entered data.
-				<br>
-				&#09;<strong>Returns:</strong>
-				<br>
-				&#09;Entry ID, User, SprintID, Data, Date, Recorded Timestamp
+				<br><br>
+				<strong>Returns:</strong>
+				<br><br>
+				Entry ID, User, SprintID, Data, Date, Recorded Timestamp
 				<br><br>
 				<strong>3. getUserGoal</strong> - Gets the user\'s goal for the sprint.
-				<br>
-				&#09;<strong>Returns:</strong>
-				<br>
-				&#09;Entry ID, User, Sprint ID, Goal
+				<br><br>
+				<strong>Returns:</strong>
+				<br><br>
+				Entry ID, User, Sprint ID, Goal
 				<br><br>
 				<strong>4. setUserGoal</strong> - Sets the user\'s goal for the sprint.
-				<br>
-				&#09;<strong>Returns:</strong>
-				<br>
-				&#09;True or Error
+				<strong>Returns:</strong>
+				<br><br>
+				True or Error
 			</p>
 			
 			<p>
