@@ -27,23 +27,20 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 */
 
 {
-  // Message upon Login
-  if( ($_GET['display'] == 'Login') )
-  {
-    if($_GET['Success'] == '1')
-    {
-      echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
-              <button type = "button" class="close" data-dismiss = "alert">x</button>
-              You have been logged in.
-            </div>';
-    }
-    else if($_GET['Success'] == '0')
-    {
-      echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
-              <button type="button" class="close" data-dismiss="alert">x</button>
-              [!] The information provided is not valid.  Please, try again.</div>';
-    }
-  }
+	// Message upon Login
+	if($_GET['display'] == 'Leaderboard' && $_GET['LoggedIn'] == '1')
+	{
+	echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+			<button type = "button" class="close" data-dismiss = "alert">x</button>
+			You have been logged in.
+			</div>';
+	}
+	if($_GET['display'] == 'Login' && $_GET['Success'] == '0')
+	{
+	echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+			<button type="button" class="close" data-dismiss="alert">x</button>
+			[!] The information provided is not valid.  Please, try again.</div>';
+	}
   
   // Message upon Registrations
   if( ($_GET['display'] == 'Register') )

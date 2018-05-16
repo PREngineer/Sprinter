@@ -29,7 +29,7 @@ if( !empty($_POST) )
 		$cookieLifetime = 365 * 24 * 60 * 60;
 		setcookie("Sprinter",session_id(),time() + $cookieLifetime);
 
-		header('Location: index.php?display=Login&Success=1');
+		header('Location: index.php?display=Leaderboard&LoggedIn=1');
 	}
 	if( $res['Result'] == false)
 	{
