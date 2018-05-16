@@ -29,8 +29,9 @@
 				<br><br>
 				<strong>4. setUserGoal</strong> - Sets the user\'s goal for the sprint.
 				<br><br>
-				<hr>
 			</p>
+			
+			<hr><hr>
 			
 			<h2>Actions:</h2>
 			
