@@ -18,7 +18,7 @@
 
 <?php
 
-	if( isset($_SESSION['userID']) && $_SESSION['userRole'] == 0 )
+	if( isset($_SESSION['userID']) )
 	{
 		echo'
 			<h4>
@@ -72,7 +72,7 @@
 				</tr>
 	';
 
-	if( isset($_SESSION['userID']) )
+	if( (isset($_SESSION['userID'])) && ($_SESSION['userRole'] == 0) )
 	{
 		$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0];
 				
