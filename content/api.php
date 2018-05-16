@@ -203,12 +203,11 @@
 	
 	if($_GET['action'] == "Register")
 	{
-		print_r( checkCode($_GET['code']) );
 		// Code is valid
 		if( checkCode($_GET['code']) == '1' )
 		{
 			$success = registerUser($_GET['username'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'] );
-			
+			print_r($success);
 			// Success registering
 			if($success == "1")
 			{
