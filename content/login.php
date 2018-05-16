@@ -3,7 +3,7 @@
 include '../functions/Init.php';
 include '../functions/DB.php';
 
-if( !empty($_POST) )
+if( isset($_POST) )
 {
 	$user = $_GET['username'];
 	$pass = $_GET['password'];
