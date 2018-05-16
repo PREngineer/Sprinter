@@ -71,7 +71,7 @@
 						Your sprint goal is: 
 					</td>
 					<td>
-						' . $UserGoal[3] . '
+						' . $UserGoal[3] . '    |    
 						<a link="index.php?display=SetGoal" style="cursor: pointer;">Set Goal</a>
 					</td>
 				</tr>
