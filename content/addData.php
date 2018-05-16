@@ -10,6 +10,8 @@
 <form class="container" action="api.php">
 	
 	<p><strong> Note: All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required.</strong></p>
+	
+	<p>Provide the date and the amount completed.</p>
 
 	<div class="form-group">
 		<label for="amount"> <label class="text-danger">*</label> Amount:</label>
