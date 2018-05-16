@@ -14,24 +14,24 @@
   });
 </script>
 
-<h3 id="page_title" tabindex="-1" role="heading" aria-level="1">Leaderboard</h3>
+<h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Leaderboard</h1>
 
 <?php
 
 	if( isset($_SESSION['userID']) )
 	{
 		echo'
-			<h2>
+			<h4>
 				Hi there, ' . $_SESSION['fName'] . '!
-			</h2>
+			</h4>
 		';
 	}
 	else
 	{
 		echo'
-			<h2>
+			<h4>
 				Hi there!
-			</h2>
+			</h4>
 		';
 	}
 
