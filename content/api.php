@@ -204,7 +204,7 @@
 	{
 		// Get the User Goal
 	
-		echo registerUser($_GET['user'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'] );
+		echo registerUser($_GET['username'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'] );
 	
 		//header('Location: index.php?display=Login');
 
