@@ -212,7 +212,7 @@
 			if($success == "1")
 			{
 				// Return JSON
-				echo '{"success":"true"}';
+				echo '{"result":"success"}';
 				
 				// Redirect to the page
 				if($_GET['do'] == "1")
@@ -224,7 +224,7 @@
 			else if( strpos($success, 'Duplicate entry') !== false )
 			{
 				// Return JSON
-				echo '{"success":"user exists"}';
+				echo '{"result":"user exists"}';
 				
 				// Redirect to the page
 				if($_GET['do'] == "1")
@@ -236,7 +236,7 @@
 			else
 			{
 				// Return JSON
-				echo '{"success":"error(s) occurred: $success"}';
+				echo '{"result":"error(s) occurred: ' . $success . '"}';
 				
 				// Redirect to the page
 				if($_GET['do'] == "1")
@@ -249,7 +249,7 @@
 		else
 		{
 			// Return JSON
-			echo '{"success":"invalid code"}';
+			echo '{"result":"invalid code"}';
 			
 			// Redirect to the page
 			if($_GET['do'] == "1")
