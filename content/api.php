@@ -46,13 +46,13 @@
 	{
 		// Get the User Goal
 	
-		echo set_UserGoal($_GET['goalID'], $_GET['goal'], $_GET['user'] );
+		echo set_UserGoal($_GET['goal'], $_GET['user'] );
 	
-		//header('Location: index.php?display=Leaderboard&action=setGoal&done=true');
+		//header('Location: index.php?display=Leaderboard');
 
 		// You need to provide the date in the URL (via GET)
 	
-		// Like so: api.php?action=setUserGoal&user=user.name&goal=100&goalID=1
+		// Like so: api.php?action=setUserGoal&user=user.name&goal=100
 	}
 	
 	//print_r($_GET);

@@ -688,7 +688,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function set_UserGoal($goalID, $goal, $user)
+	Function set_UserGoal($goal, $user)
 	{
 		$exists = ( get_UserGoal(date("Y-m-d"), $user) );
 		

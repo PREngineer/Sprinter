@@ -7,10 +7,6 @@
 
 <?php
 
-	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] );
-	
-	print($UserGoal);
-				
 	echo '
 		Your sprint goal is: ' . $UserGoal[3] . '.
 
@@ -22,7 +18,6 @@
 					<div class="input-group">
 						<input name="action" type="hidden" value="setUserGoal">
 						<input name="user" type="hidden" value="' . $UserGoal[1] . '">
-						<input name="goalID" type="hidden" value="' . $UserGoal[0] . '">
 						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal[3] . '" required>
 						<div class="input-group-btn">
 							<button type="submit" class="btn btn-primary">Set Goal</button>
