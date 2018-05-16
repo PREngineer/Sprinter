@@ -71,7 +71,7 @@
 						Your sprint goal is: 
 					</td>
 					<td>
-						' . ( ($Sprint)[0] )[0] . '
+						' . $UserGoal '
 					</td>
 				</tr>
 		';
@@ -81,29 +81,16 @@
 			</tbody>
 		</table>
 		
-		<form class="bs-example bs-example-form" data-example-id=input-group-multiple-buttons>
-			<div class=row>
+		<form action="api.php">
+			<div class="row">
 				<div class=col-lg-6>
-					<div class=input-group>
-						<div class=input-group-btn>
-							<button type=button class="btn btn-default" aria-label=Bold>
-								<span class="glyphicon glyphicon-bold"></span>
-							</button>
-							<button type=button class="btn btn-default" aria-label=Italic>
-								<span class="glyphicon glyphicon-italic"></span>
-							</button>
-						</div>
-						<input class=form-control aria-label="Text input with multiple buttons">
-					</div>
-				</div>
-				<div class=col-lg-6>
-					<div class=input-group>
-						<input class=form-control aria-label="Text input with multiple buttons">
-						<div class=input-group-btn>
-							<button type=button class="btn btn-default" aria-label=Help>
-								<span class="glyphicon glyphicon-question-sign"></span>
-							</button>
-							<button type=button class="btn btn-default">Action</button>
+					<div class="input-group">
+						<input name="action" type="hidden" value="setGoal">
+						<input name="username" type="hidden" value="' . $_SESSION['userID'] . '">
+						<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
+						<input class="form-control">
+						<div class="input-group-btn">
+							<button type=button class="btn btn-primary">Change Goal</button>
 						</div>
 					</div>
 				</div>
