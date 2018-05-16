@@ -3,7 +3,7 @@
 	include '../functions/Init.php';
 	include '../functions/DB.php';
 
-	if( !isset($_GET) )
+	if( empty($_GET) )
 	{
 		echo '
 			<h1>API Information</h1>
