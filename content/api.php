@@ -3,6 +3,45 @@
 	include '../functions/Init.php';
 	include '../functions/DB.php';
 
+	if( !isset($_GET) )
+	{
+		echo '
+			<h1>API Information</h1>
+			
+			<p>
+				<strong>How to use:</strong>
+			</p>
+			
+			<p>
+				The GET parameter "action" determines which action you want the API to execute.  The options are as follows:
+			</p>
+			
+			<p>
+				1. <strong>getSprintData</strong> - Returns the data of the Sprint that belongs to the specified date give.
+			</p>
+			
+			<p>
+				<strong>Parameters:</strong>
+			</p>
+			
+			<p>
+				a. <strong>date</strong> - The date of one of the days covered by the Sprint, in the following format: YYYY-mm-dd
+			</p>
+			
+			<p>
+				<strong>Returns:</strong>
+			</p>
+			
+			<p>
+				It returns a json encoded list of the elements that describe the Sprint.
+			</p>
+			
+			<p>
+				<strong>Use:</strong>
+			</p>
+		';
+	}
+	
 	if($_GET['action'] == "getSprintData")
 	{
 		// Get the Sprint Data
