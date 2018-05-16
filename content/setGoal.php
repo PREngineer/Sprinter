@@ -1,3 +1,4 @@
+<title>Sprinter - Set your goal</title>
 <?php
 	include '../functions/Init.php';
 	include '../functions/DB.php';

@@ -1,3 +1,4 @@
+<title>Sprinter - API</title>
 <?php
 	
 	include '../functions/Init.php';

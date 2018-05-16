@@ -1,3 +1,4 @@
+<title>Sprinter - Register an account</title>
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Register</h1>
 
 <!-- Form STARTS here -->

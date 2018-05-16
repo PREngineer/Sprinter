@@ -1,3 +1,4 @@
+<title>Sprinter - Leaderboard</title>
 <?php
 	include '../functions/Init.php';
 	include '../functions/DB.php';
