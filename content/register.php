@@ -140,16 +140,6 @@
                     }
                 }
             },
-			initials:
-            {
-                validators:
-                {
-                    notEmpty:
-                    {
-                        message: 'ERROR: Please enter your initials.'
-                    }
-                }
-            },
 			lName:
             {
                 validators:
