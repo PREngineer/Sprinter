@@ -206,7 +206,7 @@
 	
 		echo registerUser($_GET['username'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'] );
 	
-		//header('Location: index.php?display=Login');
+		header('Location: index.php?display=Login');
 
 		// You need to provide the date in the URL (via GET)
 	
