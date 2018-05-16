@@ -96,7 +96,7 @@
 						<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
 						<input name="goal type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
 						<div class="input-group-btn">
-							<button type=button class="btn btn-primary">Change Goal</button>
+							<button type="submit" class="btn btn-primary">Change Goal</button>
 						</div>
 					</div>
 				</div>
