@@ -80,7 +80,9 @@
 	echo '
 			</tbody>
 		</table>
-		
+
+		<br>
+
 		<form action="api.php">
 			<div class="row">
 				<div class=col-lg-6>
@@ -88,14 +90,16 @@
 						<input name="action" type="hidden" value="setGoal">
 						<input name="username" type="hidden" value="' . $_SESSION['userID'] . '">
 						<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
-						<input name="goal type="text" class="form-control">
-						<div class="input-group-btn" maxlength="10" placeholder="' . $UserGoal . '" required>
+						<input name="goal type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
+						<div class="input-group-btn">
 							<button type=button class="btn btn-primary">Change Goal</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</form>
+
+		<br><br>
 		';
 
 
