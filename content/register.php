@@ -5,7 +5,7 @@
 <form class="container" id="registerPage" action="api.php">
 
   <input name="action" type="hidden" value="Register">
-  <input name="do" type="hidden" value="1">
+  <!--<input name="do" type="hidden" value="1">-->
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
