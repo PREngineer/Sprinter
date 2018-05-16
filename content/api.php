@@ -221,10 +221,10 @@
 				}
 			}
 			// User already exists
-			else if($success == "0")
+			else if( strpos($a, 'Duplicate entry') !== false )
 			{
 				// Return JSON
-				echo '{"success":"false"}';
+				echo '{"success":"user already exists"}';
 				
 				// Redirect to the page
 				if($_GET['do'] == "1")
