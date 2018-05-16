@@ -22,8 +22,11 @@
 				The GET parameter <strong>action</strong> determines which action you want the API to execute.  The options are:
 				<br>
 				<strong>1. getSprintData</strong> - Gets a sprint\'s details. (Returns: ID, Name, Goal, Rules, Start Date, End Date)
+				<br>
 				<strong>2. getUserData</strong> - Gets the user\'s entered data. (Returns: Entry ID, User, SprintID, Data, Date, Recorded Timestamp)
+				<br>
 				<strong>3. getUserGoal</strong> - Gets the user\'s goal for the sprint. (Returns: Entry ID, User, Sprint ID, Goal)
+				<br>
 				<strong>4. setUserGoal</strong> - Sets the user\'s goal for the sprint. (Returns: True or Error)
 			</p>
 			
