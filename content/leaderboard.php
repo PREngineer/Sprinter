@@ -80,7 +80,11 @@
 	echo '
 			</tbody>
 		</table>
+	';
 
+	if( isset($_SESSION['userID']) )
+	{
+	echo '
 		<br>
 
 		<form action="api.php">
@@ -101,7 +105,7 @@
 
 		<br><br>
 		';
-
+	}
 
 ?>
 
