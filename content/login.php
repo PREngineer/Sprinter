@@ -30,7 +30,7 @@ include '../functions/DB.php';
 		header('Location: index.php?display=Login&Success=1');
 		exit;
 	}
-	else
+	if( !$res['Result'] )
 	{
 		header('Location: index.php?display=Login&Success=0');
 	}
