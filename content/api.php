@@ -46,9 +46,9 @@
 	{
 		// Get the User Goal
 	
-		set_UserGoal($_GET['sprint'],  $_GET['username'], $_GET['goal'] );
+		echo set_UserGoal($_GET['sprint'],  $_GET['username'], $_GET['goal'] );
 	
-		header('Location: index.php?display=Leaderboard');
+		//header('Location: index.php?display=Leaderboard');
 
 		// You need to provide the date in the URL (via GET)
 	
