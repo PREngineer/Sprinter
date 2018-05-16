@@ -3,6 +3,10 @@
 include '../functions/Init.php';
 include '../functions/DB.php';
 
+echo '<script>alert("POST is empty: ' . empty($_POST) . '");</script>';
+
+if( sizeof($_POST['username']) > 0 )
+{
 	echo '<script>alert("Inside the action");</script>';
 	$user = $_GET['username'];
 	$pass = $_GET['password'];
@@ -34,7 +38,7 @@ include '../functions/DB.php';
 		echo '<script>alert("Failed");</script>';
 		//header('Location: index.php?display=Login&Success=0');
 	}
-
+}
 ?>
 
 <script>
