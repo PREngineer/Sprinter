@@ -693,7 +693,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 	  // Update the Events Table
 	  $result = query_DB( "UPDATE `Goals`
 						   SET `Goal` = '" . sanitize($goal) . "',
-						   WHERE `ID` = '" . sanitize($goalID) . "'
+						   WHERE `ID` = '" . sanitize($goalID) . "'"
 						);
 
 	  // If successful
