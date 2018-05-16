@@ -661,7 +661,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 		$pass = hash( 'sha256', SHA1( MD5("password") ) );
 		
 		// Update the Events Table
-		$result = query_DB( "INSERT INTO `Entries`
+		$result = query_DB( "INSERT INTO `Users`
 							(`Username`, `Password`, `FName`, `Initials`, `LName`, `Role`)
 						   VALUES (
 						   '" . sanitize($user) . "',
