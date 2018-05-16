@@ -21,13 +21,15 @@
 				<br><br>
 				The GET parameter <strong>action</strong> determines which action you want the API to execute.  The options are:
 				<br><br>
-				<strong>1. getSprintData</strong> - Gets a sprint\'s details.
+				<strong>1. addUserData</strong> - Inserts data pertaining to a user\'s progress.
 				<br><br>
-				<strong>2. getUserData</strong> - Gets the user\'s entered data.
+				<strong>2. getSprintData</strong> - Gets a sprint\'s details.
 				<br><br>
-				<strong>3. getUserGoal</strong> - Gets the user\'s goal for the sprint.
+				<strong>3. getUserData</strong> - Gets the user\'s entered data.
 				<br><br>
-				<strong>4. setUserGoal</strong> - Sets the user\'s goal for the sprint.
+				<strong>4. getUserGoal</strong> - Gets the user\'s goal for the sprint.
+				<br><br>
+				<strong>5. setUserGoal</strong> - Sets the user\'s goal for the sprint.
 				<br><br>
 			</p>
 			
@@ -36,7 +38,32 @@
 			<h2><u>Actions:</u></h2>
 			
 			<p>
-				<h3>1. getSprintData</h3>
+				<h3>1. addUserData</h3>
+				<br><br>
+				
+				<b>Parameters:</b>
+				<br><br>
+				
+				a. <b><i>amount</i></b> - In the format \'XX.XX\' or \'XX\'
+				b. <b><i>date</i></b> - In the format \'YYYY-mm-dd\'
+				c. <b><i>user</i></b> - The username of the person
+				<br><br>
+				
+				<b>Returns:</b>
+				<br><br>
+				
+				a. <b><i>ID</b></i><br>
+				b. <b><i>Name</b></i><br>
+				c. <b><i>Goal</b></i><br>
+				d. <b><i>Rules</b></i><br>
+				e. <b><i>Start Date</b></i><br>
+				f. <b><i>End Date</b></i>
+				<br><br>
+				<hr>
+				<br><br>
+				
+				
+				<h3>2. getSprintData</h3>
 				<br><br>
 				
 				<b>Parameters:</b>
@@ -59,7 +86,7 @@
 				<br><br>
 				
 				
-				<h3>2. getUserData</h3>
+				<h3>3. getUserData</h3>
 				
 				<br><br>
 				<b>Parameters:</b>
@@ -82,7 +109,7 @@
 				<br><br>
 				
 				
-				<h3>3. getUserGoal</h3>
+				<h3>4. getUserGoal</h3>
 				
 				<br><br>
 				<b>Parameters:</b>
@@ -103,7 +130,7 @@
 				<br><br>
 				
 				
-				<h3>4. setUserGoal</h3>
+				<h3>5. setUserGoal</h3>
 				
 				<br><br>
 				<b>Parameters:</b>
