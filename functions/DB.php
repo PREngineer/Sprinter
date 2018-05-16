@@ -471,7 +471,7 @@ Region Start - Regular Use MySQL DB Get Functions
 
 		if( $result['Result'] )
 		{
-			return mysqli_fetch_all( $result['Data'] );
+			return ( ( mysqli_fetch_all( ($result['Data']) ) )[0] )[0];
 		}
 		else
 		{
