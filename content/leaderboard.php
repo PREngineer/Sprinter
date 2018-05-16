@@ -47,7 +47,7 @@
 						The goal this sprint is: 
 					</td>
 					<td>
-						<b>' . $Sprint[2] . '</b>.
+						<b>' . $Sprint[2] . '</b>
 					</td>
 				</tr>
 				
