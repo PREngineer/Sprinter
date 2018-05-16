@@ -8,36 +8,27 @@
 		echo '
 			<h1>API Information</h1>
 			
+			<h2>How to use it:</h2>
+			
 			<p>
-				<strong>How to use:</strong>
+				All parameters shall be passed using HTTP GET.
 			</p>
 			
 			<p>
-				The GET parameter "action" determines which action you want the API to execute.  The options are as follows:
+				A sample request is as follows:
+				<br><br>
+				<pre>api.php?action=getSprintData&date=2018-05-14</pre>
+				<br><br>
+				The GET parameter <strong>action</strong> determines which action you want the API to execute.  The options are:
+				<br>
+				<strong>1. getSprintData</strong> - Gets a sprint\'s details. (Returns: ID, Name, Goal, Rules, Start Date, End Date)
+				<strong>2. getUserData</strong> - Gets the user\'s entered data. (Returns: Entry ID, User, SprintID, Data, Date, Recorded Timestamp)
+				<strong>3. getUserGoal</strong> - Gets the user\'s goal for the sprint. (Returns: Entry ID, User, Sprint ID, Goal)
+				<strong>4. setUserGoal</strong> - Sets the user\'s goal for the sprint. (Returns: True or Error)
 			</p>
 			
 			<p>
-				1. <strong>getSprintData</strong> - Returns the data of the Sprint that belongs to the specified date give.
-			</p>
-			
-			<p>
-				<strong>Parameters:</strong>
-			</p>
-			
-			<p>
-				a. <strong>date</strong> - The date of one of the days covered by the Sprint, in the following format: YYYY-mm-dd
-			</p>
-			
-			<p>
-				<strong>Returns:</strong>
-			</p>
-			
-			<p>
-				It returns a json encoded list of the elements that describe the Sprint.
-			</p>
-			
-			<p>
-				<strong>Use:</strong>
+				
 			</p>
 		';
 	}
