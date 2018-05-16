@@ -29,22 +29,89 @@
 				<br><br>
 				<strong>4. setUserGoal</strong> - Sets the user\'s goal for the sprint.
 				<br><br>
+				<hr>
 			</p>
 			
+			<h2>Actions:</h2>
+			
 			<p>
+				<h3>1. getSprintData</h3>
 				<br><br>
-				<strong>Returns:</strong>
+				
+				<b>Parameters:</b>
 				<br><br>
-				ID, Name, Goal, Rules, Start Date, End Date
+				
+				a. <b><i>date</i></b> - In the format \'YYYY-mm-dd\'
+				<br><br>
+				
+				<b>Returns:</b>
+				<br><br>
+				
+				a. <b><i>ID</b></i>
+				b. <b><i>Name</b></i>
+				c. <b><i>Goal</b></i>
+				d. <b><i>Rules</b></i>
+				e. <b><i>Start Date</b></i>
+				f. <b><i>End Date</b></i>
 				<br><br>
 				<hr>
 				<br><br>
-				<strong>Returns:</strong>
+				
+				
+				<h3>2. getUserData</h3>
+				
 				<br><br>
-				Entry ID, User, SprintID, Data, Date, Recorded Timestamp
+				<b>Parameters:</b>
+				<br><br>
+				
+				a. <b><i>username</i></b> - The username of the person
+				<br><br>
+				
+				<b>Returns:</b>
+				<br><br>
+				
+				a. <b><i>ID</b></i>
+				b. <b><i>User</b></i>
+				c. <b><i>SprintID</b></i>
+				d. <b><i>Data</b></i>
+				e. <b><i>Date</b></i>
+				f. <b><i>Recorded</b></i>
 				<br><br>
 				<hr>
 				<br><br>
+				
+				
+				<h3>3. getUserGoal</h3>
+				
+				<br><br>
+				<b>Parameters:</b>
+				<br><br>
+				
+				a. <b><i>username</i></b> - The username of the person
+				<br><br>
+				
+				<b>Returns:</b>
+				<br><br>
+				
+				a. <b><i>ID</b></i>
+				b. <b><i>User</b></i>
+				c. <b><i>SprintID</b></i>
+				d. <b><i>Goal</b></i>
+				<br><br>
+				<hr>
+				<br><br>
+				
+				
+				<h3>4. setUserGoal</h3>
+				
+				<br><br>
+				<b>Parameters:</b>
+				<br><br>
+				
+				a. <b><i>goal</i></b> - In the format \'YYYY-mm-dd\'
+				b. <b><i>user</i></b> - In the format \'YYYY-mm-dd\'
+				<br><br>
+				
 				<strong>Returns:</strong>
 				<br><br>
 				Entry ID, User, Sprint ID, Goal
