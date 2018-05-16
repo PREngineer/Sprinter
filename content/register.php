@@ -55,12 +55,12 @@
   </div>
   
   <div class="form-group">
-    <label for="initials"> <label class="text-danger">*</label> Initials</label>
+    <label for="initials"> Initials</label>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-user"></i>
       </span>
-      <input name="initials" type="text" class="form-control" id="initials" placeholder="john.p.doe" aria-describedby="initialsHelp" required>
+      <input name="initials" type="text" class="form-control" id="initials" placeholder="john.p.doe" aria-describedby="initialsHelp">
     </div>
     <small id="initialsHelp" class="sr-only form-text text-muted">Use your enterprise ID only, don't include "@company.com"</small>
   </div>
