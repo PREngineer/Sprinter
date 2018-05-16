@@ -649,9 +649,45 @@ Region Start - Regular Use MySQL DB Insert Functions
 {
 	/*
 	  Description:
+		This function executes a query to insert a new user.
+	  @PARAM:
+		
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function registerUser($user, $password, $fName, $initials, $lName)
+	{
+		$pass = hash( 'sha256', SHA1( MD5("password") ) );
+		
+		// Update the Events Table
+		$result = query_DB( "INSERT INTO `Entries`
+							(`Username`, `Password`, `FName`, `Initials`, `LName`, `Role`)
+						   VALUES (
+						   '" . sanitize($user) . "',
+						   '" . ( sanitize($pass) ) . "',
+						   '" . sanitize($fName) . "',
+						   '" . sanitize($initials) . "',
+						   '" . sanitize($lName) . "',
+						   '0')"
+						);
+
+		// If successful
+		if( $result['Result'] )
+		{
+			return true;
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
+	
+	/*
+	  Description:
 		This function executes a query to insert data to the entries table.
 	  @PARAM:
-		[Array]   - The event data
+		
 	  @RETURN:
 		[Boolean] - True
 		[Array]   - Errors
@@ -685,7 +721,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 	  Description:
 		This function executes a query to insert data to the entries table.
 	  @PARAM:
-		[Array]   - The event data
+		
 	  @RETURN:
 		[Boolean] - True
 		[Array]   - Errors

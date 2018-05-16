@@ -1,10 +1,9 @@
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Register</h1>
 
 <!-- Form STARTS here -->
-<form class="container" id="registerPage">
+<form class="container" id="registerPage" action="api.php">
 
- <input name="display" type="hidden" value="Login">
- <input name="role" type="hidden" value="0">
+  <input name="display" type="hidden" value="Register">
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>

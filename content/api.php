@@ -200,6 +200,19 @@
 		// Like so: api.php?action=getUserGoal&date=2018-05-14
 	}
 	
+	if($_GET['action'] == "Register")
+	{
+		// Get the User Goal
+	
+		echo registerUser($_GET['user'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'] );
+	
+		//header('Location: index.php?display=Login');
+
+		// You need to provide the date in the URL (via GET)
+	
+		// Like so: api.php?action=registerUser&user=user.name&password=password&fName=fName&initials=i&lName=lName
+	}
+	
 	if($_GET['action'] == "setUserGoal")
 	{
 		// Get the User Goal
