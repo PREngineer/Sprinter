@@ -63,7 +63,7 @@
 
 	if( isset($_SESSION['userID']) )
 	{
-		$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] );
+		$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0];
 				
 		echo '
 				<tr>
@@ -93,7 +93,7 @@
 					<div class="input-group">
 						<input name="action" type="hidden" value="setUserGoal">
 						<input name="goalID" type="hidden" value="' . $UserGoal[0] . '">
-						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
+						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal[3] . '" required>
 						<div class="input-group-btn">
 							<button type="submit" class="btn btn-primary">Change Goal</button>
 						</div>
