@@ -8,6 +8,8 @@
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Add Data</h1>
 
 <form class="container" action="api.php">
+
+	<input name="action" type="hidden" value="addUserData">
 	
 	<p><strong> Note: All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required.</strong></p>
 	
