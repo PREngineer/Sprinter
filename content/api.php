@@ -8,7 +8,7 @@
 		echo '
 			<h1>API Information</h1>
 			
-			<h2>How to use it:</h2>
+			<h2><u>How to use it:</u></h2>
 			
 			<p>
 				All parameters shall be passed using HTTP GET.
@@ -33,7 +33,7 @@
 			
 			<hr><hr>
 			
-			<h2>Actions:</h2>
+			<h2><u>Actions:</u></h2>
 			
 			<p>
 				<h3>1. getSprintData</h3>
