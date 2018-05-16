@@ -692,7 +692,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 	{
 		$sprintID = ( ( get_SprintData(date("Y-m-d")) )[0] )[0];
 		
-		echo "SprintID: $sprintID":
+		echo "SprintID: $sprintID";
 		
 		$exists = ( ( get_UserGoal(date("Y-m-d"), $user) )[0] )[0];
 		
