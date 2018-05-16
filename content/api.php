@@ -115,12 +115,6 @@
 				
 				<strong>Returns:</strong>
 				<br><br>
-				Entry ID, User, Sprint ID, Goal
-				<br><br>
-				<hr>
-				<br><br>
-				<strong>Returns:</strong>
-				<br><br>
 				True or Error
 				<br><br>
 			</p>
