@@ -72,6 +72,7 @@
 					</td>
 					<td>
 						' . $UserGoal[3] . '
+						<a link="index.php?display=SetGoal">Set Goal</a>
 					</td>
 				</tr>
 		';

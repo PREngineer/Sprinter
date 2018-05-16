@@ -31,16 +31,6 @@ This is used to determine which element will be loaded into the center of the pa
     ';
   }
 
-  // Administrator View
-  if( $_GET['display'] == 'Administrator' )
-  {
-    echo'
-      <script>
-        $("#Content").load("administrator.php");
-      </script>
-    ';
-  }
-  
   // Logout
   if( $_GET['display'] == 'Logout' )
   {
@@ -54,6 +44,31 @@ This is used to determine which element will be loaded into the center of the pa
       </script>
     ';
   }
+}
+
+/*
+* View Handling
+*/
+{
+  // Add Data View
+  if( $_GET['display'] == 'AddData' )
+  {
+    echo'
+      <script>
+        $("#Content").load("addData.php");
+      </script>
+    ';
+  }
+  
+  // Administrator View
+  if( $_GET['display'] == 'Administrator' )
+  {
+    echo'
+      <script>
+        $("#Content").load("administrator.php");
+      </script>
+    ';
+  }
   
   // Leaderboard View
   if( $_GET['display'] == 'Leaderboard' )
@@ -64,17 +79,16 @@ This is used to determine which element will be loaded into the center of the pa
       </script>
     ';
   }
-  
+ 
   // Leaderboard View
-  if( $_GET['display'] == 'AddData' )
+  if( $_GET['display'] == 'SetGoal' )
   {
     echo'
       <script>
-        $("#Content").load("addData.php");
+        $("#Content").load("setGoal.php");
       </script>
     ';
   }
-  
 }
 
 
