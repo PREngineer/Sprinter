@@ -28,10 +28,6 @@ if( $res['Result'] )
   header('Location: index.php');
   exit;
 }
-
-  print_r($_GET);
-  print_r($_SESSION);
-  
 ?>
 
 <!--Skip Navigation Link-->
