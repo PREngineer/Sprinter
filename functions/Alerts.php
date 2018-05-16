@@ -37,7 +37,7 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
               You have been logged in.
             </div>';
     }
-    else
+    else if($_GET['Success'] == '0')
     {
       echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
               <button type="button" class="close" data-dismiss="alert">x</button>
