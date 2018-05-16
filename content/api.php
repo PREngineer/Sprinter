@@ -203,7 +203,7 @@
 	
 	if($_GET['action'] == "Register")
 	{
-		echo checkCode($_GET['code']);
+		print_r( checkCode($_GET['code']) );
 		// Code is valid
 		if( checkCode($_GET['code']) == '1' )
 		{
