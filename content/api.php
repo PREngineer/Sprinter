@@ -221,7 +221,7 @@
 				}
 			}
 			// User already exists
-			else if( strpos($a, 'Duplicate entry') !== false )
+			else if( strpos($success, 'Duplicate entry') !== false )
 			{
 				// Return JSON
 				echo '{"success":"user already exists"}';
