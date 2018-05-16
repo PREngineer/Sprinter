@@ -3,8 +3,6 @@
 include '../functions/Init.php';
 include '../functions/DB.php';
 
-if( !empty($_POST) )
-{
 	echo '<script>alert("Inside the action");</script>';
 	$user = $_GET['username'];
 	$pass = $_GET['password'];
@@ -36,7 +34,6 @@ if( !empty($_POST) )
 	{
 		header('Location: index.php?display=Login&Success=0');
 	}
-}
 ?>
 
 <script>
