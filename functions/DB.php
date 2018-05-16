@@ -694,11 +694,11 @@ Region Start - Regular Use MySQL DB Insert Functions
 		
 		echo "SprintID: $sprintID";
 		
-		$exists = ( ( get_UserGoal(date("Y-m-d"), $user) )[0] )[0];
+		$goalID = ( ( get_UserGoal(date("Y-m-d"), $user) )[0] )[0];
 		
 		echo "<br>Exists: " . ($exists == null);
 		
-		if($exists == null)
+		if($goalID == null)
 		{
 			// Update the Events Table
 			$result = query_DB( "INSERT INTO `Goals`
