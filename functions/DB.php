@@ -694,7 +694,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 		
 		$exists = ( ( get_UserGoal(date("Y-m-d"), $user) )[0] )[0];
 		
-		print_r($exists == null);
+		echo ($exists == null);
 		
 		if($exists == null)
 		{
@@ -702,8 +702,8 @@ Region Start - Regular Use MySQL DB Insert Functions
 			$result = query_DB( "INSERT INTO `Goals`
 								(`User`, `SprintID`, `Goal`)
 							   VALUES (
-							   '" . sanitize($user) . "',"
-							   '" . sanitize($sprintID) . "',"
+							   '" . sanitize($user) . "',
+							   '" . sanitize($sprintID) . "',
 							   '" . sanitize($goal) . "')"
 							);
 
