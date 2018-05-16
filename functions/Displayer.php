@@ -70,6 +70,46 @@ This is used to determine which element will be loaded into the center of the pa
     ';
   }
   
+  // Create New Sprint
+  if( $_GET['display'] == 'CreateSprint' )
+  {
+    echo'
+      <script>
+        $("#Content").load("createSprint.php");
+      </script>
+    ';
+  }
+  
+  // Delete Users
+  if( $_GET['display'] == 'DeleteUser' )
+  {
+    echo'
+      <script>
+        $("#Content").load("deleteUser.php");
+      </script>
+    ';
+  }
+  
+  // Edit Sprint
+  if( $_GET['display'] == 'EditSprint' )
+  {
+    echo'
+      <script>
+        $("#Content").load("editSprint.php");
+      </script>
+    ';
+  }
+  
+  // Manage Sprints
+  if( $_GET['display'] == 'ManageSprints' )
+  {
+    echo'
+      <script>
+        $("#Content").load("manageSprints.php");
+      </script>
+    ';
+  }
+  
   // Leaderboard View
   if( $_GET['display'] == 'Leaderboard' )
   {

@@ -203,11 +203,60 @@
 	
 	if($_GET['action'] == "Register")
 	{
-		// Get the User Goal
-	
-		echo registerUser($_GET['username'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'] );
-	
-		header('Location: index.php?display=Login');
+		// Code is valid
+		if( checkCode($_GET['code']) == '1' )
+		{
+			$success = registerUser($_GET['username'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'] );
+			
+			// Success registering
+			if($success == "1")
+			{
+				// Return JSON
+				echo '{"success":"true"}';
+				
+				// Redirect to the page
+				if($_GET['do'] == "1")
+				{
+					header('Location: index.php?display=Register&success=1');
+				}
+			}
+			// User already exists
+			else if($success == "0")
+			{
+				// Return JSON
+				echo '{"success":"false"}';
+				
+				// Redirect to the page
+				if($_GET['do'] == "1")
+				{
+					header('Location: index.php?display=Register&error=1');
+				}
+			}
+			// Errors occurred
+			else
+			{
+				// Return JSON
+				echo '{"success":"errors occurred"}';
+				
+				// Redirect to the page
+				if($_GET['do'] == "1")
+				{
+					header('Location: index.php?display=Register&error=2');
+				}
+			}
+		}
+		// Code is invalid
+		else
+		{
+			// Return JSON
+			echo '{"success":"invalid code"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Register&error=0');
+			}
+		}
 
 		// You need to provide the date in the URL (via GET)
 	

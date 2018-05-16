@@ -231,12 +231,13 @@ Region Start - MySQL DB Setup Functions
 	Function setup_SprintsTable()
 	{
 	  return query_DB("CREATE TABLE `Sprints` (
-							`ID` INT NOT NULL AUTO_INCREMENT COMMENT 'Sprint ID' , 
-							`Name` TEXT NOT NULL COMMENT 'Sprint Name' ,
-							`Goal` TEXT NOT NULL COMMENT 'Description of the sprint goal' ,
-							`Rules` TEXT NOT NULL COMMENT 'Rules of the sprint' ,
+							`ID` INT NOT NULL AUTO_INCREMENT COMMENT 'Sprint ID', 
+							`Name` TEXT NOT NULL COMMENT 'Sprint Name',
+							`Goal` TEXT NOT NULL COMMENT 'Description of the sprint goal',
+							`Rules` TEXT NOT NULL COMMENT 'Rules of the sprint',
 							`Start` date NOT NULL COMMENT 'Sprint Start',
 							`End` date NOT NULL COMMENT 'Sprint End',
+							`Code` TEXT NOT NULL COMMENT 'Invitation Code (expires with the Sprint)',
 							PRIMARY KEY (`ID`)
 		)
 		ENGINE  = InnoDB
@@ -460,6 +461,25 @@ Region Start - Regular Use MySQL DB Get Functions
 	}
 
 	/*
+		Used to check the registration code
+	*/
+	Function checkCode($code)
+	{
+		$result = query_DB("SELECT COUNT(*)
+						  FROM `Sprints`
+						  WHERE `Code` = '$code'");
+
+		if( $result['Result'] )
+		{
+			return mysqli_fetch_all( $result['Data'] );
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
+	
+	/*
 	  Description:
 		This function executes a query to get the leaderboard.
 	  @PARAM:
@@ -639,6 +659,33 @@ Region Start - Regular Use MySQL DB Get Functions
 			return $result['Errors'];
 		}
 	}
+
+	/*
+	  Description:
+		This function executes a query to check if the user exists
+	  @PARAM:
+	  
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function 
+	user_exists($user)
+	{
+		// Get all user data related to that Sprint
+		$result = query_DB("SELECT COUNT(*)
+						  FROM `Users`
+						  WHERE `User`   = '$user'");
+
+		if( $result['Result'] )
+		{
+			return mysqli_fetch_all( $result['Data'] );
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
 }
 
 /*
@@ -658,28 +705,38 @@ Region Start - Regular Use MySQL DB Insert Functions
 	*/
 	Function registerUser($user, $password, $fName, $initials, $lName)
 	{
-		$pass = hash( 'sha256', SHA1( MD5($password) ) );
+		$exists = user_exists($user);
 		
-		// Update the Events Table
-		$result = query_DB( "INSERT INTO `Users`
-							(`Username`, `Password`, `FName`, `Initials`, `LName`, `Role`)
-						   VALUES (
-						   '" . sanitize($user) . "',
-						   '" . ( sanitize($pass) ) . "',
-						   '" . sanitize($fName) . "',
-						   '" . sanitize($initials) . "',
-						   '" . sanitize($lName) . "',
-						   '0')"
-						);
-
-		// If successful
-		if( $result['Result'] )
+		// If user already exists
+		if($exists == "1")
 		{
-			return true;
+			return 0;
 		}
 		else
 		{
-			return $result['Errors'];
+			$pass = hash( 'sha256', SHA1( MD5($password) ) );
+			
+			// Update the Events Table
+			$result = query_DB( "INSERT INTO `Users`
+								(`Username`, `Password`, `FName`, `Initials`, `LName`, `Role`)
+							VALUES (
+							'" . sanitize($user) . "',
+							'" . ( sanitize($pass) ) . "',
+							'" . sanitize($fName) . "',
+							'" . sanitize($initials) . "',
+							'" . sanitize($lName) . "',
+							'0')"
+							);
+	
+			// If successful
+			if( $result['Result'] )
+			{
+				return "1";
+			}
+			else
+			{
+				return $result['Errors'];
+			}
 		}
 	}
 	

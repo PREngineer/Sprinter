@@ -5,6 +5,7 @@
 <form class="container" id="registerPage" action="api.php">
 
   <input name="action" type="hidden" value="Register">
+  <input name="do" type="hidden" value="1">
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
@@ -28,6 +29,17 @@
       </span>
       <input name="password" type="password" class="form-control" id="password" placeholder="password" required>
     </div>
+  </div>
+  
+  <div class="form-group">
+    <label for="code"> <label class="text-danger">*</label> Registration Code</label>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="glyphicon glyphicon-user"></i>
+      </span>
+      <input name="code" type="text" class="form-control" id="code" placeholder="john.p.doe" aria-describedby="codeHelp" required>
+    </div>
+    <small id="codeHelp" class="sr-only form-text text-muted">You must provide the invitation code to register.</small>
   </div>
   
   <div class="form-group">
@@ -76,7 +88,8 @@
 <script type="text/javascript">
    $(document).ready(function()
    {
-    $('#registerPage').bootstrapValidator({
+    $('#registerPage').bootstrapValidator(
+	{
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons:
         {
@@ -103,6 +116,16 @@
                     notEmpty:
                     {
                         message: 'ERROR: Please enter your password.'
+                    }
+                }
+            },
+			code:
+            {
+                validators:
+                {
+                    notEmpty:
+                    {
+                        message: 'ERROR: Please enter the registration code.'
                     }
                 }
             },
