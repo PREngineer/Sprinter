@@ -29,13 +29,14 @@
       </span>
       <input name="password" type="password" class="form-control" id="password" placeholder="password" required>
     </div>
+	<small id="codeHelp" class="sr-only form-text text-muted">Password must not have spaces.</small>
   </div>
   
   <div class="form-group">
     <label for="code"> <label class="text-danger">*</label> Registration Code</label>
     <div class="input-group">
       <span class="input-group-addon">
-        <i class="glyphicon glyphicon-user"></i>
+        <i class="glyphicon glyphicon-barcode"></i>
       </span>
       <input name="code" type="text" class="form-control" id="code" placeholder="john.p.doe" aria-describedby="codeHelp" required>
     </div>
