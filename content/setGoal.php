@@ -3,7 +3,7 @@
 	include '../functions/DB.php';
 ?>
 
-<h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Change Goal</h1>
+<h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Set Goal</h1>
 
 <?php
 
@@ -12,7 +12,7 @@
 	echo '
 		Your sprint goal is: ' . $UserGoal[3] . '.
 
-		<br>
+		<br><br>
 
 		<form action="api.php">
 			<div class="row">
@@ -22,7 +22,7 @@
 						<input name="goalID" type="hidden" value="' . $UserGoal[0] . '">
 						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal[3] . '" required>
 						<div class="input-group-btn">
-							<button type="submit" class="btn btn-primary">Change Goal</button>
+							<button type="submit" class="btn btn-primary">Set Goal</button>
 						</div>
 					</div>
 				</div>
