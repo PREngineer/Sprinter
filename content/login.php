@@ -26,8 +26,12 @@ if( $res['Result'] )
   $cookieLifetime = 365 * 24 * 60 * 60;
   setcookie("Sprinter",session_id(),time() + $cookieLifetime);
   
-  header('Location: index.php');
+  header('Location: index.php?display=Login&Success=1');
   exit;
+}
+else
+{
+	header('Location: index.php?display=Login&Success=0'
 }
 ?>
 
