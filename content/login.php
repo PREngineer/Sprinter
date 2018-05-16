@@ -3,8 +3,9 @@
 include '../functions/Init.php';
 include '../functions/DB.php';
 
-if( isset($_POST) )
+if( !empty($_POST) )
 {
+	echo '<script>alert("Inside the action");</script>';
 	$user = $_GET['username'];
 	$pass = $_GET['password'];
 
