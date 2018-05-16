@@ -26,7 +26,7 @@
 	
 		// You need to provide the username in the URL (via GET)
 	
-		// Like so: api.php?action=getUserData&username=jorge.l.pabon.cruz
+		// Like so: api.php?action=getUserData&username=user.name
 	}
 	
 	if($_GET['action'] == "getUserGoal")
@@ -42,5 +42,18 @@
 		// Like so: api.php?action=getUserGoal&date=2018-05-14
 	}
 	
-	print_r($_POST);
+	if($_GET['action'] == "setUserGoal")
+	{
+		// Get the User Goal
+	
+		set_UserGoal($_GET['sprint'],  $_GET['username'], $_GET['goal'] );
+	
+		header('Location: index.php?display=Leaderboard');
+
+		// You need to provide the date in the URL (via GET)
+	
+		// Like so: api.php?action=setUserGoal&sprint=1&username=user.name
+	}
+	
+	print_r($_GET);
 ?>
