@@ -3,6 +3,17 @@
 	include '../functions/DB.php';
 ?>
 
+<script>
+  $(document).ready(function()
+  {
+    $("a").click(function()
+    {
+      var url = $(this).attr("link");
+      window.location = url;
+    });
+  });
+</script>
+
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Leaderboard</h1>
 
 <?php
