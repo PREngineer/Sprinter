@@ -23,30 +23,38 @@
 				<br><br>
 				<strong>1. getSprintData</strong> - Gets a sprint\'s details.
 				<br><br>
+				<strong>2. getUserData</strong> - Gets the user\'s entered data.
+				<br><br>
+				<strong>3. getUserGoal</strong> - Gets the user\'s goal for the sprint.
+				<br><br>
+				<strong>4. setUserGoal</strong> - Sets the user\'s goal for the sprint.
+				<br><br>
+			</p>
+			
+			<p>
+				<br><br>
 				<strong>Returns:</strong>
 				<br><br>
 				ID, Name, Goal, Rules, Start Date, End Date
 				<br><br>
-				<strong>2. getUserData</strong> - Gets the user\'s entered data.
+				<hr>
 				<br><br>
 				<strong>Returns:</strong>
 				<br><br>
 				Entry ID, User, SprintID, Data, Date, Recorded Timestamp
 				<br><br>
-				<strong>3. getUserGoal</strong> - Gets the user\'s goal for the sprint.
+				<hr>
 				<br><br>
 				<strong>Returns:</strong>
 				<br><br>
 				Entry ID, User, Sprint ID, Goal
 				<br><br>
-				<strong>4. setUserGoal</strong> - Sets the user\'s goal for the sprint.
+				<hr>
+				<br><br>
 				<strong>Returns:</strong>
 				<br><br>
 				True or Error
-			</p>
-			
-			<p>
-				
+				<br><br>
 			</p>
 		';
 	}
