@@ -30,6 +30,17 @@ if( $res['Result'] )
 }
 ?>
 
+<script>
+  $(document).ready(function()
+  {
+    $("a").click(function()
+    {
+      var url = $(this).attr("link");
+      window.location = url;
+    });
+  });
+</script>
+
 <!--Skip Navigation Link-->
 <a class="skip-navigation sr-only sr-only-focusable" href="#page_title">Skip Navigation</a>
 
