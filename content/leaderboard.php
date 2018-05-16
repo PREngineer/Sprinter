@@ -18,7 +18,7 @@
 
 <?php
 
-	if( isset($_SESSION['userID']) )
+	if( isset($_SESSION['userID']) && $_SESSION['userRole'] == 0 )
 	{
 		echo'
 			<h4>
