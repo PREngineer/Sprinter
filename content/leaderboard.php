@@ -112,13 +112,13 @@
 <div class="container">
 	<table class="table">
 		<thead>
-			<th style="width:50%">
+			<th>
 				Name
 			</th>
-			<th style="width:25%">
+			<th>
 				Count to Date
 			</th>
-			<th style="width:25%">
+			<th>
 				Goal to Date (%)
 			</th>
 		</thead>
@@ -131,13 +131,13 @@
 	{
 		echo'
 				<tr>
-					<td>
+					<td style="width:50%">
 					' . $each[0] . '
 					</td>
-					<td>
+					<td style="width:25%">
 					' . $each[1] . '
 					</td>
-					<td>
+					<td style="width:25%">
 					' . $each[2] . '
 					</td>
 				</tr>
