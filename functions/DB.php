@@ -656,27 +656,29 @@ Region Start - Regular Use MySQL DB Insert Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function insert_Entry($data)
+	Function add_UserData($amount, $date, $user)
 	{
-	  $text = nl2br($data['Text']);
-
-	  // Update the Events Table
-	  $result = query_DB( "UPDATE `Announcements`
-						   SET `Title`   = '" . sanitize($data['Title']) . "',
-							   `Content` = '" . sanitize($text)          . "',
-							   `Expires` = '" . sanitize($data['Date'])  . "'
-						   WHERE `ID` = '" . sanitize($data['id']) . "'"
+		$sprintID = ( ( get_SprintData($date) )[0] )[0];
+		
+		// Update the Events Table
+		$result = query_DB( "INSERT INTO `Entries`
+							(`User`, `SprintID`, `Data`, `Date`)
+						   VALUES (
+						   '" . sanitize($user) . "',
+						   '" . sanitize($sprintID) . "',
+						   '" . sanitize($amount) . "',
+						   '" . sanitize($date) . "')"
 						);
 
-	  // If successful
-	  if( $result['Result'] )
-	  {
-		return True;
-	  }
-	  else
-	  {
-		return $result['Errors'];
-	  }
+		// If successful
+		if( $result['Result'] )
+		{
+			return true;
+		}
+		else
+		{
+			return $result['Errors'];
+		}
 	}
 	
 	/*

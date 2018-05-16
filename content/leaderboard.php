@@ -125,7 +125,7 @@
 					' . $each[1] . '
 					</td>
 					<td style="width:25%">
-					' . $each[2] . '
+					' . $each[2] . '%
 					</td>
 				</tr>
 		';

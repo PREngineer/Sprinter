@@ -121,6 +121,19 @@
 		';
 	}
 	
+	if($_GET['action'] == "addUserData")
+	{
+		// Get the User Goal
+	
+		echo add_UserData($_GET['amount'], $_GET['date'], $_GET['user'] );
+	
+		header('Location: index.php?display=Leaderboard');
+
+		// You need to provide the date in the URL (via GET)
+	
+		// Like so: api.php?action=setUserGoal&user=user.name&goal=100
+	}
+	
 	if($_GET['action'] == "getSprintData")
 	{
 		// Get the Sprint Data
