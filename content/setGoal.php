@@ -9,7 +9,7 @@
 
 	$UserGoal = get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0];
 	
-	print($_SESSION['userID');
+	print($_SESSION['userID']);
 				
 	echo '
 		Your sprint goal is: ' . $UserGoal[3] . '.
