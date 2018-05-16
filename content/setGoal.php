@@ -14,7 +14,7 @@
 
 		<br>
 
-		<form action="api.php' . $UserGoal[0] . '">
+		<form action="api.php">
 			<div class="row">
 				<div class=col-lg-6>
 					<div class="input-group">
