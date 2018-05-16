@@ -29,8 +29,7 @@
 			<span class="input-group-addon">
 			<i class="glyphicon glyphicon-calendar"></i>
 			</span>
-			<input name="date" class="form-control" type="text" id="date"
-				placeholder="YYYY-MM-DD" aria-required="true" value="2016-09-07">
+			<input name="date" class="form-control" type="text" id="date" placeholder="YYYY-MM-DD" required>
 		</div>
 	</div>
 
@@ -49,5 +48,8 @@
 			$(this).focus();
 		});
 	</script>
+	
+	<input class="btn btn-default" type="reset"  value="Clear">
+	<input class="btn btn-primary" type="submit" value="Submit">
 
 </form>
