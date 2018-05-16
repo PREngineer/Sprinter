@@ -30,7 +30,6 @@
 
 	echo '<br>';
 	echo '
-	<div class="container">
 		<table class="table">
 			<thead>
 			</thead>
@@ -72,16 +71,7 @@
 						Your sprint goal is: 
 					</td>
 					<td>
-						<form class="container" method="POST" action="api.php">
-							<input name="action" type="hidden" value="setGoal">
-							<input name="username" type="hidden" value="' . $_SESSION['userID'] . '">
-							<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
-							<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
-						
-					</td>
-					<td>
-							<input class="btn btn-primary" type="submit" value="Change">
-						</form>
+						' . ( ($Sprint)[0] )[0] . '
 					</td>
 				</tr>
 		';
@@ -90,7 +80,46 @@
 	echo '
 			</tbody>
 		</table>
-	</div>';
+		
+		<form class="bs-example bs-example-form" data-example-id=input-group-multiple-buttons>
+			<div class=row>
+				<div class=col-lg-6>
+					<div class=input-group>
+						<div class=input-group-btn>
+							<button type=button class="btn btn-default" aria-label=Bold>
+								<span class="glyphicon glyphicon-bold"></span>
+							</button>
+							<button type=button class="btn btn-default" aria-label=Italic>
+								<span class="glyphicon glyphicon-italic"></span>
+							</button>
+						</div>
+						<input class=form-control aria-label="Text input with multiple buttons">
+					</div>
+				</div>
+				<div class=col-lg-6>
+					<div class=input-group>
+						<input class=form-control aria-label="Text input with multiple buttons">
+						<div class=input-group-btn>
+							<button type=button class="btn btn-default" aria-label=Help>
+								<span class="glyphicon glyphicon-question-sign"></span>
+							</button>
+							<button type=button class="btn btn-default">Action</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+<br>		
+		<form class="container" method="POST" action="api.php">
+			<input name="action" type="hidden" value="setGoal">
+			<input name="username" type="hidden" value="' . $_SESSION['userID'] . '">
+			<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
+			<label></label>
+			<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
+			<input class="btn btn-primary" type="submit" value="Change">
+		</form>
+		';
+
 
 ?>
 
