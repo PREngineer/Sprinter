@@ -72,7 +72,7 @@
 					</td>
 					<td>
 						' . $UserGoal[3] . '
-						<a link="index.php?display=SetGoal">Set Goal</a>
+						<a link="index.php?display=SetGoal" class="navbar-brand" style="cursor: pointer;">Set Goal</a>
 					</td>
 				</tr>
 		';
@@ -82,30 +82,6 @@
 			</tbody>
 		</table>
 	';
-
-	if( isset($_SESSION['userID']) )
-	{
-	echo '
-		<br>
-
-		<form action="api.php">
-			<div class="row">
-				<div class=col-lg-6>
-					<div class="input-group">
-						<input name="action" type="hidden" value="setUserGoal">
-						<input name="goalID" type="hidden" value="' . $UserGoal[0] . '">
-						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal[3] . '" required>
-						<div class="input-group-btn">
-							<button type="submit" class="btn btn-primary">Change Goal</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</form>
-
-		<br><br>
-		';
-	}
 
 ?>
 
