@@ -80,7 +80,17 @@ This is used to determine which element will be loaded into the center of the pa
     ';
   }
  
-  // Leaderboard View
+  // Register View
+  if( $_GET['display'] == 'Register' )
+  {
+    echo'
+      <script>
+        $("#Content").load("register.php");
+      </script>
+    ';
+  }
+
+  // Set Goal View
   if( $_GET['display'] == 'SetGoal' )
   {
     echo'
