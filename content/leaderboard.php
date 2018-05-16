@@ -14,7 +14,7 @@
   });
 </script>
 
-<h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Leaderboard</h1>
+<h3 id="page_title" tabindex="-1" role="heading" aria-level="1">Leaderboard</h3>
 
 <?php
 
