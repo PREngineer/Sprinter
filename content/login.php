@@ -69,7 +69,7 @@ if( $res['Result'] )
   <div>
     <input class="btn btn-primary" type="submit" value="Submit">
   </div>
-
+  <hr>
   <p>
 	Don't have an account?  <a link="index.php?display=Register" style="cursor: pointer;">Create one here!</a>
   </p>
