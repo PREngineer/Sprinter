@@ -72,7 +72,7 @@
 					</td>
 					<td>
 						' . $UserGoal[3] . '
-						<a link="index.php?display=SetGoal" class="navbar-brand" style="cursor: pointer;">Set Goal</a>
+						<a link="index.php?display=SetGoal" style="cursor: pointer;">Set Goal</a>
 					</td>
 				</tr>
 		';
