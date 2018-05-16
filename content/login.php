@@ -31,7 +31,7 @@ if( sizeof($_POST['username']) > 0 )
 
 		header('Location: index.php?display=Leaderboard&LoggedIn=1');
 	}
-	if( $res['Result'] == false)
+	else if( $res['Result'] == false)
 	{
 		echo '<script>alert("Failed");</script>';
 		//header('Location: index.php?display=Login&Success=0');
