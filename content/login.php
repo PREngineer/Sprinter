@@ -3,7 +3,7 @@
 include '../functions/Init.php';
 include '../functions/DB.php';
 
-if( isset($_POST['username']) )
+if( sizeof($_POST['username']) > 0 )
 {
 	echo '<script>alert("Inside the action");</script>';
 	$user = $_GET['username'];
