@@ -207,7 +207,7 @@
 		if( checkCode($_GET['code']) == '1' )
 		{
 			$success = registerUser($_GET['username'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'] );
-			print_r($success);
+			
 			// Success registering
 			if($success == "1")
 			{
@@ -224,7 +224,7 @@
 			else if( strpos($success, 'Duplicate entry') !== false )
 			{
 				// Return JSON
-				echo '{"success":"user already exists"}';
+				echo '{"success":"user exists"}';
 				
 				// Redirect to the page
 				if($_GET['do'] == "1")
@@ -236,7 +236,7 @@
 			else
 			{
 				// Return JSON
-				echo '{"success":"errors occurred"}';
+				echo '{"success":"error(s) occurred: $success"}';
 				
 				// Redirect to the page
 				if($_GET['do'] == "1")
