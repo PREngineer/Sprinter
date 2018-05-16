@@ -32,31 +32,34 @@
 	echo '
 	<div class="container">
 		<table class="table">
-			<tr>
-				<td class="col-md-3">
-					Current sprint is: 
-				</td>
-				<td>
-					<b>' . $Sprint[1] . '</b>
-				</td>
-			</tr>
-			</tr>
-				<td>
-					The goal this sprint is: 
-				</td>
-				<td>
-					<b>' . $Sprint[2] . '</b>.
-				</td>
-			</tr>
-			
-			<tr>
-				<td>
-					The rules for the sprint are:
-				</td>
-				<td>
-					<b>' . $Sprint[3] . '</b>
-				</td>
-			</tr>
+			<thead>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width:50%">
+						Current sprint is: 
+					</td>
+					<td style="width:50%">
+						<b>' . $Sprint[1] . '</b>
+					</td>
+				</tr>
+				</tr>
+					<td>
+						The goal this sprint is: 
+					</td>
+					<td>
+						<b>' . $Sprint[2] . '</b>.
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						The rules for the sprint are:
+					</td>
+					<td>
+						<b>' . $Sprint[3] . '</b>
+					</td>
+				</tr>
 	';
 
 	if( isset($_SESSION['userID']) )
@@ -64,27 +67,28 @@
 		$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] )[3];
 				
 		echo '
-			<tr>
-				<td>
-					Your sprint goal is: 
-				</td>
-				<td>
-					<form class="container" method="POST" action="api.php">
-					<div class="input-group">
-						<input name="action" type="hidden" value="setGoal">
-						<input name="username" type="hidden" value="' . $_SESSION['userID'] . '">
-						<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
-						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
-						<input class="btn btn-primary" type="submit" value="Change">
-					</div>
-					</form>
-				</td>
-			</tr>
+				<tr>
+					<td>
+						Your sprint goal is: 
+					</td>
+					<td>
+						<form class="container" method="POST" action="api.php">
+						<div class="input-group">
+							<input name="action" type="hidden" value="setGoal">
+							<input name="username" type="hidden" value="' . $_SESSION['userID'] . '">
+							<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
+							<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
+							<input class="btn btn-primary" type="submit" value="Change">
+						</div>
+						</form>
+					</td>
+				</tr>
 		';
 	}
 
 	echo '
-	</table>
+			</tbody>
+		</table>
 	</div>';
 
 ?>
@@ -92,13 +96,13 @@
 <div class="container">
 	<table class="table">
 		<thead>
-			<th class="col-md-3">
+			<th style="width:50%">
 				Name
 			</th>
-			<th>
+			<th style="width:25%">
 				Count to Date
 			</th>
-			<th>
+			<th style="width:25%">
 				Goal to Date (%)
 			</th>
 		</thead>
