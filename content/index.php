@@ -52,9 +52,9 @@
 
   	<!-- For Apple Devices -->
   	<meta name="apple-mobile-web-app-capable" content="yes">
-  	<meta name="application-name" content="EM">
+  	<meta name="application-name" content="Sprinter">
   	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-  	<meta name="apple-mobile-web-app-title" content="EM">
+  	<meta name="apple-mobile-web-app-title" content="Sprinter">
   	<link rel="apple-touch-icon" href="../images/Logo.png">
 
   	<!-- For Microsoft Devices -->
@@ -62,7 +62,7 @@
   	<meta name="msapplication-TileColor" content="#2196F3">
 
   	<!-- ... -->
-  	<meta property="og:title" content="EM">
+  	<meta property="og:title" content="Sprinter">
   	<meta property="og:type" content="website">
   	<meta property="og:image" content="../images/TLogo.png">
   	<meta property="og:url" content="https://www.mydomain.com">
@@ -71,8 +71,8 @@
   	<!-- Twitter References -->
   	<meta name="twitter:card" content="summary">
   	<meta name="twitter:url" content="https://www.mydomain.com">
-  	<meta name="twitter:title" content="EM">
-  	<meta name="twitter:description" content="Event Manager. No install, just use it right away in your browser!">
+  	<meta name="twitter:title" content="Sprinter">
+  	<meta name="twitter:description" content="Sprinter. No install, just use it right away in your browser!">
   	<meta name="twitter:image" content="../images/TLogo.png">
   	<meta name="twitter:creator" content=@PianistaPR>
 
