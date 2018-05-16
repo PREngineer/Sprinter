@@ -71,7 +71,7 @@
 						Your sprint goal is: 
 					</td>
 					<td>
-						' . $UserGoal '
+						' . $UserGoal . '
 					</td>
 				</tr>
 		';
