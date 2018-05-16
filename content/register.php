@@ -3,7 +3,7 @@
 <!-- Form STARTS here -->
 <form class="container" id="registerPage" action="api.php">
 
-  <input name="display" type="hidden" value="Register">
+  <input name="action" type="hidden" value="Register">
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
