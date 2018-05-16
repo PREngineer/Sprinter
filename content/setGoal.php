@@ -19,6 +19,7 @@
 				<div class=col-lg-6>
 					<div class="input-group">
 						<input name="action" type="hidden" value="setUserGoal">
+						<input name="user" type="hidden" value="' . $UserGoal[1] . '">
 						<input name="goalID" type="hidden" value="' . $UserGoal[0] . '">
 						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal[3] . '" required>
 						<div class="input-group-btn">

@@ -688,23 +688,27 @@ Region Start - Regular Use MySQL DB Insert Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function set_UserGoal($goalID, $goal)
+	Function set_UserGoal($goalID, $goal, $user)
 	{
-	  // Update the Events Table
-	  $result = query_DB( "UPDATE `Goals`
+		$exists = ( get_UserGoal(date("Y-m-d"), $user) );
+		
+		print_r($exists);
+		
+		// Update the Events Table
+		$result = query_DB( "UPDATE `Goals`
 						   SET `Goal` = '" . sanitize($goal) . "'
 						   WHERE `ID` = '" . sanitize($goalID) . "'"
 						);
 
-	  // If successful
-	  if( $result['Result'] )
-	  {
-		return true;
-	  }
-	  else
-	  {
-		return $result['Errors'];
-	  }
+		// If successful
+		if( $result['Result'] )
+		{
+			return true;
+		}
+		else
+		{
+			return $result['Errors'];
+		}
 	}
 }
 ?>
