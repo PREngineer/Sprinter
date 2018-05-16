@@ -3,6 +3,8 @@
 include '../functions/Init.php';
 include '../functions/DB.php';
 
+if( !empty($_POST) )
+{
 	echo '<script>alert("Inside the action");</script>';
 	$user = $_GET['username'];
 	$pass = $_GET['password'];
@@ -28,12 +30,12 @@ include '../functions/DB.php';
 		setcookie("Sprinter",session_id(),time() + $cookieLifetime);
 
 		header('Location: index.php?display=Login&Success=1');
-		exit;
 	}
-	if( !$res['Result'] )
+	if( $res['Result'] == false)
 	{
 		header('Location: index.php?display=Login&Success=0');
 	}
+}
 ?>
 
 <script>
