@@ -63,7 +63,7 @@
 
 	if( isset($_SESSION['userID']) )
 	{
-		$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] )[3];
+		$UserGoal = ( get_UserGoal( date("Y-m-d"), $_SESSION['userID'] )[0] );
 				
 		echo '
 				<tr>
@@ -71,7 +71,7 @@
 						Your sprint goal is: 
 					</td>
 					<td>
-						' . $UserGoal . '
+						' . $UserGoal[3] . '
 					</td>
 				</tr>
 		';
@@ -92,8 +92,7 @@
 				<div class=col-lg-6>
 					<div class="input-group">
 						<input name="action" type="hidden" value="setUserGoal">
-						<input name="username" type="hidden" value="' . $_SESSION['userID'] . '">
-						<input name="sprint" type="hidden" value="' . ( ($Sprint)[0] )[0] . '">
+						<input name="goalID" type="hidden" value="' . $UserGoal[0] . '">
 						<input name="goal" type="text" class="form-control" maxlength="10" placeholder="' . $UserGoal . '" required>
 						<div class="input-group-btn">
 							<button type="submit" class="btn btn-primary">Change Goal</button>
