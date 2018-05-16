@@ -690,24 +690,50 @@ Region Start - Regular Use MySQL DB Insert Functions
 	*/
 	Function set_UserGoal($goal, $user)
 	{
-		$exists = get_UserGoal(date("Y-m-d"), $user);
+		$sprintID = ( ( get_SprintData(date("Y-m-d")) )[0] )[0];
 		
-		print_r($exists);
+		$exists = ( ( get_UserGoal(date("Y-m-d"), $user) )[0] )[0];
 		
-		// Update the Events Table
-		$result = query_DB( "UPDATE `Goals`
-						   SET `Goal` = '" . sanitize($goal) . "'
-						   WHERE `ID` = '" . sanitize($goalID) . "'"
-						);
-
-		// If successful
-		if( $result['Result'] )
+		print_r($exists == null);
+		
+		if($exists == null)
 		{
-			return true;
+			// Update the Events Table
+			$result = query_DB( "INSERT INTO `Goals`
+								(`User`, `SprintID`, `Goal`)
+							   VALUES (
+							   '" . sanitize($user) . "',"
+							   '" . sanitize($sprintID) . "',"
+							   '" . sanitize($goal) . "')"
+							);
+
+			// If successful
+			if( $result['Result'] )
+			{
+				return true;
+			}
+			else
+			{
+				return $result['Errors'];
+			}
 		}
 		else
 		{
-			return $result['Errors'];
+			// Update the Events Table
+			$result = query_DB( "UPDATE `Goals`
+							   SET `Goal` = '" . sanitize($goal) . "'
+							   WHERE `ID` = '" . sanitize($goalID) . "'"
+							);
+
+			// If successful
+			if( $result['Result'] )
+			{
+				return true;
+			}
+			else
+			{
+				return $result['Errors'];
+			}
 		}
 	}
 }
