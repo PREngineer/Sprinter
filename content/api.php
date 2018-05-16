@@ -48,11 +48,11 @@
 				<b>Returns:</b>
 				<br><br>
 				
-				a. <b><i>ID</b></i>
-				b. <b><i>Name</b></i>
-				c. <b><i>Goal</b></i>
-				d. <b><i>Rules</b></i>
-				e. <b><i>Start Date</b></i>
+				a. <b><i>ID</b></i><br>
+				b. <b><i>Name</b></i><br>
+				c. <b><i>Goal</b></i><br>
+				d. <b><i>Rules</b></i><br>
+				e. <b><i>Start Date</b></i><br>
 				f. <b><i>End Date</b></i>
 				<br><br>
 				<hr>
@@ -71,11 +71,11 @@
 				<b>Returns:</b>
 				<br><br>
 				
-				a. <b><i>ID</b></i>
-				b. <b><i>User</b></i>
-				c. <b><i>SprintID</b></i>
-				d. <b><i>Data</b></i>
-				e. <b><i>Date</b></i>
+				a. <b><i>ID</b></i><br>
+				b. <b><i>User</b></i><br>
+				c. <b><i>SprintID</b></i><br>
+				d. <b><i>Data</b></i><br>
+				e. <b><i>Date</b></i><br>
 				f. <b><i>Recorded</b></i>
 				<br><br>
 				<hr>
@@ -94,9 +94,9 @@
 				<b>Returns:</b>
 				<br><br>
 				
-				a. <b><i>ID</b></i>
-				b. <b><i>User</b></i>
-				c. <b><i>SprintID</b></i>
+				a. <b><i>ID</b></i><br>
+				b. <b><i>User</b></i><br>
+				c. <b><i>SprintID</b></i><br>
 				d. <b><i>Goal</b></i>
 				<br><br>
 				<hr>
@@ -109,7 +109,7 @@
 				<b>Parameters:</b>
 				<br><br>
 				
-				a. <b><i>goal</i></b> - In the format \'YYYY-mm-dd\'
+				a. <b><i>goal</i></b> - In the format \'YYYY-mm-dd\'<br>
 				b. <b><i>user</i></b> - In the format \'YYYY-mm-dd\'
 				<br><br>
 				
