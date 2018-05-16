@@ -10,28 +10,28 @@ $res = login($user, $pass);
 
 if( $res['Result'] )
 {
-  $userdata = mysqli_fetch_all( $res['Data'] )[0];
+	$userdata = mysqli_fetch_all( $res['Data'] )[0];
 
-  // Initialize the session
-  session_start();
-  
-  $_SESSION['userID']    = $userdata[0];
-  $_SESSION['fName']     = $userdata[1];
-  $_SESSION['initials']  = $userdata[2];
-  $_SESSION['lName']     = $userdata[3];
-  $_SESSION['userRole']  = $userdata[4];
+	// Initialize the session
+	session_start();
 
-  // Extend cookie life time
-  // A year in seconds = 365 days * 24 hours * 60 mins * 60 secs
-  $cookieLifetime = 365 * 24 * 60 * 60;
-  setcookie("Sprinter",session_id(),time() + $cookieLifetime);
-  
-  header('Location: index.php?display=Login&Success=1');
-  exit;
+	$_SESSION['userID']    = $userdata[0];
+	$_SESSION['fName']     = $userdata[1];
+	$_SESSION['initials']  = $userdata[2];
+	$_SESSION['lName']     = $userdata[3];
+	$_SESSION['userRole']  = $userdata[4];
+
+	// Extend cookie life time
+	// A year in seconds = 365 days * 24 hours * 60 mins * 60 secs
+	$cookieLifetime = 365 * 24 * 60 * 60;
+	setcookie("Sprinter",session_id(),time() + $cookieLifetime);
+
+	header('Location: index.php?display=Login&Success=1');
+	exit;
 }
 else
 {
-	header('Location: index.php?display=Login&Success=0'
+	header('Location: index.php?display=Login&Success=0');
 }
 ?>
 
