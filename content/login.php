@@ -14,7 +14,7 @@
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Login</h1>
 
 <!-- Form STARTS here -->
-<form class="container" method="POST" id="loginPage" action="api.php">
+<form class="container" id="loginPage" action="api.php">
 
  <input name="display" type="hidden" value="Login">
   <hr>
