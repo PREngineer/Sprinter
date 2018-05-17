@@ -153,9 +153,27 @@
 	{
 		// Get the User Goal
 	
-		echo add_UserData($_GET['amount'], $_GET['date'], $_GET['user'] );
+		$success = add_UserData($_GET['amount'], $_GET['date'], $_GET['user'] );
 	
-		header('Location: index.php?display=Leaderboard');
+		if($success)
+		{
+			echo '{"result":"success"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Leaderboard&AddData=1');
+			}
+		}
+		else
+		{
+			echo '{"result":"failure"}';
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Leaderboard&AddData=0');
+			}
+		}
 
 		// You need to provide the date in the URL (via GET)
 	
