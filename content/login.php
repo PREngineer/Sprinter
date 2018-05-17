@@ -1,48 +1,4 @@
 <title>Sprinter - Login</title>
-<?php
-include '../functions/Init.php';
-include '../functions/DB.php';
-
-if( !empty($_GET) )
-{
-	echo '<script>alert("GET is not empty.");</script>';
-	$user = $_GET['username'];
-	$pass = $_GET['password'];
-
-	$res = login($user, $pass);
-
-	if( $res['Result'] )
-	{
-		echo '<script>alert("Log in");</script>';
-		$userdata = mysqli_fetch_all( $res['Data'] )[0];
-
-		// Initialize the session
-		session_start();
-
-		$_SESSION['userID']    = $userdata[0];
-		$_SESSION['fName']     = $userdata[1];
-		$_SESSION['initials']  = $userdata[2];
-		$_SESSION['lName']     = $userdata[3];
-		$_SESSION['userRole']  = $userdata[4];
-
-		// Extend cookie life time
-		// A year in seconds = 365 days * 24 hours * 60 mins * 60 secs
-		$cookieLifetime = 365 * 24 * 60 * 60;
-		setcookie("Sprinter",session_id(),time() + $cookieLifetime);
-
-		header('Location: index.php?display=Leaderboard&LoggedIn=1');
-	}
-	else
-	{
-		echo '<script>alert("Failed");</script>';
-		//header('Location: index.php?display=Login&Success=0');
-	}
-}
-else
-{
-	echo '<script>alert("GET is empty.");</script>';
-}
-?>
 
 <script>
   $(document).ready(function()
@@ -58,7 +14,7 @@ else
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Login</h1>
 
 <!-- Form STARTS here -->
-<form class="container" method="POST" id="loginPage">
+<form class="container" method="POST" id="loginPage" action="api.php">
 
  <input name="display" type="hidden" value="Login">
   <hr>
@@ -103,7 +59,8 @@ else
 <script type="text/javascript">
    $(document).ready(function()
    {
-    $('#loginPage').bootstrapValidator({
+    $('#loginPage').bootstrapValidator(
+	{
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons:
         {

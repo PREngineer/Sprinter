@@ -201,6 +201,52 @@
 		// Like so: api.php?action=getUserGoal&date=2018-05-14
 	}
 	
+	if($_GET['action'] == "logIn")
+	{
+		// Check if login is successful	
+		$res = login($_GET['username'], $_GET['password']);
+
+		if( $res['Result'] )
+		{
+			$userdata = mysqli_fetch_all( $res['Data'] )[0];
+			
+			// Initialize the session
+			session_start();
+
+			$_SESSION['userID']    = $userdata[0];
+			$_SESSION['fName']     = $userdata[1];
+			$_SESSION['initials']  = $userdata[2];
+			$_SESSION['lName']     = $userdata[3];
+			$_SESSION['userRole']  = $userdata[4];
+
+			// Extend cookie life time
+			// A month in seconds = 30 days * 24 hours * 60 mins * 60 secs
+			$cookieLifetime = 30 * 24 * 60 * 60;
+			$lifetime = time() + $cookieLifetime;
+			
+			// Return JSON
+			echo '[{"result":"success"},{"sessionName":"Sprinter","sessionID":"' . $session_id() . '","lifetime":"' . $lifetime . '"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				setcookie("Sprinter",session_id(),$lifetime);			
+				header('Location: index.php?display=Leaderboard&LoggedIn=1');
+			}
+		}
+		else
+		{
+			echo '{"result":"failure"}';
+			header('Location: index.php?display=Login&Success=0');
+		}
+	
+		header('Location: index.php?display=Leaderboard');
+
+		// You need to provide the date in the URL (via GET)
+	
+		// Like so: api.php?action=setUserGoal&user=user.name&goal=100
+	}
+	
 	if($_GET['action'] == "Register")
 	{
 		// Code is valid
