@@ -3,7 +3,7 @@
 include '../functions/Init.php';
 include '../functions/DB.php';
 
-echo '<script>alert("POST is empty: ' . empty($_POST) . '");</script>';
+echo '<script>alert("POST is empty: ' . empty($_GET) . '");</script>';
 
 if( !empty($_GET) )
 {
