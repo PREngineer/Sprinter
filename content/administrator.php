@@ -24,6 +24,6 @@ echo '<a link="mailto:?
 		subject=Thought%20you%20would%20like%20to%20join%20in%20on%20the%20fun
 		&body=Sprinter%20is%20an%20application%20used%20to%20track%20the%20progress%20of%20healthy%20challenges.
 		%0A%0AVisit%20this%20web%20page%20to%20register%20and%20use%20the%20following%20code%20to%20register: ' . $code .'
-		%0A%0AClick here: ' . $url . '" style="cursor: pointer;">Send Invite</a>
+		%0A%0AClick here: ' . $url . '" style="cursor: pointer;">Send Invite</a>';
 				  
 ?>
