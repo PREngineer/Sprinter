@@ -23,5 +23,6 @@
 <br>
 <a link="index.php?display=EditSprint" style="cursor: pointer;">Edit Sprint</a>
 <br>
-<a link="index.php?display=SendInvite" style="cursor: pointer;">Send Invite</a>
+<a link="mailto:?subject=Thought%20you%20would%20like%20to%20join%20in%20on%20the%20fun&body=Visit%20this%20web%20page%20to%20register.%0A%0Use%20the%20following%20code%20to%20register: ' . $code .
+                  '%0A%0ASprinter%20is%20an%20application%20used%20to%20track%20the%20progress%20of%20healthy%20challenges%20.%0A%0AClick here: ' . $url . '" class="btn btn-success" role="button">Send Invite</a>
 <br>
