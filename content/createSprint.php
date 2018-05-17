@@ -16,7 +16,7 @@
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-pencil"></i>
       </span>
-      <input name="name" type="text" class="form-control" id="name" placeholder="john.p.doe" aria-describedby="nameHelp" required>
+      <input name="name" type="text" class="form-control" id="name" placeholder="Walk it off!" aria-describedby="nameHelp" required>
     </div>
   </div>
 
