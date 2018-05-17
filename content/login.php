@@ -35,7 +35,7 @@ if( !empty($_GET) )
 	else
 	{
 		echo '<script>alert("Failed");</script>';
-		header('Location: index.php?display=Login&Success=0');
+		//header('Location: index.php?display=Login&Success=0');
 	}
 }
 else
