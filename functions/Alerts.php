@@ -57,7 +57,7 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 		}
 		
 		// If Data was added
-		if($_GET['SetGoal'] == '1')
+		if($_GET['AddData'] == '1')
 		{
 			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
 				<button type = "button" class="close" data-dismiss = "alert">x</button>
@@ -66,7 +66,7 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 		}
 		
 		// If data was not added
-		if($_GET['SetGoal'] == '0')
+		if($_GET['AddData'] == '0')
 		{
 			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
 				<button type = "button" class="close" data-dismiss = "alert">x</button>
