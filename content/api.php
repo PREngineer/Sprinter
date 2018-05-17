@@ -231,16 +231,14 @@
 			if($_GET['do'] == "1")
 			{
 				setcookie("Sprinter",session_id(),$lifetime);			
-				header('Location: index.php?display=Leaderboard&LoggedIn=1');
+				//header('Location: index.php?display=Leaderboard&LoggedIn=1');
 			}
 		}
 		else
 		{
 			echo '{"result":"failure"}';
-			header('Location: index.php?display=Login&Success=0');
+			//header('Location: index.php?display=Login&Success=0');
 		}
-	
-		header('Location: index.php?display=Leaderboard');
 
 		// You need to provide the date in the URL (via GET)
 	
