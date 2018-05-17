@@ -104,7 +104,7 @@ if( $_GET['display'] == 'AddData' && $_SESSION['userRole'] == "0")
 }
 
 // Normal user is logged in and viewing leaderboard
-if( $_GET['display'] == 'Leaderboard' && $_SESSION['userRole'] == "0")
+if( ($_GET['display'] == 'Leaderboard' || $_GET['display'] == 'SetGoal') && $_SESSION['userRole'] == "0")
 {
   echo '
 	document.getElementById("addDataLink").classList.remove("active");
