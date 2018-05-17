@@ -5,7 +5,7 @@ include '../functions/DB.php';
 
 echo '<script>alert("POST is empty: ' . empty($_POST) . '");</script>';
 
-if( empty($_POST) != true )
+if( !empty($_GET) )
 {
 	echo '<script>alert("Inside the action");</script>';
 	$user = $_GET['username'];
@@ -36,7 +36,7 @@ if( empty($_POST) != true )
 	else
 	{
 		echo '<script>alert("Failed");</script>';
-		//header('Location: index.php?display=Login&Success=0');
+		header('Location: index.php?display=Login&Success=0');
 	}
 }
 ?>
