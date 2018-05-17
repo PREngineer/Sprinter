@@ -38,7 +38,7 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 				</div>';
 		}
 		
-		// If logged in
+		// If Goal was set
 		if($_GET['SetGoal'] == '1')
 		{
 			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
@@ -47,12 +47,30 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 				</div>';
 		}
 		
-		// If logged in
+		// If Goal was not set
 		if($_GET['SetGoal'] == '0')
 		{
 			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
 				<button type = "button" class="close" data-dismiss = "alert">x</button>
 				Your goal could not be set.
+				</div>';
+		}
+		
+		// If Data was added
+		if($_GET['SetGoal'] == '1')
+		{
+			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+				<button type = "button" class="close" data-dismiss = "alert">x</button>
+				Your data has been added.
+				</div>';
+		}
+		
+		// If data was not added
+		if($_GET['SetGoal'] == '0')
+		{
+			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+				<button type = "button" class="close" data-dismiss = "alert">x</button>
+				Your data could not be added.
 				</div>';
 		}
 	}
