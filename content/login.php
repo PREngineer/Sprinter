@@ -58,7 +58,7 @@ else
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Login</h1>
 
 <!-- Form STARTS here -->
-<form class="container" method="POST" id="loginPage" action="index.php?display=Login">
+<form class="container" method="POST" id="loginPage">
 
  <input name="display" type="hidden" value="Login">
   <hr>
