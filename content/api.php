@@ -208,7 +208,6 @@
 
 		if( $res['Result'] )
 		{
-			echo 'Passed<br>';
 			$userdata = mysqli_fetch_all( $res['Data'] )[0];
 			
 			// Initialize the session
