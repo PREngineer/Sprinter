@@ -208,6 +208,7 @@
 
 		if( $res['Result'] )
 		{
+			echo 'Passed<br>';
 			$userdata = mysqli_fetch_all( $res['Data'] )[0];
 			
 			// Initialize the session
@@ -225,7 +226,7 @@
 			$lifetime = time() + $cookieLifetime;
 			
 			// Return JSON
-			echo '[{"result":"success"},{"sessionName":"Sprinter","sessionID":"' . $session_id() . '","lifetime":"' . $lifetime . '"}';
+			echo '[{"result":"success"},{"sessionName":"Sprinter","sessionID":"' . session_id() . '","lifetime":"' . $lifetime . '"}]';
 			
 			// Redirect to the page
 			if($_GET['do'] == "1")
