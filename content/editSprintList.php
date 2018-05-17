@@ -9,6 +9,16 @@ include 'layout/LinkHandler.php';
 protectAdmin();
 
 ?>
+<script>
+  $(document).ready(function()
+  {
+    $("a").click(function()
+    {
+      var url = $(this).attr("link");
+      window.location = url;
+    });
+  });
+</script>
 
 <h1 id="page-title" tabindex="-1" role="heading" aria-level="1">Sprint List</h1>
 
