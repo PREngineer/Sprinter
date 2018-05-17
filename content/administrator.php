@@ -15,13 +15,13 @@
   });
 </script>
 
-<h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Administrator</h1> &nbsp;
+<h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Administrator</h1>
 
-<a link="index.php?display=CreateSprint" style="cursor: pointer;" class="btn btn-default">Create Sprint</a> &nbsp;
-
-<a link="index.php?display=DeleteUser" style="cursor: pointer;" class="btn btn-default">Delete User</a> &nbsp;
-
-<a link="index.php?display=EditSprint" style="cursor: pointer;" class="btn btn-default">Edit Sprint</a> &nbsp;
-
+<a link="index.php?display=CreateSprint" style="cursor: pointer;" class="btn btn-default">Create Sprint</a>
+<br><br>
+<a link="index.php?display=DeleteUser" style="cursor: pointer;" class="btn btn-default">Delete User</a>
+<br><br>
+<a link="index.php?display=EditSprint" style="cursor: pointer;" class="btn btn-default">Edit Sprint</a>
+<br><br>
 <a link="mailto:?subject=Thought%20you%20would%20like%20to%20join%20in%20on%20the%20fun&body=Visit%20this%20web%20page%20to%20register.%0A%0Use%20the%20following%20code%20to%20register: ' . $code .
                   '%0A%0ASprinter%20is%20an%20application%20used%20to%20track%20the%20progress%20of%20healthy%20challenges%20.%0A%0AClick here: ' . $url . '" class="btn btn-default">Send Invite</a>
