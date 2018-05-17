@@ -312,11 +312,28 @@
 	
 	if($_GET['action'] == "setUserGoal")
 	{
-		// Get the User Goal
-	
-		echo set_UserGoal($_GET['goal'], $_GET['user'] );
-	
-		header('Location: index.php?display=Leaderboard');
+		// Set the User Goal
+		$success = set_UserGoal($_GET['goal'], $_GET['user'] );
+		
+		if($success)
+		{
+			echo '{"result":"success"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Leaderboard&SetGoal=1');
+			}
+		}
+		else
+		{
+			echo '{"result":"failure"}';
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Leaderboard&SetGoal=0');
+			}
+		}
 
 		// You need to provide the date in the URL (via GET)
 	

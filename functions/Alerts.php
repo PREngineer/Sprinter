@@ -23,9 +23,8 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 <?php
 
 /*
-* User Actions
+* Leaderboard page messages
 */
-
 {
 	// Messages in the Leaderboard page
 	if($_GET['display'] == 'Leaderboard')
@@ -38,8 +37,31 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 				You have been logged in.
 				</div>';
 		}
+		
+		// If logged in
+		if($_GET['SetGoal'] == '1')
+		{
+			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+				<button type = "button" class="close" data-dismiss = "alert">x</button>
+				Your goal has been set.
+				</div>';
+		}
+		
+		// If logged in
+		if($_GET['SetGoal'] == '0')
+		{
+			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+				<button type = "button" class="close" data-dismiss = "alert">x</button>
+				Your goal could not be set.
+				</div>';
+		}
 	}
-	
+}
+
+/*
+* Login page messages
+*/
+{
 	// Messages in the Login page
 	if($_GET['display'] == 'Login')
 	{
@@ -51,7 +73,12 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 				[!] The information provided is not valid.  Please, try again.</div>';
 		}
 	}
-  
+}
+
+/*
+* Register page messages
+*/
+{
 	// Message upon Registrations
 	if( ($_GET['display'] == 'Register') )
 	{
@@ -81,8 +108,13 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 					[!] Error(s) occurred while attempting to register the account.</div>';
 		}
 	}
-	
-	// Message upon 
+}
+
+/*
+* Leaderboard page messages
+*/
+{
+		// Message upon 
 	//if( ($_GET['display'] == '') )
 	//{
 	//	if(1)
