@@ -14,7 +14,7 @@
     <label for="name"> <label class="text-danger">*</label> Sprint Name</label>
     <div class="input-group">
       <span class="input-group-addon">
-        <i class="glyphicon glyphicon-user"></i>
+        <i class="glyphicon glyphicon-pencil"></i>
       </span>
       <input name="name" type="text" class="form-control" id="name" placeholder="john.p.doe" aria-describedby="nameHelp" required>
     </div>
@@ -24,7 +24,7 @@
     <label for="goal"> <label class="text-danger">*</label> Goal</label>
     <div class="input-group">
       <span class="input-group-addon">
-        <i class="glyphicon glyphicon-lock"></i>
+        <i class="glyphicon glyphicon-thumbs-up"></i>
       </span>
       <input name="goal" type="text" class="form-control" id="goal" placeholder="10.00" required>
     </div>
@@ -34,7 +34,7 @@
     <label for="rules"> <label class="text-danger">*</label> Rules</label>
     <div class="input-group">
       <span class="input-group-addon">
-        <i class="glyphicon glyphicon-pencil"></i>
+        <i class="glyphicon glyphicon-exclamation-sign"></i>
       </span>
       <textarea name="rules" class="form-control" id="rules" placeholder="The rules go here." aria-required="true" rows="10"></textarea>
     </div>

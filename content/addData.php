@@ -22,7 +22,7 @@
 		<label for="amount"> <label class="text-danger">*</label> Amount:</label>
 		<div class="input-group">
 			<span class="input-group-addon">
-				<i class="glyphicon glyphicon-lock"></i>
+				<i class="glyphicon glyphicon-thumbs-up"></i>
 			</span>
 			<input name="amount" type="text" class="form-control" placeholder="10.00" required>
 		</div>
