@@ -3,11 +3,9 @@
 include '../functions/Init.php';
 include '../functions/DB.php';
 
-echo '<script>alert("POST is empty: ' . empty($_GET) . '");</script>';
-
 if( !empty($_GET) )
 {
-	echo '<script>alert("Inside the action");</script>';
+	echo '<script>alert("GET is not empty.");</script>';
 	$user = $_GET['username'];
 	$pass = $_GET['password'];
 
@@ -15,6 +13,7 @@ if( !empty($_GET) )
 
 	if( $res['Result'] )
 	{
+		echo '<script>alert("Log in");</script>';
 		$userdata = mysqli_fetch_all( $res['Data'] )[0];
 
 		// Initialize the session
@@ -38,6 +37,10 @@ if( !empty($_GET) )
 		echo '<script>alert("Failed");</script>';
 		header('Location: index.php?display=Login&Success=0');
 	}
+}
+else
+{
+	echo '<script>alert("GET is empty: ' . empty($_GET) . '");</script>';
 }
 ?>
 
