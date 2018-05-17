@@ -9,6 +9,14 @@ protectAdmin();
 ?>
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Create Sprint</h1>
 
+<ol class="breadcrumb">
+  <li>
+    <a link="index.php?display=Administrator" style="cursor:pointer;">
+      <i class="glyphicon glyphicon-arrow-left"></i> Admin
+    </a>
+  </li>
+</ol>
+
 <!-- Form STARTS here -->
 <form class="container" id="registerPage" action="api.php">
 
