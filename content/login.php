@@ -16,7 +16,7 @@
 <!-- Form STARTS here -->
 <form class="container" id="loginPage" action="api.php">
 
- <input name="display" type="hidden" value="Login">
+ <input name="action" type="hidden" value="Login">
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
