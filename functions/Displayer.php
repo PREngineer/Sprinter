@@ -100,6 +100,16 @@ This is used to determine which element will be loaded into the center of the pa
     ';
   }
   
+  // Edit Sprint List
+  if( $_GET['display'] == 'EditSprintList' )
+  {
+    echo'
+      <script>
+        $("#Content").load("editSprintList.php");
+      </script>
+    ';
+  }
+  
   // Manage Sprints
   if( $_GET['display'] == 'ManageSprints' )
   {
