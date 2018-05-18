@@ -28,6 +28,11 @@ $data = get_sprintDataByID($_GET['id'])[0];
       <i class="glyphicon glyphicon-arrow-left"></i> Admin
     </a>
   </li>
+  <li>
+    <a link="index.php?display=EditSprintList" style="cursor:pointer;">
+      <i class="glyphicon glyphicon-arrow-left"></i> Sprint List
+    </a>
+  </li>
 </ol>
 
 <!-- Form STARTS here -->
