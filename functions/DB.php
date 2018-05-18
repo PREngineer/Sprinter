@@ -834,22 +834,22 @@ Region Start - Regular Use MySQL DB Insert Functions
 	{
 		// Update the Events Table
 		$result = query_DB( "UPDATE `Sprints`
-							SET (`Name`  = '" . sanitize($name)  . "',
+							SET `Name`  = '" . sanitize($name)  . "',
 								 `Goal`  = '" . sanitize($goal)  . "',
 								 `Rules` = '" . sanitize( nl2br($rules) ) . "',
 								 `Start` = '" . sanitize($start) . "',
 								 `End`   = '" . sanitize($end)   . "',
-								 `Code`  = '" . sanitize($code)  . "')
+								 `Code`  = '" . sanitize($code)  . "'
 							WHERE `ID` = '" . $id . "'"
 						);
 						
 		echo "<pre>UPDATE `Sprints`
-			SET (`Name`  = '" . sanitize($name)  . "',
+			SET  `Name`  = '" . sanitize($name)  . "',
 				 `Goal`  = '" . sanitize($goal)  . "',
 				 `Rules` = '" . sanitize( nl2br($rules) ) . "',
 				 `Start` = '" . sanitize($start) . "',
 				 `End`   = '" . sanitize($end)   . "',
-				 `Code`  = '" . sanitize($code)  . "')
+				 `Code`  = '" . sanitize($code)  . "'
 			WHERE `ID` = '" . $id . "'</pre>";
 
 		// If successful
