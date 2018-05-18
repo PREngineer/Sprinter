@@ -31,7 +31,7 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
 </ol>
 
 <!-- Form STARTS here -->
-<form class="container" id="registerPage" action="api.php">
+<form class="container" method="POST" id="registerPage" action="api.php">
 
   <input name="action" type="hidden" value="createSprint">
   <!--<input name="do" type="hidden" value="1">-->
