@@ -33,7 +33,7 @@ $user = get_User($_GET['username'])[0];
   </div>
 
   <div class="form-group">
-    <label for="Password"> <label class="text-danger">*</label> Password</label>
+    <label for="password"> <label class="text-danger">*</label> Password</label>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-lock"></i>
@@ -49,7 +49,7 @@ $user = get_User($_GET['username'])[0];
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-barcode"></i>
       </span>
-      <input name="code" type="text" class="form-control" id="code" placeholder="john.p.doe" aria-describedby="codeHelp" value="<?php echo $user[0]; ?>" required>
+      <input name="code" type="text" class="form-control" id="code" placeholder="john.p.doe" aria-describedby="codeHelp" value="<?php echo $user[2]; ?>" required>
     </div>
     <small id="codeHelp" class="sr-only form-text text-muted">You must provide the invitation code to register.</small>
   </div>
@@ -60,7 +60,7 @@ $user = get_User($_GET['username'])[0];
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-user"></i>
       </span>
-      <input name="fName" type="text" class="form-control" id="fName" placeholder="john.p.doe" aria-describedby="fNameHelp" value="<?php echo $user[0]; ?>" required>
+      <input name="fName" type="text" class="form-control" id="fName" placeholder="john.p.doe" aria-describedby="fNameHelp" value="<?php echo $user[3]; ?>" required>
     </div>
     <small id="fNameHelp" class="sr-only form-text text-muted">Use your enterprise ID only, don't include "@company.com"</small>
   </div>
@@ -71,7 +71,7 @@ $user = get_User($_GET['username'])[0];
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-user"></i>
       </span>
-      <input name="initials" type="text" class="form-control" id="initials" placeholder="john.p.doe" aria-describedby="initialsHelp" value="<?php echo $user[0]; ?>">
+      <input name="initials" type="text" class="form-control" id="initials" placeholder="john.p.doe" aria-describedby="initialsHelp" value="<?php echo $user[4]; ?>">
     </div>
     <small id="initialsHelp" class="sr-only form-text text-muted">Use your enterprise ID only, don't include "@company.com"</small>
   </div>
@@ -82,7 +82,7 @@ $user = get_User($_GET['username'])[0];
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-user"></i>
       </span>
-      <input name="lName" type="text" class="form-control" id="lName" placeholder="john.p.doe" aria-describedby="lNameHelp" value="<?php echo $user[0]; ?>" required>
+      <input name="lName" type="text" class="form-control" id="lName" placeholder="john.p.doe" aria-describedby="lNameHelp" value="<?php echo $user[5]; ?>" required>
     </div>
     <small id="lNameHelp" class="sr-only form-text text-muted">Use your enterprise ID only, don't include "@company.com"</small>
   </div>
