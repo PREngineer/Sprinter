@@ -220,10 +220,37 @@
 		else
 		{
 			echo '{"result":"failure"}';
+			
 			// Redirect to the page
 			if($_GET['do'] == "1")
 			{
 				header('Location: index.php?display=EditSprintList&DeleteSprint=0');
+			}
+		}
+	}
+	
+	if($_GET['action'] == "editSprint")
+	{
+		$success = editSprint( $_GET['id'], $_GET['name'], $_GET['goal'], $_GET['rules'], $_GET['start'], $_GET['end'], $_GET['code'] );
+	
+		if($success)
+		{
+			echo '{"result":"success"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Administrator&EditSprint=1');
+			}
+		}
+		else
+		{
+			echo '{"result":"failure"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=EditSprint&id=' . $_GET['id'] . '&EditSprint=0');
 			}
 		}
 	}

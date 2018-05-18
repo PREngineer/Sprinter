@@ -31,7 +31,7 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
 </ol>
 
 <!-- Form STARTS here -->
-<form class="container" id="registerPage" action="api.php">
+<form class="container" id="createSprint" action="api.php">
 
   <input name="action" type="hidden" value="createSprint">
   <input name="do" type="hidden" value="1">
@@ -147,7 +147,7 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
 <script type="text/javascript">
    $(document).ready(function()
    {
-    $('#registerPage').bootstrapValidator(
+    $('#createSprint').bootstrapValidator(
 	{
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons:

@@ -31,10 +31,11 @@ $data = get_sprintDataByID($_GET['id'])[0];
 </ol>
 
 <!-- Form STARTS here -->
-<form class="container" id="registerPage" action="api.php">
+<form class="container" id="editSprint" action="api.php">
 
-  <input name="action" type="hidden" value="createSprint">
-  <input name="do" type="hidden" value="1">
+  <input name="action" type="hidden" value="editSprint">
+  <input name="id" type="hidden" value="<?php echo $data[0]; ?>">
+  <!--<input name="do" type="hidden" value="1">-->
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
@@ -147,7 +148,7 @@ $data = get_sprintDataByID($_GET['id'])[0];
 <script type="text/javascript">
    $(document).ready(function()
    {
-    $('#registerPage').bootstrapValidator(
+    $('#editSprint').bootstrapValidator(
 	{
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons:

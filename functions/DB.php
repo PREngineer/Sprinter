@@ -823,6 +823,39 @@ Region Start - Regular Use MySQL DB Insert Functions
 	
 	/*
 	  Description:
+		This function executes a query to edit a sprint.
+	  @PARAM:
+		
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function editSprint( $id, $name, $goal, $rules, $start, $end, $code )
+	{
+		// Update the Events Table
+		$result = query_DB( "UPDATE `Sprints`
+							SET (`Name`  = '" . sanitize($name)  . "',
+								 `Goal`  = '" . sanitize($goal)  . "',
+								 `Rules` = '" . sanitize( nl2br($rules) ) . "',
+								 `Start` = '" . sanitize($start) . "',
+								 `End`   = '" . sanitize($end)   . "',
+								 `Code`  = '" . sanitize($code)  . "')
+							WHERE `ID` = '" . $id . "'"
+						);
+
+		// If successful
+		if( $result['Result'] )
+		{
+			return true;
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
+	
+	/*
+	  Description:
 		This function executes a query to insert a new user.
 	  @PARAM:
 		
