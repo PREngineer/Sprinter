@@ -11,6 +11,16 @@ protectAdmin();
 $user = get_User($_GET['username'])[0];
 
 ?>
+<script>
+  $(document).ready(function()
+  {
+    $("a").click(function()
+    {
+      var url = $(this).attr("link");
+      window.location = url;
+    });
+  });
+</script>
 
 <ol class="breadcrumb">
   <li>
