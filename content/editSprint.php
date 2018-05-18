@@ -40,7 +40,7 @@ $data = get_sprintDataByID($_GET['id'])[0];
 
   <input name="action" type="hidden" value="editSprint">
   <input name="id" type="hidden" value="<?php echo $data[0]; ?>">
-  <!--<input name="do" type="hidden" value="1">-->
+  <input name="do" type="hidden" value="1">
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
