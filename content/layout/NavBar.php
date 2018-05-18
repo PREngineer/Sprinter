@@ -52,6 +52,9 @@ if( isset($_SESSION['userRole']) && $_SESSION['userRole'] == 1 )
           <li id="administratorLink">
             <a link="index.php?display=Administrator" style="cursor: pointer;">Administrator</a>
           </li>
+		  <li id="deleteAccountLink">
+            <a link="index.php?display=DeleteAccount" style="cursor: pointer;">Delete My Account</a>
+          </li>
 	';
 }
 
@@ -60,6 +63,9 @@ if( isset($_SESSION['userRole']) && $_SESSION['userRole'] == 0 )
 	echo'
           <li id="addDataLink">
             <a link="index.php?display=AddData" style="cursor: pointer;">Add Data</a>
+          </li>
+		  <li id="deleteAccountLink">
+            <a link="index.php?display=DeleteAccount" style="cursor: pointer;">Delete My Account</a>
           </li>
 	';
 }
