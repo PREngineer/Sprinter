@@ -151,13 +151,31 @@
 	
 	if($_GET['action'] == "createSprint")
 	{
-		print_r($_GET);
+		$success = createSprint( $_GET['name'], $_GET['goal'], $_GET['rules'], $_GET['start'], $_GET['end'], $_GET['code'] );
+	
+		if($success)
+		{
+			echo '{"result":"success"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Administrator&CreateSprint=1');
+			}
+		}
+		else
+		{
+			echo '{"result":"failure"}';
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=CreateSprint&CreateSprint=0');
+			}
+		}
 	}
 	
 	if($_GET['action'] == "addUserData")
 	{
-		// Get the User Goal
-	
 		$success = add_UserData($_GET['amount'], $_GET['date'], $_GET['user'] );
 	
 		if($success)
