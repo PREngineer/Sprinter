@@ -97,6 +97,7 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
       </span>
       <input name="code" type="text" class="form-control" id="code" placeholder="<?php echo $code;?>" value="<?php echo $code;?>" required>
     </div>
+	<small id="enterpriseIDHelp" class="form-text text-muted">Use a code of at least 6 characters, without spaces.</small>
   </div>
 
   <!--Login Button-->
