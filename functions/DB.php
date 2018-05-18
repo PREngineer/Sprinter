@@ -528,7 +528,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		}
 		
 		// Order descending
-		return ($a < $b) ? 1 : -1;
+		return ($a[2] < $b[2]) ? 1 : -1;
 	}
 
 	/*
