@@ -149,7 +149,7 @@
 		';
 	}
 	
-	if($_POST['action'] == "createSprint")
+	if($_GET['action'] == "createSprint")
 	{
 		$success = createSprint( $_GET['name'], $_GET['goal'], $_GET['rules'], $_GET['start'], $_GET['end'], $_GET['code'] );
 	

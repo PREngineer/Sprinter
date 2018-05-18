@@ -344,7 +344,7 @@ Region Start - Regular Use MySQL DB Setup Functions
 	*/
 	Function sanitize($string)
 	{
-	  //$string = str_replace("'", "", $string);
+	  $string = str_replace("'", "", $string);
 	  $string = str_replace('"', "", $string);
 	  $string = str_replace("\0", "", $string);
 	  $string = str_replace("\b", "", $string);
@@ -353,7 +353,7 @@ Region Start - Regular Use MySQL DB Setup Functions
 	  $string = str_replace("\t", "", $string);
 	  $string = str_replace("\Z", "", $string);
 	  $string = str_replace("\\", "", $string);
-	  $string = str_replace("%", "", $string);
+	  //$string = str_replace("%", "", $string);
 	  $string = str_replace("\_", "", $string);
 	  $string = str_replace("`", "", $string);
 	  $string = str_replace(";", "", $string);
