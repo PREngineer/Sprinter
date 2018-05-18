@@ -6,9 +6,7 @@ include '../functions/DB.php';
 
 protectAdmin();
 
-$data = get_sprintDataByID($_GET['id']);
-echo 'ID: ' . $_GET['id'];
-print_r($data);
+$data = get_sprintDataByID($_GET['id'])[0];
 
 ?>
 <script>
@@ -47,7 +45,7 @@ print_r($data);
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-pencil"></i>
       </span>
-      <input name="name" type="text" class="form-control" id="name" placeholder="Walk it off!" aria-describedby="nameHelp" required>
+      <input name="name" type="text" class="form-control" id="name" placeholder="Walk it off!" value="<?php echo $data[1]; ?>" aria-describedby="nameHelp"  aria-required="true">
     </div>
   </div>
 
@@ -57,7 +55,7 @@ print_r($data);
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-thumbs-up"></i>
       </span>
-      <input name="goal" type="text" class="form-control" id="goal" placeholder="Sleep at least 8 hours a day." required>
+      <input name="goal" type="text" class="form-control" id="goal" placeholder="Sleep at least 8 hours a day." value="<?php echo $data[2]; ?>"  aria-required="true">
     </div>
 	<small id="goalIDHelp" class="form-text text-muted">A description of what the goal is.</small>
   </div>
@@ -68,7 +66,7 @@ print_r($data);
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-exclamation-sign"></i>
       </span>
-      <textarea name="rules" class="form-control" id="rules" placeholder="The rules go here." aria-required="true" rows="10"></textarea>
+      <textarea name="rules" class="form-control" id="rules" placeholder="The rules go here." value="<?php echo $data[3]; ?>" aria-required="true" rows="10"></textarea>
     </div>
   </div>
   
@@ -78,7 +76,7 @@ print_r($data);
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-calendar"></i>
       </span>
-      <input name="start" class="form-control" type="text" id="start" placeholder="YYYY-MM-DD" aria-required="true">
+      <input name="start" class="form-control" type="text" id="start" placeholder="YYYY-MM-DD" value="<?php echo $data[4]; ?>" aria-required="true">
     </div>
   </div>
   
@@ -104,7 +102,7 @@ print_r($data);
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-calendar"></i>
       </span>
-      <input name="end" class="form-control" type="text" id="end" placeholder="YYYY-MM-DD" aria-required="true">
+      <input name="end" class="form-control" type="text" id="end" placeholder="YYYY-MM-DD" value="<?php echo $data[5]; ?>" aria-required="true">
     </div>
   </div>
   
@@ -130,7 +128,7 @@ print_r($data);
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-lock"></i>
       </span>
-      <input name="code" type="text" class="form-control" id="code" placeholder="<?php echo $code;?>" value="<?php echo $code;?>" required>
+      <input name="code" type="text" class="form-control" id="code" placeholder="<?php echo $code;?>" value="<?php echo $data[6]; ?>" aria-required="true">
     </div>
 	<small id="codeIDHelp" class="form-text text-muted">Use a code of at least 6 characters, without spaces.  The code of the active sprint will be used to allow people to register in the platform.</small>
   </div>
