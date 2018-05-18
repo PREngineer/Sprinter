@@ -948,14 +948,11 @@ Region Start - Regular Use MySQL DB Insert Functions
 	*/
 	Function editUser( $username, $password, $fName, $initials, $lName, $role )
 	{
-		if( !empty( $_GET['password'] ) )
+		if( empty( $_GET['password'] ) )
 		{
-			$pass = hash( 'sha256', SHA1( MD5($password) ) );
-			
-			// Update the Events Table
+			// Update
 			$result = query_DB( "UPDATE `Users`
 								SET `Username`  = '" . sanitize($name)           . "',
-									`Password`  = '" . ( sanitize($pass) )       . "',
 									`FName`     = '" . sanitize($goal)           . "',
 									`Initials`  = '" . sanitize( nl2br($rules) ) . "',
 									`LName`     = '" . sanitize($start)          . "',
@@ -975,9 +972,12 @@ Region Start - Regular Use MySQL DB Insert Functions
 		}
 		else
 		{
-			// Update the Events Table
+			$pass = hash( 'sha256', SHA1( MD5($password) ) );
+			
+			// Update
 			$result = query_DB( "UPDATE `Users`
 								SET `Username`  = '" . sanitize($name)           . "',
+									`Password`  = '" . ( sanitize($pass) )       . "',
 									`FName`     = '" . sanitize($goal)           . "',
 									`Initials`  = '" . sanitize( nl2br($rules) ) . "',
 									`LName`     = '" . sanitize($start)          . "',
