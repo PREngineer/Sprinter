@@ -948,7 +948,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 	*/
 	Function editUser( $username, $password, $fName, $initials, $lName, $role )
 	{
-		if( sizeof($password) > 0 )
+		if( !empty( $_GET['password'] ) )
 		{
 			$pass = hash( 'sha256', SHA1( MD5($password) ) );
 			
