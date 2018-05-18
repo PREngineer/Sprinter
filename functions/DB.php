@@ -693,6 +693,32 @@ Region Start - Regular Use MySQL DB Get Functions
 
 	/*
 	  Description:
+		This function executes a query to get the all Users' data.
+	  @PARAM:
+		
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function 
+	get_Users()
+	{
+		// Get all user data related to that Sprint
+		$result = query_DB("SELECT *
+						  FROM `Users`");
+
+		if( $result['Result'] )
+		{
+			return mysqli_fetch_all( $result['Data'] );
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
+	
+	/*
+	  Description:
 		This function executes a query to get the User's entry data.
 	  @PARAM:
 		[date]   - Sprint active day

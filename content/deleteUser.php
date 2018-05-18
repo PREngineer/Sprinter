@@ -8,6 +8,8 @@ include 'layout/LinkHandler.php';
 
 protectAdmin();
 
+$users = getUsers();
+
 ?>
 <script>
   $(document).ready(function()
@@ -74,7 +76,7 @@ protectAdmin();
 
 <?php
 
-  foreach ($events as $key => $value)
+  foreach ($users as $key => $value)
   {
     echo'
     <tr id="Entry' . $value[0] . '">
@@ -91,10 +93,6 @@ protectAdmin();
       </td>
 
       <td>
-      ' . $value[2] . '
-      </td>
-
-      <td>
       ' . $value[3] . '
       </td>
 
@@ -104,6 +102,10 @@ protectAdmin();
 
       <td>
       ' . $value[5] . '
+      </td>
+
+      <td>
+      ' . $value[6] . '
       </td>
 
     </tr>';
