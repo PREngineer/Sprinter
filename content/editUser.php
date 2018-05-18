@@ -16,7 +16,7 @@ $user = get_User($_GET['username'])[0];
 <form class="container" id="editUserPage" action="api.php">
 
   <input name="action" type="hidden" value="editUser">
-  <!--<input name="do" type="hidden" value="1">-->
+  <input name="do" type="hidden" value="1">
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
