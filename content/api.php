@@ -214,7 +214,7 @@
 			// Redirect to the page
 			if($_GET['do'] == "1")
 			{
-				header('Location: index.php?display=EditSprintlist&DeleteSprint=1');
+				header('Location: index.php?display=EditSprintList&DeleteSprint=1');
 			}
 		}
 		else
@@ -223,7 +223,7 @@
 			// Redirect to the page
 			if($_GET['do'] == "1")
 			{
-				header('Location: index.php?display=EditSprintlist&DeleteSprint=0');
+				header('Location: index.php?display=EditSprintList&DeleteSprint=0');
 			}
 		}
 	}
