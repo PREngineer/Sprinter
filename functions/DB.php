@@ -478,6 +478,16 @@ Region Start - Regular Use MySQL DB Get Functions
 */
 {
 	/*
+	 * reverse function for nl2br
+	 * @param $string - string with br's
+	 * @return string - string with \n
+	 */
+	function br2nl($string)
+	{
+		return preg_replace('/\<br(\s*)?\/?\>/i', "\n", $string);
+	}
+
+	/*
 		Used to sort the Leaderboard
 	*/
 	Function compare($a, $b)
