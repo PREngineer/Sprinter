@@ -56,7 +56,7 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 		{
 			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
 					<button type = "button" class="close" data-dismiss = "alert">x</button>
-					The sprint has been registered.
+					[!]  An error occurred.  The sprint was not registered.
 				</div>';
 		}
 	}

@@ -709,12 +709,12 @@ Region Start - Regular Use MySQL DB Insert Functions
 		$result = query_DB( "INSERT INTO `Sprints`
 							(`Name`, `Goal`, `Rules`, `Start`, `End`, `Code`)
 						   VALUES (
-						   '" . sanitize($name) . "',
-						   '" . sanitize($goal) . "',
-						   '" . sanitize( nl2br($rules) ) . "',
+						   '" . sanitize($name)  . "',
+						   '" . sanitize($goal)  . "',
+						   '" . nl2br($rules)    . "',
 						   '" . sanitize($start) . "',
-						   '" . sanitize($end) . "',
-						   '" . sanitize($code) . "')"
+						   '" . sanitize($end)   . "',
+						   '" . sanitize($code)  . "')"
 						);
 
 		// If successful
