@@ -106,6 +106,7 @@ if( $_GET['display'] == 'AddData' && $_SESSION['userRole'] == "0")
   echo '
 	document.getElementById("addDataLink").classList.add("active");
 	document.getElementById("leaderboardLink").classList.remove("active");
+	document.getElementById("deleteAccountLinkLink").classList.remove("active");
   ';
 }
 
@@ -115,6 +116,17 @@ if( ($_GET['display'] == 'Leaderboard' || $_GET['display'] == 'SetGoal') && $_SE
   echo '
 	document.getElementById("addDataLink").classList.remove("active");
 	document.getElementById("leaderboardLink").classList.add("active");
+	document.getElementById("deleteAccountLinkLink").classList.remove("active");
+  ';
+}
+
+// Normal user is logged in and viewing delete my account
+if( ($_GET['display'] == 'Leaderboard' || $_GET['display'] == 'DeleteAccount') && $_SESSION['userRole'] == "0")
+{
+  echo '
+	document.getElementById("addDataLink").classList.remove("active");
+	document.getElementById("leaderboardLink").classList.remove("active");
+	document.getElementById("deleteAccountLinkLink").classList.add("active");
   ';
 }
 
@@ -124,6 +136,7 @@ if( $_GET['display'] == 'Leaderboard' && !isset($_SESSION['userRole']) )
   echo '
 	document.getElementById("loginLink").classList.remove("active");
 	document.getElementById("leaderboardLink").classList.add("active");
+	document.getElementById("deleteAccountLinkLink").classList.remove("active");
   ';
 }
 
@@ -133,6 +146,7 @@ if( $_GET['display'] == 'Login' )
   echo '
 	document.getElementById("loginLink").classList.add("active");
 	document.getElementById("leaderboardLink").classList.remove("active");
+	document.getElementById("deleteAccountLinkLink").classList.remove("active");
   ';
 }
 
@@ -142,6 +156,7 @@ if( $_GET['display'] == 'Administrator' && $_SESSION['userRole'] == "1")
   echo '
 	document.getElementById("administratorLink").classList.add("active");
 	document.getElementById("leaderboardLink").classList.remove("active");
+	document.getElementById("deleteAccountLinkLink").classList.remove("active");
   ';
 }
 
@@ -151,6 +166,17 @@ if( $_GET['display'] == 'Leaderboard' && $_SESSION['userRole'] == "1")
   echo '
 	document.getElementById("administratorLink").classList.remove("active");
 	document.getElementById("leaderboardLink").classList.add("active");
+	document.getElementById("deleteAccountLinkLink").classList.remove("active");
+  ';
+}
+
+// Administrator user is logged in and viewing Delete My Account
+if( $_GET['display'] == 'DeleteAccount' && $_SESSION['userRole'] == "1")
+{
+  echo '
+	document.getElementById("administratorLink").classList.remove("active");
+	document.getElementById("leaderboardLink").classList.remove("active");
+	document.getElementById("deleteAccountLinkLink").classList.add("active");
   ';
 }
 
