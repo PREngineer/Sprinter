@@ -483,6 +483,12 @@ Region Start - Regular Use MySQL DB Delete Functions
 	{
 		$result = query_DB("DELETE FROM `Users`
 						  WHERE `Username` = '$username'");
+						  
+		query_DB("DELETE FROM `Goals`
+				WHERE `User` = '$username'");
+				
+		query_DB("DELETE FROM `Entries`
+				WHERE `User` = '$username'");
 
 		if( $result['Result'] )
 		{
