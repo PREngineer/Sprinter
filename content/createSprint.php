@@ -55,7 +55,7 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-thumbs-up"></i>
       </span>
-      <input name="goal" type="text" class="form-control" id="goal" placeholder="Sleep at least 8 hours/day." required>
+      <input name="goal" type="text" class="form-control" id="goal" placeholder="Sleep at least 8 hours a day." required>
     </div>
 	<small id="goalIDHelp" class="form-text text-muted">A description of what the goal is.</small>
   </div>
@@ -80,6 +80,22 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
     </div>
   </div>
   
+  <script type="text/javascript">
+	$('#start').datepicker(
+	{
+		format: "yyyy-mm-dd",
+		toggleActive: true,
+		weekStart: 1,
+		maxViewMode: 3,
+		autoclose: true,
+		daysOfWeekHighlighted: "1,2,3,4,5",
+		todayHighlight: true
+	}).on('changeDate', function (e)
+	{
+		$(this).focus();
+	});
+  </script>
+	
   <div class="form-group">
     <label for="end"> <label class="text-danger">*</label> End Date:</label>
     <div class="input-group">
@@ -90,6 +106,22 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
     </div>
   </div>
   
+  <script type="text/javascript">
+	$('#end').datepicker(
+	{
+		format: "yyyy-mm-dd",
+		toggleActive: true,
+		weekStart: 1,
+		maxViewMode: 3,
+		autoclose: true,
+		daysOfWeekHighlighted: "1,2,3,4,5",
+		todayHighlight: true
+	}).on('changeDate', function (e)
+	{
+		$(this).focus();
+	});
+  </script>
+	
   <div class="form-group">
     <label for="code"> <label class="text-danger">*</label> Invite Code</label>
     <div class="input-group">
