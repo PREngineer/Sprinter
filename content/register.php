@@ -11,8 +11,7 @@
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
 
   <div class="form-group">
-    <label for="username"> <label class="text-danger">*</label> Username</label>
-	<small class="sr-only form-text text-muted">In the format "user.name". No spaces.</small>
+    <label for="username"> <label class="text-danger">*</label> Username - In the format "user.name". No spaces.</label>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-user"></i>
@@ -22,8 +21,7 @@
   </div>
 
   <div class="form-group">
-    <label for="Password"> <label class="text-danger">*</label> Password</label>
-	<small class="sr-only form-text text-muted">Password must not have spaces.</small>
+    <label for="Password"> <label class="text-danger">*</label> Password - Password must not have spaces.</label>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-lock"></i>
@@ -33,8 +31,7 @@
   </div>
   
   <div class="form-group">
-    <label for="code"> <label class="text-danger">*</label> Registration Code</label>
-	<small class="sr-only form-text text-muted">You must provide the invitation code to register.</small>
+    <label for="code"> <label class="text-danger">*</label> Registration Code -You must provide the invitation code to register.</label>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-barcode"></i>
