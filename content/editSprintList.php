@@ -87,9 +87,9 @@ $sprints = get_AllSprintData();
     <tr id="Entry' . $value[0] . '">
 
       <td>
-        <a link="index.php?display=EditEvent&id=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-edit" title="Edit" style="color: orange"></i></a>
+        <a link="index.php?display=EditSprint&id=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-edit" title="Edit" style="color: orange"></i></a>
 
-        <a link="deleteEvent.php?display=Admin&id=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-trash" title="Delete" style="color: red"></i></a>
+        <a link="api.php?action=DeleteSprint&id=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-trash" title="Delete" style="color: red"></i></a>
 
       </td>
 
