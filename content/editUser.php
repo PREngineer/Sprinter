@@ -29,7 +29,6 @@ $user = get_User($_GET['username'])[0];
       </span>
       <input name="username" type="text" class="form-control" id="username" placeholder="john.p.doe" aria-describedby="usernameHelp" value="<?php echo $user[0]; ?>" required>
     </div>
-    <small id="usernameHelp" class="sr-only form-text text-muted">Use your enterprise ID only, don't include "@company.com"</small>
   </div>
 
   <div class="form-group">
@@ -41,7 +40,7 @@ $user = get_User($_GET['username'])[0];
       <input name="password" type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="password" required>
     </div>
   </div>
-  <small id="passwordHelp" class="sr-only form-text text-muted">ONLY IF YOU WANT TO CHANGE IT.  Password must not have spaces.</small>
+  <small class="sr-only form-text text-muted">ONLY IF YOU WANT TO CHANGE IT.  Password must not have spaces.</small>
   
   <div class="form-group">
     <label for="fName"> <label class="text-danger">*</label> First Name</label>
@@ -51,7 +50,6 @@ $user = get_User($_GET['username'])[0];
       </span>
       <input name="fName" type="text" class="form-control" id="fName" placeholder="john.p.doe" aria-describedby="fNameHelp" value="<?php echo $user[2]; ?>" required>
     </div>
-    <small id="fNameHelp" class="sr-only form-text text-muted">Use your enterprise ID only, don't include "@company.com"</small>
   </div>
   
   <div class="form-group">
@@ -62,7 +60,6 @@ $user = get_User($_GET['username'])[0];
       </span>
       <input name="initials" type="text" class="form-control" id="initials" placeholder="john.p.doe" aria-describedby="initialsHelp" value="<?php echo $user[3]; ?>">
     </div>
-    <small id="initialsHelp" class="sr-only form-text text-muted">Use your enterprise ID only, don't include "@company.com"</small>
   </div>
   
   <div class="form-group">
@@ -73,7 +70,6 @@ $user = get_User($_GET['username'])[0];
       </span>
       <input name="lName" type="text" class="form-control" id="lName" placeholder="john.p.doe" aria-describedby="lNameHelp" value="<?php echo $user[4]; ?>" required>
     </div>
-    <small id="lNameHelp" class="sr-only form-text text-muted">Use your enterprise ID only, don't include "@company.com"</small>
   </div>
 
   <!--Login Button-->
