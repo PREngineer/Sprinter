@@ -66,7 +66,7 @@ $data = get_sprintDataByID($_GET['id'])[0];
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-exclamation-sign"></i>
       </span>
-      <textarea name="rules" class="form-control" id="rules" placeholder="The rules go here." value="<?php echo $data[3]; ?>" aria-required="true" rows="10"></textarea>
+      <textarea name="rules" class="form-control" id="rules" placeholder="The rules go here." value="<?php echo br2nl($data[3]); ?>" aria-required="true" rows="10"></textarea>
     </div>
   </div>
   
