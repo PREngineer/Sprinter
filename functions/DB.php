@@ -948,15 +948,25 @@ Region Start - Regular Use MySQL DB Insert Functions
 	*/
 	Function editUser( $username, $password, $fName, $initials, $lName, $role )
 	{
+		$rol = "";
+		if($role == Admin)
+		{
+			$rol = 1;
+		}
+		else
+		{
+			$rol = 0;
+		}
+		
 		if( empty( $_GET['password'] ) )
 		{
 			// Update
 			$result = query_DB( "UPDATE `Users`
-								SET `Username`  = '" . sanitize($name)           . "',
-									`FName`     = '" . sanitize($goal)           . "',
-									`Initials`  = '" . sanitize( nl2br($rules) ) . "',
-									`LName`     = '" . sanitize($start)          . "',
-									`Role`      = '" . sanitize($end)            . "'
+								SET `Username`  = '" . sanitize($name)     . "',
+									`FName`     = '" . sanitize($fName)    . "',
+									`Initials`  = '" . sanitize($initials) . "',
+									`LName`     = '" . sanitize($lName)    . "',
+									`Role`      = '" . sanitize($rol)      . "'
 								WHERE `Username` = '" . $username . "'"
 							);
 
@@ -976,12 +986,12 @@ Region Start - Regular Use MySQL DB Insert Functions
 			
 			// Update
 			$result = query_DB( "UPDATE `Users`
-								SET `Username`  = '" . sanitize($name)           . "',
-									`Password`  = '" . ( sanitize($pass) )       . "',
-									`FName`     = '" . sanitize($goal)           . "',
-									`Initials`  = '" . sanitize( nl2br($rules) ) . "',
-									`LName`     = '" . sanitize($start)          . "',
-									`Role`      = '" . sanitize($end)            . "'
+								SET `Username`  = '" . sanitize($name)     . "',
+									`Password`  = '" . ( sanitize($pass) ) . "',
+									`FName`     = '" . sanitize($fName)    . "',
+									`Initials`  = '" . sanitize($initials) . "',
+									`LName`     = '" . sanitize($lName)    . "',
+									`Role`      = '" . sanitize($rol)      . "'
 								WHERE `Username` = '" . $username . "'"
 							);
 
