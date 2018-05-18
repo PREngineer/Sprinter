@@ -240,7 +240,7 @@
 			// Redirect to the page
 			if($_GET['do'] == "1")
 			{
-				header('Location: index.php?display=Administrator&EditSprint=1');
+				header('Location: index.php?display=EditSprintList&EditSprint=1');
 			}
 		}
 		else
@@ -250,7 +250,7 @@
 			// Redirect to the page
 			if($_GET['do'] == "1")
 			{
-				header('Location: index.php?display=EditSprint&id=' . $_GET['id'] . '&EditSprint=0');
+				header('Location: index.php?display=EditSprintList&EditSprint=0');
 			}
 		}
 	}
