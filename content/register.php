@@ -12,7 +12,7 @@
 
   <div class="form-group">
     <label for="username"> <label class="text-danger">*</label> Username</label>
-	<small id="usernameHelp" class="sr-only form-text text-muted">In the format "user.name". No spaces.</small>
+	<small class="sr-only form-text text-muted">In the format "user.name". No spaces.</small>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-user"></i>
@@ -23,7 +23,7 @@
 
   <div class="form-group">
     <label for="Password"> <label class="text-danger">*</label> Password</label>
-	<small id="codeHelp" class="sr-only form-text text-muted">Password must not have spaces.</small>
+	<small class="sr-only form-text text-muted">Password must not have spaces.</small>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-lock"></i>
@@ -34,7 +34,7 @@
   
   <div class="form-group">
     <label for="code"> <label class="text-danger">*</label> Registration Code</label>
-	<small id="codeHelp" class="sr-only form-text text-muted">You must provide the invitation code to register.</small>
+	<small class="sr-only form-text text-muted">You must provide the invitation code to register.</small>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-barcode"></i>
