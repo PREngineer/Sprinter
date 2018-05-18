@@ -4,7 +4,7 @@
 <!-- Form STARTS here -->
 <form class="container" id="registerPage" action="api.php">
 
-  <input name="action" type="hidden" value="Register">
+  <input name="action" type="hidden" value="register">
   <input name="do" type="hidden" value="1">
   <hr>
 

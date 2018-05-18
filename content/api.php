@@ -149,6 +149,11 @@
 		';
 	}
 	
+	if($_GET['action'] == "createSprint")
+	{
+		print_r($_GET);
+	}
+	
 	if($_GET['action'] == "addUserData")
 	{
 		// Get the User Goal
@@ -266,7 +271,7 @@
 		// Like so: api.php?action=setUserGoal&user=user.name&goal=100
 	}
 	
-	if($_GET['action'] == "Register")
+	if($_GET['action'] == "register")
 	{
 		// Code is valid
 		if( checkCode($_GET['code']) == '1' )
