@@ -6,6 +6,10 @@ include '../functions/DB.php';
 
 protectAdmin();
 
+$code = get_SprintData( date("Y-m-d") )[0][6];
+
+$url = 'http://' . $_SERVER['HTTP_HOST'] . '/Sprinter/content/index.php?display=Register';
+
 ?>
 <script>
   $(document).ready(function()
