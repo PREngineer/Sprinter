@@ -125,8 +125,8 @@ if( $_GET['display'] == 'Leaderboard' && $_SESSION['userRole'] == "0")
 {
   echo '
 	document.getElementById("addDataLink").classList.remove("active");
-	document.getElementById("leaderboardLink").classList.remove("active");
-	document.getElementById("deleteAccountLink").classList.add("active");
+	document.getElementById("leaderboardLink").classList.add("active");
+	document.getElementById("deleteAccountLink").classList.remove("active");
   ';
 }
 
