@@ -281,6 +281,32 @@
 		}
 	}
 	
+	if($_GET['action'] == "editUser")
+	{
+		$success = editUser( $_GET['username'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'], $_GET['role'] );
+	
+		if($success)
+		{
+			echo '{"result":"success"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=DeleteUser&EditUser=1');
+			}
+		}
+		else
+		{
+			echo '{"result":"failure"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=DeleteUser&EditUser=0');
+			}
+		}
+	}
+	
 	if($_GET['action'] == "getSprintData")
 	{
 		// Get the Sprint Data

@@ -109,6 +109,29 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 }
 
 /*
+* DeleteUser page messages
+*/
+{
+	// Message upon 
+	if( ($_GET['display'] == 'DeleteUser') )
+	{
+		if($_GET['EditUser'] == '1')
+		{
+			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type = "button" class="close" data-dismiss = "alert">x</button>
+					The user account has been updated.
+				</div>';
+		}
+		else if($_GET['EditUser'] == '0')
+		{
+			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type="button" class="close" data-dismiss="alert">x</button>
+					[!] An error occurred.  The user account was not updated.  Please, try again.</div>';
+		}
+	}
+}
+
+/*
 * Leaderboard page messages
 */
 {

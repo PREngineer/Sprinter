@@ -70,6 +70,38 @@ $user = get_User($_GET['username'])[0];
       <input name="lName" type="text" class="form-control" id="lName" placeholder="john.p.doe" aria-describedby="lNameHelp" value="<?php echo $user[4]; ?>" required>
     </div>
   </div>
+  
+  <div class="form-group">
+    <label for="role"> <label class="text-danger">*</label> Role:</label>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="glyphicon glyphicon-th-list"></i>
+      </span>
+      <select name="role" class="form-control" id="role" aria-required="true">
+      <?php
+
+         if($user[5] == 1)
+		 {
+           echo '<option selected>Admin</option>';
+         }
+		 else
+		 {
+			 echo '<option>Admin</option>';
+		 }
+		 
+		 if($user[5] == 0)
+		 {
+           echo '<option selected>User</option>';
+         }
+		 else
+		 {
+			 echo '<option>User</option>';
+		 }
+
+      ?>
+      </select>
+    </div>
+  </div>
 
   <!--Login Button-->
 </div >

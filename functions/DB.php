@@ -925,15 +925,6 @@ Region Start - Regular Use MySQL DB Insert Functions
 								 `Code`  = '" . sanitize($code)  . "'
 							WHERE `ID` = '" . $id . "'"
 						);
-						
-		echo "<pre>UPDATE `Sprints`
-			SET  `Name`  = '" . sanitize($name)  . "',
-				 `Goal`  = '" . sanitize($goal)  . "',
-				 `Rules` = '" . sanitize( nl2br($rules) ) . "',
-				 `Start` = '" . sanitize($start) . "',
-				 `End`   = '" . sanitize($end)   . "',
-				 `Code`  = '" . sanitize($code)  . "'
-			WHERE `ID` = '" . $id . "'</pre>";
 
 		// If successful
 		if( $result['Result'] )
@@ -943,6 +934,66 @@ Region Start - Regular Use MySQL DB Insert Functions
 		else
 		{
 			return $result['Errors'];
+		}
+	}
+	
+	/*
+	  Description:
+		This function executes a query to edit a user account.
+	  @PARAM:
+		
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function editUser( $username, $password, $fName, $initials, $lName, $role )
+	{
+		if( sizeof($password) > 0 )
+		{
+			$pass = hash( 'sha256', SHA1( MD5($password) ) );
+			
+			// Update the Events Table
+			$result = query_DB( "UPDATE `Users`
+								SET `Username`  = '" . sanitize($name)           . "',
+									`Password`  = '" . ( sanitize($pass) )       . "',
+									`FName`     = '" . sanitize($goal)           . "',
+									`Initials`  = '" . sanitize( nl2br($rules) ) . "',
+									`LName`     = '" . sanitize($start)          . "',
+									`Role`      = '" . sanitize($end)            . "'
+								WHERE `Username` = '" . $username . "'"
+							);
+
+			// If successful
+			if( $result['Result'] )
+			{
+				return true;
+			}
+			else
+			{
+				return $result['Errors'];
+			}
+		}
+		else
+		{
+			// Update the Events Table
+			$result = query_DB( "UPDATE `Users`
+								SET `Username`  = '" . sanitize($name)           . "',
+									`FName`     = '" . sanitize($goal)           . "',
+									`Initials`  = '" . sanitize( nl2br($rules) ) . "',
+									`LName`     = '" . sanitize($start)          . "',
+									`Role`      = '" . sanitize($end)            . "'
+								WHERE `Username` = '" . $username . "'"
+							);
+
+			// If successful
+			if( $result['Result'] )
+			{
+				return true;
+			}
+			else
+			{
+				return $result['Errors'];
+			}
 		}
 	}
 	
