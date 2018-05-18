@@ -63,6 +63,35 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 }
 
 /*
+* EditSprintList page messages
+*/
+{
+	// Message upon 
+	if( ($_GET['display'] == 'EditSprintList') )
+	{
+		if($_GET['DeleteSprint'] == '1')
+		{
+			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type = "button" class="close" data-dismiss = "alert">x</button>
+					The sprint has been deleted.
+				</div>';
+		}
+		else if($_GET['EditSprint'] == '1')
+		{
+			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type="button" class="close" data-dismiss="alert">x</button>
+					The sprint has been successfully updated.</div>';
+		}
+		else if($_GET['EditSprint'] == '0')
+		{
+			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type="button" class="close" data-dismiss="alert">x</button>
+					[!] An error occurred.  The sprint was not updated.  Please, try again.</div>';
+		}
+	}
+}
+
+/*
 * Leaderboard page messages
 */
 {
