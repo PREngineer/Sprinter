@@ -4,6 +4,8 @@
 	include '../functions/DB.php';
 	
 	protectUser();
+	
+	$entries = get_UserData(date("Y-m-d"), $_SESSION['userID']);
 ?>
 
 <h1 id="page_title" tabindex="-1" role="heading" aria-level="1">Add Data</h1>
@@ -58,3 +60,40 @@
 	<input class="btn btn-primary" type="submit" value="Submit">
 
 </form>
+
+<table class="table">
+	<thead>
+			<th>
+				Date
+			</th>
+			<th>
+				Amount
+			</th>
+			<th>
+				Recorded on
+			</th>
+	</thead>
+	<tbody>
+
+<?php
+
+
+	foreach($entries as $each)
+	{
+		echo'
+				<tr>
+					<td style="width:50%">
+					' . $each[4] . '
+					</td>
+					<td style="width:25%">
+					' . $each[3] . '
+					</td>
+					<td style="width:25%">
+					' . $each[5] . '%
+					</td>
+				</tr>
+		';
+	}
+?>
+	</tbody>
+</table>
