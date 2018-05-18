@@ -203,6 +203,31 @@
 		// Like so: api.php?action=setUserGoal&user=user.name&goal=100
 	}
 	
+	if($_GET['action'] == "deleteSprint")
+	{
+		$success = deleteSprint( $_GET['id'] );
+	
+		if($success)
+		{
+			echo '{"result":"success"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=EditSprintlist&DeleteSprint=1');
+			}
+		}
+		else
+		{
+			echo '{"result":"failure"}';
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=EditSprintlist&DeleteSprint=0');
+			}
+		}
+	}
+	
 	if($_GET['action'] == "getSprintData")
 	{
 		// Get the Sprint Data

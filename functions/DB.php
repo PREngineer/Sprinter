@@ -442,6 +442,37 @@ Region Start - Session Related Session Functions
 
 /*
 *****************************
+Region Start - Regular Use MySQL DB Delete Functions
+*****************************
+*/
+{
+	/*
+	  Description:
+		This function executes a query to delete a sprint.
+	  @PARAM:
+		
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function createSprint( $id )
+	{
+		$result = query_DB("DELETE FROM `Sprints`
+						  WHERE `ID` >= '$id'");
+
+		if( $result['Result'] )
+		{
+			return mysqli_fetch_all( $result['Data'] );
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
+}
+
+/*
+*****************************
 Region Start - Regular Use MySQL DB Get Functions
 *****************************
 */

@@ -82,7 +82,7 @@ protectAdmin();
       <td>
         <a link="index.php?display=EditEvent&id=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-edit" title="Edit" style="color: orange"></i></a>
 
-        <a link="deleteEvent.php?display=deleteUser&id=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-trash" title="Delete" style="color: red"></i></a>
+        <a link="api.php?display=deleteUser&id=' . $value[0] . '&do=1" style="cursor:pointer;"><i class="glyphicon glyphicon-trash" title="Delete" style="color: red"></i></a>
 
       </td>
 
