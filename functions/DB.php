@@ -962,7 +962,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 		{
 			// Update
 			$result = query_DB( "UPDATE `Users`
-								SET `Username`  = '" . sanitize($name)     . "',
+								SET `Username`  = '" . sanitize($username) . "',
 									`FName`     = '" . sanitize($fName)    . "',
 									`Initials`  = '" . sanitize($initials) . "',
 									`LName`     = '" . sanitize($lName)    . "',
@@ -986,7 +986,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 			
 			// Update
 			$result = query_DB( "UPDATE `Users`
-								SET `Username`  = '" . sanitize($name)     . "',
+								SET `Username`  = '" . sanitize($username) . "',
 									`Password`  = '" . ( sanitize($pass) ) . "',
 									`FName`     = '" . sanitize($fName)    . "',
 									`Initials`  = '" . sanitize($initials) . "',
