@@ -8,6 +8,10 @@ include 'layout/LinkHandler.php';
 
 protectAdmin();
 
+$sprints = get_AllSprintData();
+
+print_r($sprints);
+
 ?>
 <script>
   $(document).ready(function()

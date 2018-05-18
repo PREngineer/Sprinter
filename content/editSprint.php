@@ -6,8 +6,6 @@ include '../functions/DB.php';
 
 protectAdmin();
 
-$code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
-
 ?>
 <script>
   $(document).ready(function()
@@ -33,8 +31,8 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
 <!-- Form STARTS here -->
 <form class="container" id="registerPage" action="api.php">
 
-  <input name="action" type="hidden" value="EditSprint">
-  <!--<input name="do" type="hidden" value="1">-->
+  <input name="action" type="hidden" value="createSprint">
+  <input name="do" type="hidden" value="1">
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
@@ -55,8 +53,9 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-thumbs-up"></i>
       </span>
-      <input name="goal" type="text" class="form-control" id="goal" placeholder="10.00" required>
+      <input name="goal" type="text" class="form-control" id="goal" placeholder="Sleep at least 8 hours a day." required>
     </div>
+	<small id="goalIDHelp" class="form-text text-muted">A description of what the goal is.</small>
   </div>
   
   <div class="form-group">
@@ -79,6 +78,22 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
     </div>
   </div>
   
+  <script type="text/javascript">
+	$('#start').datepicker(
+	{
+		format: "yyyy-mm-dd",
+		toggleActive: true,
+		weekStart: 1,
+		maxViewMode: 3,
+		autoclose: true,
+		daysOfWeekHighlighted: "1,2,3,4,5",
+		todayHighlight: true
+	}).on('changeDate', function (e)
+	{
+		$(this).focus();
+	});
+  </script>
+	
   <div class="form-group">
     <label for="end"> <label class="text-danger">*</label> End Date:</label>
     <div class="input-group">
@@ -89,6 +104,22 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
     </div>
   </div>
   
+  <script type="text/javascript">
+	$('#end').datepicker(
+	{
+		format: "yyyy-mm-dd",
+		toggleActive: true,
+		weekStart: 1,
+		maxViewMode: 3,
+		autoclose: true,
+		daysOfWeekHighlighted: "1,2,3,4,5",
+		todayHighlight: true
+	}).on('changeDate', function (e)
+	{
+		$(this).focus();
+	});
+  </script>
+	
   <div class="form-group">
     <label for="code"> <label class="text-danger">*</label> Invite Code</label>
     <div class="input-group">
@@ -97,11 +128,13 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
       </span>
       <input name="code" type="text" class="form-control" id="code" placeholder="<?php echo $code;?>" value="<?php echo $code;?>" required>
     </div>
+	<small id="codeIDHelp" class="form-text text-muted">Use a code of at least 6 characters, without spaces.  The code of the active sprint will be used to allow people to register in the platform.</small>
   </div>
 
   <!--Login Button-->
 </div >
   <div>
+	<input class="btn btn-default" type="reset"  value="Clear">
     <input class="btn btn-primary" type="submit" value="Submit">
   </div>
 

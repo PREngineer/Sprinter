@@ -481,6 +481,32 @@ Region Start - Regular Use MySQL DB Get Functions
 	
 	/*
 	  Description:
+		This function executes a query to get all the Sprints' data.
+	  @PARAM:
+		[date]   - Sprint active day
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function 
+	get_AllSprintData()
+	{
+		$result = query_DB("SELECT *
+						  FROM `Sprints`
+						  WHERE `End` >= '$date'");
+
+		if( $result['Result'] )
+		{
+			return mysqli_fetch_all( $result['Data'] );
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
+	
+	/*
+	  Description:
 		This function executes a query to get the leaderboard.
 	  @PARAM:
 
