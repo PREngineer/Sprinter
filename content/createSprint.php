@@ -55,8 +55,9 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-thumbs-up"></i>
       </span>
-      <input name="goal" type="text" class="form-control" id="goal" placeholder="10.00" required>
+      <input name="goal" type="text" class="form-control" id="goal" placeholder="Sleep at least 8 hours/day." required>
     </div>
+	<small id="goalIDHelp" class="form-text text-muted">A description of what the goal is.</small>
   </div>
   
   <div class="form-group">
@@ -97,12 +98,13 @@ $code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
       </span>
       <input name="code" type="text" class="form-control" id="code" placeholder="<?php echo $code;?>" value="<?php echo $code;?>" required>
     </div>
-	<small id="enterpriseIDHelp" class="form-text text-muted">Use a code of at least 6 characters, without spaces.</small>
+	<small id="codeIDHelp" class="form-text text-muted">Use a code of at least 6 characters, without spaces.  The code of the active sprint will be used to allow people to register in the platform.</small>
   </div>
 
   <!--Login Button-->
 </div >
   <div>
+	<input class="btn btn-default" type="reset"  value="Clear">
     <input class="btn btn-primary" type="submit" value="Submit">
   </div>
 
