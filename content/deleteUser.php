@@ -81,7 +81,7 @@ $users = get_Users();
     <tr id="Entry' . $value[0] . '">
 
       <td>
-        <a link="index.php?display=EditEvent&username=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-edit" title="Edit" style="color: orange"></i></a>
+        <a link="index.php?display=EditUser&username=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-edit" title="Edit" style="color: orange"></i></a>
 
         <a link="api.php?action=deleteUser&username=' . $value[0] . '&do=1" style="cursor:pointer;"><i class="glyphicon glyphicon-trash" title="Delete" style="color: red"></i></a>
 
