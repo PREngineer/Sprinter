@@ -101,13 +101,26 @@ $users = get_Users();
 
       <td>
       ' . $value[4] . '
-      </td>
+      </td>';
 
-      <td>
-      ' . $value[5] . '
-      </td>
+	if($value[5])
+	{
+      echo '
+	  <td>
+		Admin
+      </td>';
+	}
+	else
+	{
+		echo '
+	  <td>
+		User
+      </td>';
+	}
 
-    </tr>';
+    echo '
+	</tr>
+	';
   }
 ?>
   </table>
