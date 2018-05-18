@@ -793,7 +793,8 @@ Region Start - Regular Use MySQL DB Get Functions
 		$result = query_DB("SELECT *
 						  FROM `Entries`
 						  WHERE `User`   = '$user'
-						  AND `SprintID` = '$sprintID'");
+						  AND `SprintID` = '$sprintID'
+						  ORDER BY `Date` DESC");
 
 		if( $result['Result'] )
 		{

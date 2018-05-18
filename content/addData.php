@@ -61,6 +61,10 @@
 
 </form>
 
+<br>
+<hr>
+<br>
+
 <table class="table">
 	<thead>
 			<th>
