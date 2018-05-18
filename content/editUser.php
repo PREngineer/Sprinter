@@ -12,6 +12,19 @@ $user = get_User($_GET['username'])[0];
 
 ?>
 
+<ol class="breadcrumb">
+  <li>
+    <a link="index.php?display=Administrator" style="cursor:pointer;">
+      <i class="glyphicon glyphicon-arrow-left"></i> Admin
+    </a>
+  </li>
+  <li>
+    <a link="index.php?display=EditSprintList" style="cursor:pointer;">
+      Sprint List
+    </a>
+  </li>
+</ol>
+
 <!-- Form STARTS here -->
 <form class="container" id="editUserPage" action="api.php">
 
