@@ -705,13 +705,14 @@ Region Start - Regular Use MySQL DB Insert Functions
 	*/
 	Function createSprint( $name, $goal, $rules, $start, $end, $code )
 	{
+		$rul = nl2br( sanitize($rules) );
 		// Update the Events Table
 		$result = query_DB( "INSERT INTO `Sprints`
 							(`Name`, `Goal`, `Rules`, `Start`, `End`, `Code`)
 						   VALUES (
 						   '" . sanitize($name) . "',
 						   '" . sanitize($goal) . "',
-						   '" . nl2br( sanitize($rules) ) . "',
+						   '" . $rul . "',
 						   '" . sanitize($start) . "',
 						   '" . sanitize($end) . "',
 						   '" . sanitize($code) . "')"
