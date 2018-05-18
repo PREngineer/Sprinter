@@ -614,7 +614,7 @@ Region Start - Regular Use MySQL DB Get Functions
 	{
 		$result = query_DB("SELECT *
 						  FROM `Sprints`
-						  WHERE `ID` <= '$id'");
+						  WHERE `ID` = '$id'");
 
 		if( $result['Result'] )
 		{
