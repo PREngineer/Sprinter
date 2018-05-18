@@ -32,14 +32,13 @@ $user = get_User($_GET['username'])[0];
   </div>
 
   <div class="form-group">
-    <label for="password"> <label class="text-danger">*</label> Password</label>
+    <label for="password"> <label class="text-danger">*</label> Password</label> <label class="text-danger">(ONLY IF YOU WANT TO CHANGE IT)  Password must not have spaces.</label>
     <div class="input-group">
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-lock"></i>
       </span>
       <input name="password" type="password" class="form-control" id="password" placeholder="password">
     </div>
-	<small class="sr-only form-text text-muted">ONLY IF YOU WANT TO CHANGE IT.  Password must not have spaces.</small>
   </div>
   
   <div class="form-group">
