@@ -7,7 +7,7 @@ include '../functions/DB.php';
 protectAdmin();
 
 $data = get_sprintDataByID($_GET['id']);
-
+echo 'ID: ' . $_GET['id'];
 print_r($data);
 
 ?>
