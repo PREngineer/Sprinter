@@ -32,6 +32,23 @@ Libraries/Frameworks used:
 
 # How to Install (Ubuntu Server)
 
+  * Step 1 - Create /var/www/html folder and set permissions
+
+    sudo mkdir /var
+    sudo mkdir /var/www
+    sudo mkdir /var/www/html
+    sudo chmod -R 777 /var/www/html
+
+  * Step 2 - Clone the repository
+
+    cd /var/www/html
+    sudo git clone https://github.com/PREngineer/Sprinter
+    cd Sprinter
+
+  * Step 3 - Run the installer
+
+    sudo ./install.sh
+
 
 
 # Important Considerations:
