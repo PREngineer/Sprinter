@@ -610,7 +610,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Array]   - Errors
 	*/
 	Function 
-	get_SprintData($id)
+	get_SprintDataByID($id)
 	{
 		$result = query_DB("SELECT *
 						  FROM `Sprints`
