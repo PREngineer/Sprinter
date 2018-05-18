@@ -462,7 +462,7 @@ Region Start - Regular Use MySQL DB Delete Functions
 
 		if( $result['Result'] )
 		{
-			return mysqli_fetch_all( $result['Data'] );
+			return true;
 		}
 		else
 		{
