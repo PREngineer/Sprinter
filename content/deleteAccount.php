@@ -14,9 +14,9 @@
 	<input name="action" type="hidden" value="deleteAccount">
 	<input name="do" type="hidden" value="1">
 	
-	<p><strong> Note: All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required.</strong></p>
+	<p><strong class="text-danger"> Are you sure that you want to delete your account?</strong></p>
 	
-	<p>Provide the date and the amount completed.</p>
+	<p>Deleting your account will also delete all data associated to your account from this platform.</p>
 
 	<div class="form-group">
 		<label for="username"> <label class="text-danger">*</label> Username:</label>
