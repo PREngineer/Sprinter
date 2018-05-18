@@ -30,7 +30,7 @@ $data = get_sprintDataByID($_GET['id'])[0];
   </li>
   <li>
     <a link="index.php?display=EditSprintList" style="cursor:pointer;">
-      <i class="glyphicon glyphicon-arrow-left"></i> Sprint List
+      Sprint List
     </a>
   </li>
 </ol>
