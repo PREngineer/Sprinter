@@ -36,12 +36,6 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 					The sprint has been registered.
 				</div>';
 		}
-		else if($_GET['something'] == '1')
-		{
-			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
-					<button type="button" class="close" data-dismiss="alert">x</button>
-					[!] .  Please, try again.</div>';
-		}
 	}
 }
 
@@ -58,6 +52,29 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 					<button type = "button" class="close" data-dismiss = "alert">x</button>
 					[!]  An error occurred.  The sprint was not registered.
 				</div>';
+		}
+	}
+}
+
+/*
+* DeleteUser page messages
+*/
+{
+	// Message upon 
+	if( ($_GET['display'] == 'DeleteUser') )
+	{
+		if($_GET['DeleteUser'] == '1')
+		{
+			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type = "button" class="close" data-dismiss = "alert">x</button>
+					The user has been deleted.
+				</div>';
+		}
+		else if($_GET['DeleteUser'] == '0')
+		{
+			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type="button" class="close" data-dismiss="alert">x</button>
+					[!] An error occurred.  The user was not deleted.  Please, try again.</div>';
 		}
 	}
 }

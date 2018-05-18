@@ -469,6 +469,30 @@ Region Start - Regular Use MySQL DB Delete Functions
 			return $result['Errors'];
 		}
 	}
+
+	/*
+	  Description:
+		This function executes a query to delete a user.
+	  @PARAM:
+		
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function deleteUser( $username )
+	{
+		$result = query_DB("DELETE FROM `Users`
+						  WHERE `Username` = '$username'");
+
+		if( $result['Result'] )
+		{
+			return true;
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
 }
 
 /*
