@@ -10,8 +10,6 @@ protectAdmin();
 
 $sprints = get_AllSprintData();
 
-print_r($sprints);
-
 ?>
 <script>
   $(document).ready(function()
@@ -83,7 +81,7 @@ print_r($sprints);
 
 <?php
 
-  foreach ($events as $key => $value)
+  foreach ($sprints as $key => $value)
   {
     echo'
     <tr id="Entry' . $value[0] . '">
