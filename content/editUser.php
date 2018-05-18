@@ -15,8 +15,8 @@ $user = get_User($_GET['username'])[0];
 <!-- Form STARTS here -->
 <form class="container" id="editUserPage" action="api.php">
 
-  <input name="action" type="hidden" value="register">
-  <input name="do" type="hidden" value="1">
+  <input name="action" type="hidden" value="editUser">
+  <!--<input name="do" type="hidden" value="1">-->
   <hr>
 
   <p><strong>All fields marked with an asterisk ( <label class="text-danger">*</label> ) are required. </strong></p>
@@ -40,8 +40,8 @@ $user = get_User($_GET['username'])[0];
       </span>
       <input name="password" type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="password" required>
     </div>
-	<small id="passwordHelp" class="sr-only form-text text-muted">ONLY IF YOU WANT TO CHANGE IT.  Password must not have spaces.</small>
   </div>
+  <small id="passwordHelp" class="sr-only form-text text-muted">ONLY IF YOU WANT TO CHANGE IT.  Password must not have spaces.</small>
   
   <div class="form-group">
     <label for="fName"> <label class="text-danger">*</label> First Name</label>
@@ -107,16 +107,6 @@ $user = get_User($_GET['username'])[0];
                     notEmpty:
                     {
                         message: 'ERROR: Please enter your enterprise ID.'
-                    }
-                }
-            },
-            password:
-            {
-                validators:
-                {
-                    notEmpty:
-                    {
-                        message: 'ERROR: Please enter your password.'
                     }
                 }
             },
