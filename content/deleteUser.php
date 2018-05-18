@@ -78,21 +78,21 @@ $users = get_Users();
   foreach ($users as $key => $value)
   {
     echo'
-    <tr id="Entry' . $value[1] . '">
+    <tr id="Entry' . $value[0] . '">
 
       <td>
-        <a link="index.php?display=EditEvent&id=' . $value[1] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-edit" title="Edit" style="color: orange"></i></a>
+        <a link="index.php?display=EditEvent&id=' . $value[0] . '" style="cursor:pointer;"><i class="glyphicon glyphicon-edit" title="Edit" style="color: orange"></i></a>
 
-        <a link="api.php?display=deleteUser&id=' . $value[1] . '&do=1" style="cursor:pointer;"><i class="glyphicon glyphicon-trash" title="Delete" style="color: red"></i></a>
+        <a link="api.php?display=deleteUser&id=' . $value[0] . '&do=1" style="cursor:pointer;"><i class="glyphicon glyphicon-trash" title="Delete" style="color: red"></i></a>
 
       </td>
 
       <td>
-      ' . $value[1] . '
+      ' . $value[0] . '
       </td>
 
       <td>
-      ' . $value[3] . '
+      ' . $value[2] . '
       </td>
 
       <td>
