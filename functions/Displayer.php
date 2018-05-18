@@ -90,6 +90,16 @@ This is used to determine which element will be loaded into the center of the pa
     ';
   }
   
+  // Delete My Account
+  if( $_GET['display'] == 'DeleteAccount' )
+  {
+    echo'
+      <script>
+        $("#Content").load("deleteAccount.php");
+      </script>
+    ';
+  }
+  
   // Edit Sprint
   if( $_GET['display'] == 'EditSprint' )
   {

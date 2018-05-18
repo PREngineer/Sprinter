@@ -19,6 +19,21 @@ function logged_in()
   - Used all over the place
   @Return - Boolean (T or F) if logged in
 */
+function protect()
+{
+  if( !isset($_SESSION['userRole']) )
+  {
+    echo '<script type="text/javascript">
+        window.location.href = "index.php?display=Leaderboard"
+      </script>';
+  }
+}
+
+/*
+  Function that checks if the Admin session is active
+  - Used all over the place
+  @Return - Boolean (T or F) if logged in
+*/
 function protectAdmin()
 {
   if( $_SESSION['userRole'] != '1' )
