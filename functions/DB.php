@@ -27,7 +27,7 @@ Region Start - Testing MySQL Setup
 	{
 	  // Open Connection
 	  $link = mysqli_init();
-
+	  // Try to connect
 	  $connection = mysqli_real_connect(
 	   $link,
 	   $host.':'.$port,
