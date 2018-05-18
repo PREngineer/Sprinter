@@ -6,6 +6,8 @@ include '../functions/DB.php';
 
 protectAdmin();
 
+$code = substr( MD5(date("Y-m-d-h:m:s")), 0, 6 );
+
 ?>
 <script>
   $(document).ready(function()
@@ -93,7 +95,7 @@ protectAdmin();
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-lock"></i>
       </span>
-      <input name="code" type="text" class="form-control" id="code" placeholder="0a34bc" required>
+      <input name="code" type="text" class="form-control" id="code" placeholder="<?php echo $code;?>" value="<?php echo $code;?>" required>
     </div>
   </div>
 
