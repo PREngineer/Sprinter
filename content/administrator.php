@@ -26,9 +26,9 @@ $url = 'http://' . $_SERVER['HTTP_HOST'] . '/Sprinter/content/index.php?display=
 
 <a link="index.php?display=CreateSprint" style="cursor: pointer;">Create Sprint</a>
 <br><br>
-<a link="index.php?display=DeleteUser" style="cursor: pointer;">Delete User</a>
+<a link="index.php?display=DeleteUser" style="cursor: pointer;">Manage Users</a>
 <br><br>
-<a link="index.php?display=EditSprintList" style="cursor: pointer;">Edit Sprint</a>
+<a link="index.php?display=EditSprintList" style="cursor: pointer;">Manage Sprints</a>
 <br><br>
 <?php
 echo '<a link="mailto:?
