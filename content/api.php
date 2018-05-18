@@ -229,6 +229,32 @@
 		}
 	}
 
+	if($_GET['action'] == "deleteAccount")
+	{
+		$success = deleteUser( $_GET['username'] );
+	
+		if($success)
+		{
+			echo '{"result":"success"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Logout&DeleteUser=1');
+			}
+		}
+		else
+		{
+			echo '{"result":"failure"}';
+			
+			// Redirect to the page
+			if($_GET['do'] == "1")
+			{
+				header('Location: index.php?display=Leaderboard&DeleteUser=0');
+			}
+		}
+	}
+	
 	if($_GET['action'] == "deleteUser")
 	{
 		$success = deleteUser( $_GET['username'] );

@@ -182,6 +182,15 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 				Your data could not be added.
 				</div>';
 		}
+		
+		// If data was not added
+		if($_GET['DeleteUser'] == '0')
+		{
+			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+				<button type = "button" class="close" data-dismiss = "alert">x</button>
+				[!] An error occurred.  Your account couldn\'t be deleted.
+				</div>';
+		}
 	}
 }
 
@@ -198,6 +207,23 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
 				<button type="button" class="close" data-dismiss="alert">x</button>
 				[!] The information provided is not valid.  Please, try again.</div>';
+		}
+	}
+}
+
+/*
+* Logout page messages
+*/
+{
+	// Messages in the Login page
+	if($_GET['display'] == 'Logout')
+	{
+		// If failed to validate
+		if($_GET['DeleteUser'] == '1')
+		{
+			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+				<button type="button" class="close" data-dismiss="alert">x</button>
+				Your account and all its data has been deleted.</div>';
 		}
 	}
 }

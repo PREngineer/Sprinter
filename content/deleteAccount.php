@@ -29,6 +29,6 @@
 	</div>
 	
 	<input class="btn btn-default" type="reset"  value="Clear">
-	<input class="btn btn-primary" type="submit" value="Submit">
+	<input class="btn btn-primary" type="submit" value="Delete my account and data">
 
 </form>
