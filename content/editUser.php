@@ -37,10 +37,10 @@ $user = get_User($_GET['username'])[0];
       <span class="input-group-addon">
         <i class="glyphicon glyphicon-lock"></i>
       </span>
-      <input name="password" type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="password" required>
+      <input name="password" type="password" class="form-control" id="password" placeholder="password">
     </div>
+	<small class="sr-only form-text text-muted">ONLY IF YOU WANT TO CHANGE IT.  Password must not have spaces.</small>
   </div>
-  <small class="sr-only form-text text-muted">ONLY IF YOU WANT TO CHANGE IT.  Password must not have spaces.</small>
   
   <div class="form-group">
     <label for="fName"> <label class="text-danger">*</label> First Name</label>
