@@ -285,8 +285,6 @@
 	{
 		$success = editUser( $_GET['username'], $_GET['password'], $_GET['fName'], $_GET['initials'], $_GET['lName'], $_GET['role'] );
 	
-		echo 'Password is not empty: ' . !empty( $_GET['password'] );
-	
 		if($success)
 		{
 			echo '{"result":"success"}';
