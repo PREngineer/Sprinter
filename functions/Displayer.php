@@ -95,7 +95,7 @@ This is used to determine which element will be loaded into the center of the pa
   {
     echo'
       <script>
-        $("#Content").load("editSprint.php");
+        $("#Content").load("editSprint.php?id=' . $_GET['id'] . '");
       </script>
     ';
   }
