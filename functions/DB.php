@@ -455,7 +455,7 @@ Region Start - Regular Use MySQL DB Delete Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function createSprint( $id )
+	Function deleteSprint( $id )
 	{
 		$result = query_DB("DELETE FROM `Sprints`
 						  WHERE `ID` >= '$id'");
