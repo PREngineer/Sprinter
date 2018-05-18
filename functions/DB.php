@@ -599,6 +599,32 @@ Region Start - Regular Use MySQL DB Get Functions
 			return $result['Errors'];
 		}
 	}
+	
+	/*
+	  Description:
+		This function executes a query to get the Sprint's data.
+	  @PARAM:
+		[id]   - Sprint id
+	  @RETURN:
+		[Boolean] - True
+		[Array]   - Errors
+	*/
+	Function 
+	get_SprintData($id)
+	{
+		$result = query_DB("SELECT *
+						  FROM `Sprints`
+						  WHERE `ID` <= '$id'");
+
+		if( $result['Result'] )
+		{
+			return mysqli_fetch_all( $result['Data'] );
+		}
+		else
+		{
+			return $result['Errors'];
+		}
+	}
 
 	/*
 	  Description:
