@@ -4,11 +4,10 @@
 
 include '../functions/Init.php';
 include '../functions/DB.php';
-include 'layout/LinkHandler.php';
 
 protectAdmin();
 
-$users = getUsers();
+$users = get_Users();
 
 ?>
 <script>
