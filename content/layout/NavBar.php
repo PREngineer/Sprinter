@@ -151,7 +151,8 @@ if( $_GET['display'] == 'Login' )
 }
 
 // Administrator user is logged in and adding data
-if( $_GET['display'] == 'Administrator' && $_SESSION['userRole'] == "1")
+if( ($_GET['display'] == 'Administrator' || $_GET['display'] == 'CreateSprint' || $_GET['display'] == 'DeleteUser' || 
+	 $_GET['display'] == 'EditSprint' || $_GET['display'] == 'EditSprintList' || $_GET['display'] == 'EditUser') && $_SESSION['userRole'] == "1")
 {
   echo '
 	document.getElementById("administratorLink").classList.add("active");
