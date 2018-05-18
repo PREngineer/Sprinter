@@ -93,7 +93,7 @@
 					' . $each[3] . '
 					</td>
 					<td style="width:25%">
-					' . $each[5] . '%
+					' . $each[5] . '
 					</td>
 				</tr>
 		';
