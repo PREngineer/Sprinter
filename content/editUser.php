@@ -19,8 +19,8 @@ $user = get_User($_GET['username'])[0];
     </a>
   </li>
   <li>
-    <a link="index.php?display=EditSprintList" style="cursor:pointer;">
-      Sprint List
+    <a link="index.php?display=DeleteUser" style="cursor:pointer;">
+      User List
     </a>
   </li>
 </ol>
