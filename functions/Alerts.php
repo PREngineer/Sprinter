@@ -23,6 +23,46 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 <?php
 
 /*
+* Administrator page messages
+*/
+{
+	// Message upon 
+	if( ($_GET['display'] == 'Administrator') )
+	{
+		if($_GET['CreateSprint'] == '1')
+		{
+			echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type = "button" class="close" data-dismiss = "alert">x</button>
+					The sprint has been registered.
+				</div>';
+		}
+		else if($_GET['something'] == '1')
+		{
+			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type="button" class="close" data-dismiss="alert">x</button>
+					[!] .  Please, try again.</div>';
+		}
+	}
+}
+
+/*
+* CreateSprint page messages
+*/
+{
+	// Message upon 
+	if( ($_GET['display'] == 'CreateSprint') )
+	{
+		if($_GET['CreateSprint'] == '0')
+		{
+			echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
+					<button type = "button" class="close" data-dismiss = "alert">x</button>
+					The sprint has been registered.
+				</div>';
+		}
+	}
+}
+
+/*
 * Leaderboard page messages
 */
 {
@@ -128,33 +168,6 @@ The alerts are dismissible but they disappear after 5 a seconds with an upper sc
 	}
 }
 
-/*
-* Leaderboard page messages
-*/
-{
-		// Message upon 
-	//if( ($_GET['display'] == '') )
-	//{
-	//	if(1)
-	//	{
-	//		echo '<div class="container alert alert-success alert-dismissible" role="alert" style="padding-top:75px;">
-	//				<button type = "button" class="close" data-dismiss = "alert">x</button>
-	//				!
-	//			</div>';
-	//	}
-	//	else if(0)
-	//	{
-	//		echo '<div class="container alert alert-danger alert-dismissible" role="alert" style="padding-top:75px;">
-	//				<button type="button" class="close" data-dismiss="alert">x</button>
-	//				[!] .  Please, try again.</div>';
-	//	}
-	//	else
-	//	{
-	//		echo '<div class="container alert alert-warning alert-dismissible" role="alert" style="padding-top:75px;">
-	//				<button type="button" class="close" data-dismiss="alert">x</button>
-	//				[!] .</div>';
-	//	}
-	//}
-}
+
 
 ?>
