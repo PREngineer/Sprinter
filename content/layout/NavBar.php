@@ -121,7 +121,7 @@ if( ($_GET['display'] == 'Leaderboard' || $_GET['display'] == 'SetGoal') && $_SE
 }
 
 // Normal user is logged in and viewing delete my account
-if( ($_GET['display'] == 'Leaderboard' || $_GET['display'] == 'DeleteAccount') && $_SESSION['userRole'] == "0")
+if( $_GET['display'] == 'Leaderboard' && $_SESSION['userRole'] == "0")
 {
   echo '
 	document.getElementById("addDataLink").classList.remove("active");
