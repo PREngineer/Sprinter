@@ -844,13 +844,13 @@ Region Start - Regular Use MySQL DB Insert Functions
 						);
 						
 		echo "UPDATE `Sprints`
-							SET (`Name`  = '" . sanitize($name)  . "',
-								 `Goal`  = '" . sanitize($goal)  . "',
-								 `Rules` = '" . sanitize( nl2br($rules) ) . "',
-								 `Start` = '" . sanitize($start) . "',
-								 `End`   = '" . sanitize($end)   . "',
-								 `Code`  = '" . sanitize($code)  . "')
-							WHERE `ID` = '" . $id . "'";
+			SET (`Name`  = '" . sanitize($name)  . "',
+				 `Goal`  = '" . sanitize($goal)  . "',
+				 `Rules` = '" . sanitize( nl2br($rules) ) . "',
+				 `Start` = '" . sanitize($start) . "',
+				 `End`   = '" . sanitize($end)   . "',
+				 `Code`  = '" . sanitize($code)  . "')
+			WHERE `ID` = '" . $id . "'";
 
 		// If successful
 		if( $result['Result'] )
