@@ -843,14 +843,14 @@ Region Start - Regular Use MySQL DB Insert Functions
 							WHERE `ID` = '" . $id . "'"
 						);
 						
-		echo "UPDATE `Sprints`
+		echo "<pre>UPDATE `Sprints`
 			SET (`Name`  = '" . sanitize($name)  . "',
 				 `Goal`  = '" . sanitize($goal)  . "',
 				 `Rules` = '" . sanitize( nl2br($rules) ) . "',
 				 `Start` = '" . sanitize($start) . "',
 				 `End`   = '" . sanitize($end)   . "',
 				 `Code`  = '" . sanitize($code)  . "')
-			WHERE `ID` = '" . $id . "'";
+			WHERE `ID` = '" . $id . "'</pre>";
 
 		// If successful
 		if( $result['Result'] )
