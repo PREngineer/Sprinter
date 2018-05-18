@@ -711,7 +711,7 @@ Region Start - Regular Use MySQL DB Insert Functions
 						   VALUES (
 						   '" . sanitize($name)  . "',
 						   '" . sanitize($goal)  . "',
-						   '" . nl2br($rules)    . "',
+						   '" . $rules           . "',
 						   '" . sanitize($start) . "',
 						   '" . sanitize($end)   . "',
 						   '" . sanitize($code)  . "')"
