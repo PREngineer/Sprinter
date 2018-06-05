@@ -2,7 +2,7 @@
 
 This project is being developed during my spare time.  I would appreciate a donation if you found it useful.
 
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=53CD2WNX3698E&lc=US&item_name=PREngineer&item_number=Event%2dManager&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=53CD2WNX3698E&lc=US&item_name=PREngineer&item_number=Sprinter&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
 # Sprinter
 
@@ -32,18 +32,44 @@ Libraries/Frameworks used:
 
 # How to Install (Ubuntu Server)
 
+  * Step 1 - Create /var/www/html folder and set permissions
+
+    sudo mkdir /var
+
+    sudo mkdir /var/www
+
+    sudo mkdir /var/www/html
+
+    sudo chmod -R 777 /var/www/html
+
+  * Step 2 - Clone the repository
+
+    cd /var/www/html
+
+    sudo git clone https://github.com/PREngineer/Sprinter
+
+    cd Sprinter
+
+  * Step 3 - Run the installer
+
+    sudo ./install.sh
+
 
 
 # Important Considerations:
 
   * Links do not work like they do normally!
+
     The links' "href" property has been removed and replaced by a "link" property that is read by
     the JavaScript link handler function.
+
     This is done because we do not want a complete reload of a new page.  We just care about
     replacing the content of a DIV that represents the content of the pages.  We want to maintain the same navigation menu and footer.
+
     This also allows for better management of code in different locations without having a
     negative effect on others.
-	This also prevents the PWA from opening links in Safari (iOS).
+
+	  This also prevents the PWA from opening links in Safari (iOS).
 
 # The Team
 
