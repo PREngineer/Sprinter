@@ -86,13 +86,17 @@
 						' . $UserGoal[3] . '    |    
 						<a link="index.php?display=SetGoal" style="cursor: pointer;">Set Goal</a>
 					</td>
-				</tr>
+				</tr>';
+		if( empty($UserGoal) )
+		{
+			echo '
 				<tr>
-					<td colspan="2">
-					The first thing that you should do in any sprint is establish your goal.  Otherwise, you won\'t show up in the leaderboard.
+					<td colspan="2" class="text-danger">
+						<strong>The first thing that you should do in any sprint is establish your goal.  Otherwise, you won\'t show up in the leaderboard.</strong>
 					</td>
 				</tr>
-		';
+			';
+		}
 	}
 
 	echo '
