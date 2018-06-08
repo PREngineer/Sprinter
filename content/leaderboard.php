@@ -87,7 +87,7 @@
 						
 						if( empty($UserGoal) )
 						{
-							echo 'Not set yet';
+							echo '<strong class="text-danger">Not set yet</strong>';
 						}
 						else
 						{
