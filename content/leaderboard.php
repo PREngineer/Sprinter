@@ -87,6 +87,11 @@
 						<a link="index.php?display=SetGoal" style="cursor: pointer;">Set Goal</a>
 					</td>
 				</tr>
+				<tr>
+					<td colspan="2">
+					The first thing that you should do in any sprint is establish your goal.  Otherwise, you won\'t show up in the leaderboard.
+					</td>
+				</tr>
 		';
 	}
 
