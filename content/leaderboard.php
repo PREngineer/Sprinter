@@ -83,7 +83,18 @@
 						Your sprint goal is: 
 					</td>
 					<td>
-						' . $UserGoal[3] . '    |    
+						';
+						
+						if( empty($UserGoal) )
+						{
+							echo 'Not set yet';
+						}
+						else
+						{
+							echo $UserGoal[3];
+						}
+						
+		echo '    |    
 						<a link="index.php?display=SetGoal" style="cursor: pointer;">Set Goal</a>
 					</td>
 				</tr>';
