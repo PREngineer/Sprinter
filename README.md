@@ -4,6 +4,10 @@ This project is being developed during my spare time.  I would appreciate a dona
 
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=53CD2WNX3698E&lc=US&item_name=PREngineer&item_number=Sprinter&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)
 
+You can also support me by sending a BitCoin donation to the following address:
+
+19JXFGfRUV4NedS5tBGfJhkfRrN2EQtxVo
+
 # Sprinter
 
 This platform is used to track health related competitions
