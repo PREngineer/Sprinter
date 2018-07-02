@@ -46,12 +46,11 @@
 	</table>
 
 <?php	
-	if( isset($_GET['sprint']) )
-	{
-		echo '<br><br>Sprint provided!<br><br>';
-		$leaders = get_Leaderboard( $_GET['sprint'] );
+
+	echo '<br><br>Sprint provided: ' . $_GET['sprint'] . '<br><br>';
+	//$leaders = get_Leaderboard( $_GET['sprint'] );
 	
-		echo '
+	echo '
 <div class="container">
 	<table class="table">
 		<thead>
@@ -88,5 +87,4 @@
 </div>
 			';
 		}
-	}
 ?>
