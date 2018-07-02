@@ -48,7 +48,7 @@
 <?php	
 
 	echo '<br><br>Sprint provided: ' . $_GET['sprint'] . '<br><br>';
-	//$leaders = get_Leaderboard( $_GET['sprint'] );
+	$leaders = get_Leaderboard( $_GET['sprint'] );
 	
 	echo '
 <div class="container">
