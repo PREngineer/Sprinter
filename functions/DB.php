@@ -559,8 +559,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_AllSprintData()
+	Function get_AllSprintData()
 	{
 		$result = query_DB("SELECT *
 						  FROM `Sprints`
@@ -585,8 +584,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Array] - List
 		[Array]   - Errors
 	*/
-	Function 
-	get_AvailableSprints()
+	Function get_AvailableSprints()
 	{
 		$result = query_DB("SELECT *
 						  FROM `Sprints`");
@@ -647,8 +645,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_SprintData($date)
+	Function get_SprintData($date)
 	{
 		$result = query_DB("SELECT *
 						  FROM `Sprints`
@@ -674,8 +671,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_SprintDataByID($id)
+	Function get_SprintDataByID($id)
 	{
 		$result = query_DB("SELECT *
 						  FROM `Sprints`
@@ -700,8 +696,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_SprintEntries($id)
+	Function get_SprintEntries($id)
 	{
 		// Get all user data related to that Sprint
 		$result = query_DB("SELECT `User`, SUM(`Data`) AS Data
@@ -728,8 +723,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_SprintGoals($id)
+	Function get_SprintGoals($id)
 	{
 		// Get all user data related to that Sprint
 		$result = query_DB("SELECT `User`, `Goal`
@@ -755,8 +749,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_User($username)
+	Function get_User($username)
 	{
 		// Get all user data related to that Sprint
 		$result = query_DB("SELECT *
@@ -782,8 +775,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_Users()
+	Function get_Users()
 	{
 		// Get all user data related to that Sprint
 		$result = query_DB("SELECT *
@@ -808,8 +800,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_UserData($date, $user)
+	Function get_UserData($date, $user)
 	{
 		// Retrieve the Sprint ID
 		$sprintID = get_SprintData($date)[0][0];
@@ -840,8 +831,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	get_UserGoal($date, $user)
+	Function get_UserGoal($date, $user)
 	{
 		// Retrieve the Sprint ID
 		$sprintID = get_SprintData($date)[0][0];
@@ -871,8 +861,7 @@ Region Start - Regular Use MySQL DB Get Functions
 		[Boolean] - True
 		[Array]   - Errors
 	*/
-	Function 
-	user_exists($user)
+	Function user_exists($user)
 	{
 		// Get all user data related to that Sprint
 		$result = query_DB("SELECT COUNT(*)
