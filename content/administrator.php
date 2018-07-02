@@ -30,6 +30,9 @@ $url = 'http://' . $_SERVER['HTTP_HOST'] . '/Sprinter/content/index.php?display=
 <br><br>
 <a link="index.php?display=EditSprintList" style="cursor: pointer;">Manage Sprints</a>
 <br><br>
+<a link="index.php?display=Past" style="cursor: pointer;">Past Sprints Results</a>
+<br><br>
+
 <?php
 echo '<a link="mailto:?
 		subject=Thought%20you%20would%20like%20to%20join%20in%20on%20the%20fun

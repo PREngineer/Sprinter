@@ -151,6 +151,16 @@ This is used to determine which element will be loaded into the center of the pa
   }
  
   // Register View
+  if( $_GET['display'] == 'Past' )
+  {
+    echo'
+      <script>
+        $("#Content").load("summary.php");
+      </script>
+    ';
+  }
+  
+  // Register View
   if( $_GET['display'] == 'Register' )
   {
     echo'
