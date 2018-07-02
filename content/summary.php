@@ -82,9 +82,11 @@
 						' . $each[2] . '%
 						</td>
 					</tr>
-		</tbody>
-	</table>
-</div>
 			';
 		}
+
+echo '		</tbody>
+	</table>
+</div>';
+
 ?>
