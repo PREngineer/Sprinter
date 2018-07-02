@@ -21,6 +21,7 @@ Testing!!
 	$sprints = get_AvailableSprints();
 	
 	// Drop down to choose the Sprint
+?>
 	<div class="panel-body">
     <table role="presentation">
       <tr>
@@ -28,7 +29,7 @@ Testing!!
           <div class="input-group">
             <select onchange="changeSprint(this.value)" class="form-control" id="Options">
         	    <option <?php if( !( isset($_GET['sprint']) ) ){echo 'selected';} ?> value="">-Please choose-</option>
-         <?php     
+        <?php     
 			  foreach($sprints as $each)
 			  {
 				echo '<option ';
@@ -45,7 +46,8 @@ Testing!!
         </td>
 	  </tr>
 	</table>
-	
+
+<?php	
 	if( isset($_GET['sprint']) )
 	{
 		$Sprint   = get_SprintData( $_GET['sprint'] )[0];
