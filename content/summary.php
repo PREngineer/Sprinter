@@ -4,8 +4,6 @@
 	include '../functions/DB.php';
 ?>
 
-Testing!!
-
 <script>
   // Do the actual loading.
   function changeSprint(value)
@@ -50,8 +48,7 @@ Testing!!
 <?php	
 	if( isset($_GET['sprint']) )
 	{
-		$Sprint   = get_SprintData( $_GET['sprint'] )[0];
-	
+		echo '<br><br>Sprint provided!<br><br>';
 		$leaders = get_Leaderboard( $_GET['sprint'] );
 	
 		echo '
