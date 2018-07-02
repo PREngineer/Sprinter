@@ -4,22 +4,13 @@
 	include '../functions/DB.php';
 ?>
 
-<script>
-  $(document).ready(function()
-  {
-    $("a").click(function()
-    {
-      var url = $(this).attr("link");
-      window.location = url;
-    });
-  });
-</script>
+Testing!!
 
 <script>
   // Do the actual loading.
   function changeSprint(value)
   {
-    window.location = "index.php?display=Past&sprint="+value;
+    window.location = "index.php?display=Past&sprint=" + value;
   }
 </script>
 
