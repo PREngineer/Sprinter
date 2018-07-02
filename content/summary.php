@@ -38,7 +38,7 @@ Testing!!
 					echo 'selected ';
 				} 
 				echo 'value="' . $each[2] . '"';
-				echo '>' . $each[1] . '</option>';
+				echo '>' . $each[4] . '</option>';
 			  }
 		?>	  
             </select>
