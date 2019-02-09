@@ -75,11 +75,6 @@ Libraries/Frameworks used:
 
 	  This also prevents the PWA from opening links in Safari (iOS).
 
-# The Team
-
-  * Benjamin Burden
-  * Jorge Pabon
-
 # License
 
-All rights are reserved by Jorge L. Pabon Cruz.  Use of this application without a license is not authorized.  For licensing costs contact Jorge L. Pabon Cruz at pianistapr@hotmail.com.
+All rights are reserved by Jorge Pabon.  Use of this application without a license is not authorized.  For licensing costs contact Jorge Pabon at pianistapr@hotmail.com.
